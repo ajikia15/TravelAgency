@@ -5,8 +5,8 @@
 </script>
 
 <Hero />
-<section class="grid w-full place-items-center">
-	<div class="mt-12 grid w-4/5 grid-cols-3  gap-12" id="tours">
+<section class="mt-12 grid w-full  place-items-center">
+	<div class="mx-4 grid grid-cols-1 gap-10 md:grid-cols-2" id="tours">
 		{#each tours as tour}
 			<a href={`/tour/${tour.id}`}>
 				<Card {tour} />
@@ -14,3 +14,9 @@
 		{/each}
 	</div>
 </section>
+
+<style lang="scss">
+	section {
+		grid-template-columns: 2fr 1fr;
+	}
+</style>
