@@ -10,13 +10,18 @@
 	<p>{tour.description}</p> -->
 
 <div class="group flex flex-col overflow-hidden rounded bg-emerald-900 text-white shadow-lg">
-	<img class="w-full  " src="/hero-svaneti.jpg" alt="Sunset in the mountains" />
+	<div class="overflow-hidden">
+		<img
+			class="w-full transition-all duration-700 ease-in-out group-hover:scale-125 "
+			src="/hero-svaneti.jpg"
+			alt="Sunset in the mountains" />
+	</div>
 	<div class=" px-6 py-4">
 		<a
 			href="#"
 			class="inline-block text-2xl  transition-all duration-500 ease-in-out group-hover:text-amber-500 "
 			>{tour.destination}</a>
-		<p class="truncate text-lg text-gray-300 transition-all duration-300 group-hover:text-white">
+		<p class="truncate text-lg text-gray-300 transition-all duration-300">
 			{tour.description}
 		</p>
 	</div>
