@@ -2,27 +2,24 @@
 	export let tour;
 </script>
 
-<div class="flex flex-col rounded-md   text-black shadow-md">
-	<!-- <p>{tour.destination}</p>
+<!-- <p>{tour.destination}</p>
 	<p>{tour.price}</p>
 	<p>{tour.daysCount}</p>
 	<p>{tour.description}</p> -->
-	<div class="max-w-sm rounded-lg bg-emerald-900 ">
-		<a href="#">
-			<img class="rounded-t-lg" src="/hero-svaneti.jpg" alt="" />
-		</a>
+<div class="flex flex-col rounded-md text-black shadow-md">
+	<div class="h-sm max-w-sm rounded-lg bg-emerald-900 ">
+		<img class="rounded-t-lg" src="/hero-svaneti.jpg" alt="" />
 		<div class="p-5">
-			<a href="#">
-				<h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
-					{tour.destination}
-				</h5>
-			</a>
+			<h5 class="mb-2 text-2xl font-bold tracking-wide text-white">
+				{tour.destination}
+			</h5>
 			<p class="mb-3 font-normal text-white">
 				{tour.description}
 			</p>
 			<a
 				href={`/tour/${tour.id}`}
-				class="inline-flex items-center rounded-lg bg-amber-500 px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4 focus:ring-blue-300 hover:bg-blue-800"
+				class="inline-flex items-center rounded-lg bg-amber-500 px-3 py-2 text-center text-sm font-medium text-white focus:outline-none focus:ring-4 focus:ring-amber-500 hover:bg-amber-600
+				hover:shadow-md hover:focus:ring-amber-600"
 			>
 				Read more
 				<svg

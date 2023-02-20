@@ -6,7 +6,7 @@
 
 <Hero />
 <section class="grid w-full place-items-center">
-	<div class="mt-12 grid w-4/5 grid-cols-3 gap-12" id="tours">
+	<div class="mt-12 grid w-4/5 grid-cols-3  gap-12" id="tours">
 		{#each tours as tour}
 			<a href={`/tour/${tour.id}`}>
 				<Card {tour} />

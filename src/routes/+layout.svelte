@@ -1,7 +1,7 @@
 <script>
 	import '../app.css';
-	import Header from '../components/Header.svelte';
+	import Navigation from '../components/Navigation.svelte';
 </script>
 
-<Header />
+<Navigation />
 <slot />
