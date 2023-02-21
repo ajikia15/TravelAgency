@@ -6,7 +6,7 @@ export default class Tour {
 		availability,
 		peopleCount,
 		daysCount,
-		images,
+		src,
 		description,
 		title,
 		startDate,
@@ -18,7 +18,7 @@ export default class Tour {
 		this.availability = availability;
 		this.peopleCount = peopleCount;
 		this.daysCount = daysCount;
-		this.images = images;
+		this.src = src;
 		this.description = description;
 		this.title = title;
 		this.startDate = startDate;
@@ -143,18 +143,5 @@ export const tours = [
 		'Highland Adventure in Ushguli',
 		'2023/03/01',
 		'2023/03/14'
-	),
-	new Tour(
-		9,
-		'Mestia',
-		1600,
-		true,
-		4,
-		9,
-		['mestia-1.jpg', 'mestia-2.jpg', 'mestia-3.jpg'],
-		'Explore the stunning towers and museums of Mestia!',
-		'Mestia Heritage Tour',
-		'2023/05/01',
-		'2023/05/09'
 	)
 ];
