@@ -6,7 +6,7 @@
 
 <Hero />
 <section class="mt-12 grid w-full  place-items-center">
-	<div class="mx-4 grid grid-cols-1 gap-10 md:grid-cols-2" id="tours">
+	<div class="mx-4 grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3" id="tours">
 		{#each tours as tour}
 			<a href={`/tour/${tour.id}`}>
 				<Card {tour} />
@@ -17,6 +17,6 @@
 
 <style lang="scss">
 	section {
-		grid-template-columns: 5fr 3fr;
+		grid-template-columns: 5fr 2fr;
 	}
 </style>
