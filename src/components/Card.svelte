@@ -4,11 +4,6 @@
 	export let tour;
 </script>
 
-<!-- <p>{tour.destination}</p>
-	<p>{tour.price}</p>
-	<p>{tour.daysCount}</p>
-	<p>{tour.description}</p> -->
-
 <div class="group flex flex-col overflow-hidden rounded bg-emerald-800 text-white shadow-lg">
 	<div class="overflow-hidden">
 		<img
@@ -18,21 +13,21 @@
 	</div>
 	<div class="px-6 py-4 shadow-2xl">
 		<a
-			href="#"
-			class="inline-block text-2xl  transition-all duration-500 ease-in-out group-hover:text-amber-500 "
+			href="https://en.wikipedia.org/wiki/Svaneti"
+			class="inline-block text-4xl  transition-all duration-500 ease-in-out group-hover:text-amber-500 "
 			>{tour.destination}</a>
-		<p class="truncate text-lg text-gray-300 transition-all duration-300">
+		<p class="truncate text-xl text-gray-300 transition-all duration-300 lg:text-2xl">
 			{tour.description}
 		</p>
 	</div>
 	<div class="px-6s flex bg-emerald-900">
-		<ul class="[&>*]:text-md grid w-full grid-cols-3 [&>*]:py-3">
-			<li class="flex items-center justify-center">
+		<ul class="grid w-full grid-cols-3 [&>*]:py-3 [&>*]:text-xl">
+			<li class="flex items-center justify-center ">
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" color="" viewBox="0 0 24 24"
 					><path
 						fill="currentColor"
 						d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z" /></svg>
-				<p class="">
+				<p>
 					{tour.peopleCount}
 				</p>
 			</li>
