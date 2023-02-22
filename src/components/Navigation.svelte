@@ -19,7 +19,11 @@
 				<a href="/" class="">Home</a>
 			</li>
 			<li
-				class="w-min-content relative transition-all before:absolute before:-bottom-[3px] before:right-0 before:h-1 before:w-0 before:bg-amber-500 before:shadow-2xl before:transition-all before:duration-500 hover:text-gray-200 hover:before:left-0 hover:before:w-full">
+				class="w-min-content relative transition-all before:absolute before:-bottom-[3px] before:right-0 before:h-1 before:w-0 before:bg-amber-500 before:shadow-2xl before:transition-all before:duration-500 hover:text-gray-200 hover:before:left-0 hover:before:w-full {path.includes(
+					'/tour'
+				)
+					? 'text-gray-200 before:w-full'
+					: ''}">
 				<a href="/#tours" class="">Tours</a>
 			</li>
 			<li
