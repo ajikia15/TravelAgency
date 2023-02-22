@@ -13,7 +13,7 @@
 <Hero />
 <Search bind:searchQuery />
 
-<section class="grid w-full place-items-center">
+<section class="grid min-h-[60vh] w-full place-items-center">
 	<div class="mx-4 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" id="tours">
 		{#each tours as tour}
 			{#if tour.destination.toLowerCase().includes(processedSearch)}
