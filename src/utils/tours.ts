@@ -1,17 +1,17 @@
 export default class Tour {
 	constructor(
-		id,
-		destination,
-		price,
-		availability,
-		peopleCount,
-		daysCount,
-		src,
-		description,
-		title,
-		startDate,
-		endDate
-	) {
+		public id: number,
+		public destination: string,
+		public price: number,
+		public availability: boolean,
+		public peopleCount: number,
+		public daysCount: number,
+		public src: string[],
+		public description: string,
+		public title: string,
+		public startDate: string,
+		public endDate: string,
+	  ) {
 		this.id = id;
 		this.destination = destination;
 		this.price = price;
