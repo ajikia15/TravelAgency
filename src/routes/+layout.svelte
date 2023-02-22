@@ -4,5 +4,8 @@
 	import { fade } from 'svelte/transition';
 </script>
 
+<svelte:head>
+	<title>Travel Agency</title>
+</svelte:head>
 <Navigation />
 <slot />

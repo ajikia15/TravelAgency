@@ -4,6 +4,9 @@
 	const id = $page.params.id;
 </script>
 
+<svelte:head>
+	<title>Explore {tours[id].destination}</title>
+</svelte:head>
 <!-- <h1>page.params.id === {$page.params.id}</h1> -->
 <h1>id = {id}</h1>
 <h1>{tours[id].availability ? 'We can' : "We can't"}</h1>
@@ -13,4 +16,4 @@
 <h1>To {tours[id].description}</h1>
 <h1>For {tours[id].daysCount} days</h1>
 <h1>{tours[id].startDate} - {tours[id].endDate}</h1>
-<img src="" alt="">
+<img src="" alt="" />
