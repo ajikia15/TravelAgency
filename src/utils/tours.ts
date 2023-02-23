@@ -43,7 +43,7 @@ export const tours = [
 	new Tour(
 		1,
 		'Kazbegi',
-		1200,
+		250,
 		true,
 		4,
 		8,
@@ -56,7 +56,7 @@ export const tours = [
 	new Tour(
 		2,
 		'Svaneti',
-		1800,
+		100,
 		true,
 		6,
 		12,
@@ -69,7 +69,7 @@ export const tours = [
 	new Tour(
 		3,
 		'Batumi',
-		1100,
+		110,
 		true,
 		2,
 		6,
@@ -95,7 +95,7 @@ export const tours = [
 	new Tour(
 		5,
 		'Vardzia',
-		1500,
+		150,
 		true,
 		4,
 		10,
@@ -108,7 +108,7 @@ export const tours = [
 	new Tour(
 		6,
 		'Gudauri',
-		1100,
+		130,
 		true,
 		4,
 		7,
@@ -134,7 +134,7 @@ export const tours = [
 	new Tour(
 		8,
 		'Ushguli',
-		2200,
+		220,
 		true,
 		6,
 		14,
