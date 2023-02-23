@@ -3,6 +3,12 @@
 	const max = 300;
 	let curMin = 0;
 	let curMax = max;
+	$: leftPercent = (curMin / max) * 100;
+	$: rightPercent = ((max - curMax) / max) * 100;
+	$: {
+		if (curMin >= curMax) curMin = curMax - 10;
+		else if (curMax <= curMin) curMax = curMin + 10;
+	}
 </script>
 
 <div class="grid w-full -translate-y-1/2 place-items-center">
@@ -29,27 +35,32 @@
 		</div>
 		<!-- SLIDER -->
 		<div class="p-3">
-			<div class="price-input mb-3">
+			<div class="price-input mb-3 text-gray-400">
 				<div class="field">
 					<span>Min</span>
-					<input type="number" class="input-min" value="0" />
+					<input
+						type="tel"
+						class="input-min focus-within:text-gray-700"
+						maxlength="4"
+						bind:value={curMin} />
 				</div>
 				<div class="separator">-</div>
 				<div class="field">
 					<input
-						type="number"
-						class="input-max"
+						type="tel"
+						maxlength="4"
+						class="input-max group focus-within:text-gray-700"
 						style="margin-left:0; margin-right:12px"
-						value={curMax} />
-					<span>Max</span>
+						bind:value={curMax} />
+					<span class="">Max</span>
 				</div>
 			</div>
 			<div class="slider">
-				<div class="progress" />
+				<div class="progress" style="left:{leftPercent}%; right:{rightPercent}%" />
 			</div>
 			<div class="range-input">
-				<input type="range" class="range-min" min="0" {max} value={curMin} step="10" />
-				<input type="range" class="range-max" min="0" {max} value={curMax} step="10" />
+				<input type="range" class="range-min" min="0" {max} bind:value={curMin} step="10" />
+				<input type="range" class="range-max" min="0" {max} bind:value={curMax} step="10" />
 			</div>
 		</div>
 	</div>
@@ -57,7 +68,8 @@
 
 <style>
 	:root {
-		--color: rgb(6 95 70);
+		--color: #f59e0b;
+		/* --color: rgb(6 95 70); */
 	}
 	::selection {
 		color: #fff;
@@ -82,8 +94,8 @@
 		border: 1px solid #999;
 		-moz-appearance: textfield;
 	}
-	input[type='number']::-webkit-outer-spin-button,
-	input[type='number']::-webkit-inner-spin-button {
+	input[type='tel']::-webkit-outer-spin-button,
+	input[type='tel']::-webkit-inner-spin-button {
 		-webkit-appearance: none;
 	}
 	.price-input .separator {
