@@ -1,13 +1,17 @@
 <script>
 	export let searchQuery = '';
 	const max = 300;
-	let curMin = 0;
-	let curMax = max;
+	export let curMin = 0;
+	export let curMax = max;
+	let temp = 0;
 	$: leftPercent = (curMin / max) * 100;
 	$: rightPercent = ((max - curMax) / max) * 100;
 	$: {
-		if (curMin >= curMax) curMin = curMax - 10;
-		else if (curMax <= curMin) curMax = curMin + 10;
+		if (curMin >= curMax) {
+			temp = curMin;
+			curMin = curMax;
+			curMax = temp;
+		}
 	}
 </script>
 
