@@ -1,4 +1,4 @@
-<script>
+<script lang>
 	import { page } from '$app/stores';
 	let path;
 	$: path = $page.url.pathname;

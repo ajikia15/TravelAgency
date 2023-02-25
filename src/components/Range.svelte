@@ -1,18 +1,18 @@
-<script>
+<script lang="ts">
 	const max = 1000;
-	export let curMin = 1;
+	export let curMin: number = 0;
 	export let curMax = max;
 	let temp = 0;
 	$: leftPercent = (curMin / max) * 100;
 	$: rightPercent = ((max - curMax) / max) * 100;
+	$: if (curMin >= curMax) {
+		temp = curMin;
+		curMin = curMax;
+		curMax = temp;
+	}
 	$: {
-		if (curMin == '') curMin = 1;
+		if (curMin == '') curMin = 0;
 		if (curMax == '') curMax = max;
-		if (curMin >= curMax) {
-			temp = curMin;
-			curMin = curMax;
-			curMax = temp;
-		}
 	}
 	// function handleclick() {
 	// 	console.log(curMin);

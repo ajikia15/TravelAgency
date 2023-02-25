@@ -1,5 +1,5 @@
-<script>
-	export let searchQuery = '';
+<script lang="ts">
+	export let searchQuery: string = '';
 </script>
 
 <div class="flex rounded-lg bg-gray-100 p-4">
