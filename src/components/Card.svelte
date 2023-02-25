@@ -1,20 +1,33 @@
 <script>
 	import { tours } from '../utils/tours';
 	export let tour;
+	//href={`/tour/${tour.id}`}
 </script>
 
 <div
-	class="group flex flex-col overflow-hidden rounded bg-emerald-800 text-white shadow-xl duration-500 hover:scale-105 hover:shadow-2xl">
-	<div class="overflow-hidden">
+	class="flex flex-col overflow-hidden rounded bg-emerald-800 text-white shadow-xl duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-2xl">
+	<div class="group relative overflow-hidden transition-all ">
 		<img
-			class="w-full transition-all duration-500 ease-in-out hover:scale-105 "
+			class="w-full transition-all duration-500 ease-in-out group-hover:scale-105 "
 			src={tour.src[0]}
 			alt="Sunset in the mountains" />
+		<div
+			class="absolute top-0 left-0 z-10 grid h-full w-full place-items-center bg-gray-700 bg-opacity-0 duration-500 group-hover:bg-opacity-60">
+			<a
+				href=""
+				class=" rounded-sm bg-gray-800 bg-opacity-40 p-2 opacity-0 duration-500 group-hover:opacity-100">
+				<svg class="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+					><path
+						fill="currentColor"
+						fill-rule="evenodd"
+						d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" /></svg>
+			</a>
+		</div>
 	</div>
-	<div class="px-6 py-4 shadow-2xl">
+	<div class="group/text px-6 py-4 shadow-2xl">
 		<a
 			href="https://en.wikipedia.org/wiki/Svaneti"
-			class="inline-block text-3xl  transition-all duration-500 ease-in-out group-hover:text-amber-500"
+			class="inline-block text-3xl  transition-all duration-500 ease-in-out group-hover/text:text-amber-500"
 			>{tour.destination}</a>
 		<p class="truncate text-xl text-gray-300 transition-all duration-300 lg:text-xl">
 			{tour.title}
@@ -50,15 +63,14 @@
 					${tour.price}<span class="text-[0.75em] text-gray-300">/each</span>
 				</p>
 			</li>
-			<li class="flex items-center justify-center ">
+			<li class="group/sun flex items-center justify-center ">
 				<p class="text-amber-400">{tour.daysCount}&nbsp;&nbsp;</p>
-
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="24"
 					height="24"
 					viewBox="0 0 24 24"
-					class="h-8 w-8 text-amber-400 duration-500 group-hover:rotate-180"
+					class="h-8 w-8 text-amber-400 duration-500 group-hover/sun:rotate-180"
 					><path
 						fill="currentColor"
 						d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0a4.5 4.5 0 0 1-9 0Zm11.394-5.834a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75Zm-3.916 6.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18Zm-4.242-.697a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12Zm.697-4.243a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" /></svg>

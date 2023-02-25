@@ -28,14 +28,15 @@
 			{#if tour.destination
 				.toLowerCase()
 				.includes(processedSearch) && tour.price > minMax[0] && tour.price < minMax[1]}
-				<a href={`/tour/${tour.id}`}>
-					<Card {tour} />
-				</a>
+				<Card {tour} />
 			{/if}
 		{/each}
 	</div>
 </section>
 
+<!-- <a href={`/tour/${tour.id}`}>
+	<Card {tour} />
+</a> -->
 <style lang="scss">
 	// .searchWrap {
 	// 	@apply relative grid w-11/12 transform grid-cols-1 flex-row items-center gap-3 rounded-xl bg-white p-5 text-2xl shadow-md transition duration-500 after:absolute after:left-0 after:-top-[1px] after:h-2 after:w-full  after:rounded-t-xl hover:scale-105 hover:shadow-lg md:grid-cols-[2fr_1fr] xl:w-1/2;
