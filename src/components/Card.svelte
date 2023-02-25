@@ -3,17 +3,18 @@
 	export let tour;
 </script>
 
-<div class="group flex flex-col overflow-hidden rounded bg-emerald-800 text-white shadow-lg">
+<div
+	class="group flex flex-col overflow-hidden rounded bg-emerald-800 text-white shadow-xl transition-all hover:scale-105 hover:shadow-2xl">
 	<div class="overflow-hidden">
 		<img
-			class="w-full transition-all duration-500 ease-in-out group-hover:scale-[1.05] "
+			class="w-full transition-all duration-500 ease-in-out hover:scale-105 "
 			src={tour.src[0]}
 			alt="Sunset in the mountains" />
 	</div>
 	<div class="px-6 py-4 shadow-2xl">
 		<a
 			href="https://en.wikipedia.org/wiki/Svaneti"
-			class="inline-block text-3xl  transition-all duration-500 ease-in-out group-hover:text-amber-500 "
+			class="inline-block text-3xl  transition-all duration-500 ease-in-out group-hover:text-amber-500"
 			>{tour.destination}</a>
 		<p class="truncate text-xl text-gray-300 transition-all duration-300 lg:text-xl">
 			{tour.description}

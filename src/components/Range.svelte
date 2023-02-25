@@ -65,7 +65,7 @@
 	}
 	.price-input .field {
 		display: flex;
-		width: 50%;
+		width: 80%;
 		align-items: center;
 	}
 	.field input {

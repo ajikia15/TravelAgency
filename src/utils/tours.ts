@@ -9,8 +9,6 @@ export default class Tour {
 		public src: string[],
 		public description: string,
 		public title: string,
-		public startDate: string,
-		public endDate: string,
 	  ) {
 		this.id = id;
 		this.destination = destination;
@@ -21,9 +19,8 @@ export default class Tour {
 		this.src = src;
 		this.description = description;
 		this.title = title;
-		this.startDate = startDate;
-		this.endDate = endDate;
 	}
+	
 }
 
 export const tours = [
@@ -36,9 +33,7 @@ export const tours = [
 		5,
 		['tbilisi-1.jpg', 'tbilisi-2.jpg', 'tbilisi-3.jpg'],
 		'Discover the vibrant culture and history of Tbilisi!',
-		'Exploring Tbilisi',
-		'2022/06/01',
-		'2022/06/05'
+		'Exploring Tbilisi'
 	),
 	new Tour(
 		1,
@@ -49,9 +44,7 @@ export const tours = [
 		8,
 		['kazbegi-1.jpg', 'kazbegi-2.jpg', 'kazbegi-3.jpg'],
 		'Explore the beautiful landscapes of Kazbegi!',
-		'Hiking in Kazbegi',
-		'2022/06/15',
-		'2022/06/22'
+		'Hiking in Kazbegi'
 	),
 	new Tour(
 		2,
@@ -63,8 +56,6 @@ export const tours = [
 		['svaneti-1.jpg', 'svaneti-2.jpg', 'svaneti-3.jpg'],
 		'Discover the remote villages and stunning peaks of Svaneti!',
 		'Adventure in Svaneti',
-		'2022/07/01',
-		'2022/07/12'
 	),
 	new Tour(
 		3,
@@ -76,8 +67,6 @@ export const tours = [
 		['batumi-1.jpg', 'batumi-2.jpg', 'batumi-3.jpg'],
 		'Enjoy the sun, sea, and sand in Batumi!',
 		'Beach holiday in Batumi',
-		'2022/08/01',
-		'2022/08/06'
 	),
 	new Tour(
 		4,
@@ -89,8 +78,6 @@ export const tours = [
 		['kutaisi-1.jpg', 'kutaisi-2.jpg', 'kutaisi-3.jpg'],
 		'Discover the ancient history and architecture of Kutaisi!',
 		'Historic Kutaisi',
-		'2022/09/01',
-		'2022/09/04'
 	),
 	new Tour(
 		5,
@@ -102,8 +89,6 @@ export const tours = [
 		['vardzia-1.jpg', 'vardzia-2.jpg', 'vardzia-3.jpg'],
 		'Explore the stunning cave city of Vardzia!',
 		'Cave City Adventure',
-		'2022/10/01',
-		'2022/10/10'
 	),
 	new Tour(
 		6,
@@ -115,8 +100,6 @@ export const tours = [
 		['gudauri-1.jpg', 'gudauri-2.jpg', 'gudauri-3.jpg'],
 		'Hit the slopes at Georgia\'s top ski resort!',
 		'Skiing in Gudauri',
-		'2022/12/01',
-		'2022/12/08'
 	),
 	new Tour(
 		7,
@@ -128,8 +111,6 @@ export const tours = [
 		['borjomi-1.jpg', 'borjomi-2.jpg', 'borjomi-3.jpg'],
 		'Relax and unwind in the picturesque town of Borjomi!',
 		'Borjomi Getaway',
-		'2023/02/01',
-		'2023/02/03'
 	),
 	new Tour(
 		8,
@@ -141,7 +122,19 @@ export const tours = [
 		['ushguli-1.jpg', 'ushguli-2.jpg', 'ushguli-3.jpg'],
 		'Discover the highest permanently inhabited village in Europe!',
 		'Highland Adventure in Ushguli',
-		'2023/03/01',
-		'2023/03/14'
+	),
+	new Tour(
+		9,
+		'Tsalka',
+		110,
+		true,
+		6,
+		14,
+		['tsalka-1.jpg'],
+		'Where Mountains Meet the lake',
+		'The Hidden Gem of Caucasus'
 	)
 ];
+// sedan 3 jeep minivan 5 sprinter 16-18 
+	// imereti samegrelo
+	//price starting from
