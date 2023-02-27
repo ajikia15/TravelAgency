@@ -9,6 +9,11 @@
 	let curMax = 1000;
 	$: processedSearch = searchQuery.toLowerCase();
 	$: minMax = [curMin, curMax];
+
+	// import { fade, fly } from 'svelte/transition';
+	// import { onMount } from 'svelte';
+	// let mounted = false;
+	// onMount(() => (mounted = true));
 </script>
 
 <svelte:head>
@@ -28,6 +33,7 @@
 			{#if tour.destination
 				.toLowerCase()
 				.includes(processedSearch) && tour.price > minMax[0] && tour.price < minMax[1]}
+				<!-- <div in:fly={{ y: 200, duration: 400, delay: 500 }}> </div> -->
 				<Card {tour} />
 			{/if}
 		{/each}
@@ -38,7 +44,4 @@
 	<Card {tour} />
 </a> -->
 <style lang="scss">
-	// .searchWrap {
-	// 	@apply relative grid w-11/12 transform grid-cols-1 flex-row items-center gap-3 rounded-xl bg-white p-5 text-2xl shadow-md transition duration-500 after:absolute after:left-0 after:-top-[1px] after:h-2 after:w-full  after:rounded-t-xl hover:scale-105 hover:shadow-lg md:grid-cols-[2fr_1fr] xl:w-1/2;
-	// }
 </style>
