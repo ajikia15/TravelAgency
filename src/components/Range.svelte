@@ -11,8 +11,8 @@
 		curMax = temp;
 	}
 	$: {
-		if (curMin == '') curMin = 0;
-		if (curMax == '') curMax = max;
+		if (curMin.toString() == '') curMin = 0;
+		if (curMax.toString() == '') curMax = max;
 	}
 	// function handleclick() {
 	// 	console.log(curMin);
