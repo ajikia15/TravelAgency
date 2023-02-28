@@ -10,10 +10,10 @@
 	$: processedSearch = searchQuery.toLowerCase();
 	$: minMax = [curMin, curMax];
 
-	// import { fade, fly } from 'svelte/transition';
-	// import { onMount } from 'svelte';
-	// let mounted = false;
-	// onMount(() => (mounted = true));
+	import { fade, fly } from 'svelte/transition';
+	import { onMount } from 'svelte';
+	let show = false;
+	onMount(() => (show = true));
 </script>
 
 <svelte:head>
@@ -29,14 +29,18 @@
 </div>
 <section class="grid min-h-[60vh] w-full grid-cols-[3fr_1fr] place-items-center">
 	<div class="grid w-11/12 grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 " id="tours">
-		{#each tours as tour}
-			{#if tour.destination
-				.toLowerCase()
-				.includes(processedSearch) && tour.price > minMax[0] && tour.price < minMax[1]}
-				<!-- <div in:fly={{ y: 200, duration: 400, delay: 500 }}> </div> -->
-				<Card {tour} />
-			{/if}
-		{/each}
+		{#if show}
+			{#each tours as tour, i}
+				{#if tour.destination
+					.toLowerCase()
+					.includes(processedSearch) && tour.price > minMax[0] && tour.price < minMax[1]}
+					<!-- <div in:fly={{ y: 200, duration: 400, delay: 500 }}> </div> -->
+					<div transition:fade={{ delay: 400 + i * 100 }}>
+						<Card {tour} />
+					</div>
+				{/if}
+			{/each}
+		{/if}
 	</div>
 </section>
 
