@@ -7,13 +7,14 @@
 	const handleClose = () => {
 		showModal = false;
 	};
-
 	import { fade, fly } from 'svelte/transition';
+	// let activityText = tour.activities.join(', ');
+	// let lim = 80;
+	// activityText = activityText.slice(0, lim - 3) + '...';
 </script>
 
 <PicModal show={showModal} on:close={handleClose} bind:tour />
-<!-- {#if mounted} -->
-<!-- in:fly={{ y: 200, duration: 400, delay: 500 }} -->
+
 <div
 	class="flex flex-col overflow-hidden rounded bg-emerald-800 text-white shadow-xl duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-2xl">
 	<div class="group relative overflow-hidden transition-all ">
@@ -58,8 +59,14 @@
 						d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z" /></svg>
 			</div>
 		</div>
-		<p class="roboto truncate text-[0.5rem] text-gray-300 transition-all duration-300 lg:text-xl">
-			{tour.description}
+		<p class="roboto truncated text-sm font-extrabold text-gray-300 transition-all duration-300">
+			{#each tour.activities as activity, i}
+				{#if i != tour.activities.length - 1}
+					{activity},&nbsp;
+				{:else}
+					{activity}...
+				{/if}
+			{/each}
 		</p>
 	</div>
 	<div class=" flex bg-emerald-900">
@@ -94,9 +101,15 @@
 	</div>
 </div>
 
-<!-- {/if} -->
 <style lang="scss">
 	.roboto {
 		font-family: 'Roboto', sans-serif;
+	}
+	.truncated {
+		--max-lines: 2;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: var(--max-lines);
 	}
 </style>
