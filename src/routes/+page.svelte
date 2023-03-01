@@ -27,7 +27,7 @@
 		<Range bind:curMin bind:curMax />
 	</div>
 </div>
-<section class="grid min-h-[60vh] w-full grid-cols-[3fr_1fr] place-items-center">
+<section class="grid min-h-[60vh] w-full place-items-center sm:grid-cols-[3fr_1fr]">
 	<div class="grid w-11/12 grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 " id="tours">
 		{#if show}
 			{#each tours as tour, i}
@@ -35,7 +35,7 @@
 					.toLowerCase()
 					.includes(processedSearch) && tour.price > minMax[0] && tour.price < minMax[1]}
 					<!-- <div in:fly={{ y: 200, duration: 400, delay: 500 }}> </div> -->
-					<div transition:fade={{ delay: 400 + i * 100 }}>
+					<div in:fade={{ delay: 400 + i * 100 }}>
 						<Card {tour} />
 					</div>
 				{/if}
