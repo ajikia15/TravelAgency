@@ -24,7 +24,7 @@
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<div
 				on:click={() => (showModal = true)}
-				class="m-2 cursor-pointer rounded-sm bg-gray-800 bg-opacity-30 p-2 opacity-0 duration-500 group-hover:opacity-100 hover:bg-opacity-60">
+				class="m-2 cursor-pointer rounded-sm bg-gray-800 bg-opacity-30 p-2 text-gray-200 opacity-0 duration-500 group-hover:opacity-100 hover:bg-opacity-60 ">
 				<svg class="" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 16 16"
 					><path
 						fill="currentColor"
@@ -82,8 +82,8 @@
 			</li>
 
 			<li class="flex items-center justify-center">
-				<p>
-					<span class=" text-xs text-gray-300" />{tour.price}$
+				<p class="">
+					{tour.price}$
 				</p>
 			</li>
 			<li class=" relative flex items-center justify-center">

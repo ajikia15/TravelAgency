@@ -14,7 +14,7 @@
 {#if show}
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div
-		class="fixed top-0 left-0 z-10 grid h-full w-full place-items-center bg-black bg-opacity-90 "
+		class="fixed top-0 left-0 z-30 grid h-full w-full place-items-center bg-black bg-opacity-90 "
 		on:click={close}>
 		<div
 			class="relative w-2/3 bg-white"

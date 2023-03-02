@@ -6,7 +6,7 @@
 
 <!-- Tablet++ nav -->
 <nav
-	class="fixed top-0 z-10 hidden w-full place-items-center overflow-hidden bg-white py-4 text-lg text-gray-400 shadow-sm transition-all md:grid">
+	class="fixed top-0 z-20 hidden w-full place-items-center overflow-hidden bg-white py-4 text-lg text-gray-400 shadow-sm transition-all md:grid">
 	<div class="flex w-11/12 flex-row items-center justify-between text-2xl tracking-wide">
 		<ul class="flex flex-row items-center justify-between ">
 			<li>Logo</li>
@@ -60,7 +60,7 @@
 </nav>
 <!-- Mobile Nav -->
 <nav
-	class="fixed bottom-0 left-0 z-10 grid h-[12%] min-h-max w-full place-items-center bg-white text-gray-400 shadow-2xl transition-all md:hidden">
+	class="fixed bottom-0 left-0 z-20 grid h-[12%] min-h-max w-full place-items-center bg-white text-gray-400 shadow-2xl transition-all md:hidden">
 	<ul class="grid w-11/12 grid-cols-4">
 		<li class="relative flex flex-col items-center {path == '/' ? 'text-moss-500' : ''}">
 			<a href="/" class="flex cursor-pointer flex-col items-center">
