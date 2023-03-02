@@ -6,31 +6,31 @@
 
 <!-- Tablet++ nav -->
 <nav
-	class="top-0 z-10 hidden w-full place-items-center overflow-hidden bg-white  py-4 text-lg text-gray-400 shadow-sm transition-all md:grid">
+	class="fixed top-0 z-10 hidden w-full place-items-center overflow-hidden bg-white py-4 text-lg text-gray-400 shadow-sm transition-all md:grid">
 	<div class="flex w-11/12 flex-row items-center justify-between text-2xl tracking-wide">
 		<ul class="flex flex-row items-center justify-between ">
 			<li>Logo</li>
 		</ul>
 		<ul class="flex flex-row items-center justify-between gap-6">
 			<li
-				class="w-min-content relative transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-1 before:w-0 before:bg-gray-600 before:shadow-2xl before:duration-500 hover:text-gray-600 hover:before:left-0 hover:before:w-full {path ==
+				class="w-min-content relative transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-1 before:w-0 before:bg-moss-500 before:shadow-2xl before:duration-500 hover:text-moss-500 hover:before:left-0 hover:before:w-full {path ==
 				'/'
-					? 'text-gray-600 before:w-full'
+					? 'text-moss-500 before:w-full'
 					: ''}">
 				<a href="/" class="">Home</a>
 			</li>
 			<li
-				class="w-min-content relative transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-1 before:w-0 before:bg-gray-600 before:shadow-2xl before:transition-all before:duration-500 hover:text-gray-600 hover:before:left-0 hover:before:w-full {path.includes(
+				class="w-min-content relative transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-1 before:w-0 before:bg-moss-500 before:shadow-2xl before:transition-all before:duration-500 hover:text-moss-500 hover:before:left-0 hover:before:w-full {path.includes(
 					'/tour'
 				)
-					? 'text-gray-600 before:w-full'
+					? 'text-moss-500 before:w-full'
 					: ''}">
 				<a href="/#tours" class="">Tours</a>
 			</li>
 			<li
-				class="w-min-content relative transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-1 before:w-0 before:bg-gray-600 before:shadow-2xl before:transition-all before:duration-500 hover:text-gray-600 hover:before:left-0 hover:before:w-full {path ==
+				class="w-min-content relative transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-1 before:w-0 before:bg-moss-500 before:shadow-2xl before:transition-all before:duration-500 hover:text-moss-500 hover:before:left-0 hover:before:w-full {path ==
 				'/about'
-					? 'text-gray-600 before:w-full'
+					? 'text-moss-500 before:w-full'
 					: ''}">
 				<a href="/about" class="">About Us</a>
 			</li>
@@ -39,7 +39,7 @@
 			<li class="group relative flex flex-row items-center">
 				<button
 					type="button"
-					class="rounded-lg  border-2 border-moss-400 bg-emerald-500 p-2 px-5 tracking-wide text-gray-700 shadow-lg transition-all focus:outline-none focus:ring focus:ring-moss-400 group-hover:border-moss-800 group-hover:bg-moss-800 group-hover:text-white  group-hover:shadow-md group-hover:focus:ring-moss-800">
+					class="rounded-lg  border-2 border-moss-500 bg-transparent p-2 px-5 tracking-wide text-moss-500 shadow-lg transition-all focus:outline-none focus:ring focus:ring-moss-400 group-hover:bg-moss-500 group-hover:text-white group-hover:shadow-md  group-hover:focus:ring-moss-500 hover:text-moss-100">
 					<p>Book</p>
 				</button>
 				<div class="popPhone">
@@ -62,7 +62,7 @@
 <nav
 	class="fixed bottom-0 left-0 z-10 grid h-[12%] min-h-max w-full place-items-center bg-white text-gray-400 shadow-2xl transition-all md:hidden">
 	<ul class="grid w-11/12 grid-cols-4">
-		<li class="relative flex flex-col items-center {path == '/' ? 'text-black' : ''}">
+		<li class="relative flex flex-col items-center {path == '/' ? 'text-moss-500' : ''}">
 			<a href="/" class="flex cursor-pointer flex-col items-center">
 				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"
 					><path
@@ -81,7 +81,7 @@
 				<p class="flex justify-center ">Home</p>
 			</a>
 		</li>
-		<li class="relative flex flex-col items-center {path.includes('/tour') ? 'text-black' : ''}">
+		<li class="relative flex flex-col items-center {path.includes('/tour') ? 'text-moss-500' : ''}">
 			<a href="/#tours" class="flex cursor-pointer flex-col items-center">
 				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
 					><path
@@ -90,7 +90,7 @@
 				<p class="">Tours</p>
 			</a>
 		</li>
-		<li class="relative flex flex-col items-center {path == '/about' ? 'text-black' : ''}">
+		<li class="relative flex flex-col items-center {path == '/about' ? 'text-moss-500' : ''}">
 			<a href="/about" class="flex cursor-pointer flex-col items-center">
 				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
 					><path
@@ -99,7 +99,7 @@
 				<p class="">About Us</p>
 			</a>
 		</li>
-		<li class="relative flex flex-col items-center {path == '/book' ? 'text-black' : ''}">
+		<li class="relative flex flex-col items-center {path == '/book' ? 'text-moss-500' : ''}">
 			<div class="flex cursor-pointer flex-col items-center">
 				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
 					><path
@@ -114,10 +114,10 @@
 <style lang="scss">
 	.popPhone {
 		@apply absolute left-0 top-0 flex h-full w-1/2 cursor-pointer flex-col items-center
-		justify-center text-moss-800 opacity-0 transition-all duration-500 group-hover:-left-1/2 group-hover:rotate-[360deg] group-hover:opacity-100 hover:text-moss-400;
+		justify-center text-moss-500 opacity-0 transition-all duration-500 group-hover:-left-1/2 group-hover:rotate-[360deg] group-hover:opacity-100 hover:text-moss-700;
 	}
 	.popMessenger {
 		@apply absolute right-0 top-0 flex h-full w-1/2 cursor-pointer flex-col items-center
-		justify-center  text-moss-800 opacity-0 transition-all duration-500 group-hover:-right-1/2 group-hover:rotate-[360deg] group-hover:opacity-100 hover:text-moss-400;
+		justify-center  text-moss-500 opacity-0 transition-all duration-500 group-hover:-right-1/2 group-hover:rotate-[360deg] group-hover:opacity-100 hover:text-moss-800;
 	}
 </style>

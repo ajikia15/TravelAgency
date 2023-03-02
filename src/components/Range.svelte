@@ -20,12 +20,12 @@
 </script>
 
 <div class="p-3">
-	<div class="price-input mb-3 text-gray-600">
+	<div class="price-input mb-3 text-moss-500">
 		<div class="field">
-			<span>Min</span>
+			<span class="">Min</span>
 			<input
 				type="tel"
-				class="input-min focus-within:text-black"
+				class="input-min focus-within:text-gray-700"
 				maxlength="3"
 				bind:value={curMin} />
 		</div>
@@ -52,7 +52,7 @@
 <!-- <input type="button" class="h-12 w-12 bg-green-500" value="" on:click={handleclick} /> -->
 <style>
 	:root {
-		--color: #4b5563;
+		--color: #14803c;
 		/* --color: rgb(6 95 70); */
 	}
 	::selection {
@@ -75,7 +75,7 @@
 		margin-left: 12px;
 		border-radius: 5px;
 		text-align: center;
-		border: 1px solid #999;
+		border: 1px solid #13803b;
 		-moz-appearance: textfield;
 	}
 	input[type='tel']::-webkit-outer-spin-button,
@@ -91,7 +91,7 @@
 	.slider {
 		height: 5px;
 		position: relative;
-		background: #e1e9c4;
+		background: #e8eeeb;
 		border-radius: 5px;
 	}
 	.slider .progress {
