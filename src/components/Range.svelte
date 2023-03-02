@@ -20,12 +20,12 @@
 </script>
 
 <div class="p-3">
-	<div class="price-input mb-3 text-gray-400">
+	<div class="price-input mb-3 text-gray-600">
 		<div class="field">
 			<span>Min</span>
 			<input
 				type="tel"
-				class="input-min focus-within:text-gray-700"
+				class="input-min focus-within:text-black"
 				maxlength="3"
 				bind:value={curMin} />
 		</div>
@@ -49,10 +49,10 @@
 	</div>
 </div>
 
-<!-- <input type="button" class="h-12 w-12 bg-green-500" value="nigger" on:click={handleclick} /> -->
+<!-- <input type="button" class="h-12 w-12 bg-green-500" value="" on:click={handleclick} /> -->
 <style>
 	:root {
-		--color: #f59e0b;
+		--color: #4b5563;
 		/* --color: rgb(6 95 70); */
 	}
 	::selection {
@@ -91,7 +91,7 @@
 	.slider {
 		height: 5px;
 		position: relative;
-		background: #ddd;
+		background: #e1e9c4;
 		border-radius: 5px;
 	}
 	.slider .progress {
