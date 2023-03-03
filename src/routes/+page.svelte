@@ -24,10 +24,14 @@
 <Hero />
 <div class=" relative mb-24 grid w-full place-items-center md:mb-20">
 	<div
-		class="-top-15 absolute grid w-11/12 transform grid-cols-1 flex-row items-center gap-3 rounded-xl bg-white p-5 text-2xl shadow-md transition duration-500 after:absolute after:left-0 after:-top-[1px] after:h-2 after:w-full after:rounded-t-xl hover:scale-105 hover:shadow-lg md:grid-cols-[3fr_2fr_1fr] lg:w-3/5">
-		<Search bind:searchQuery />
-		<Range bind:curMin bind:curMax />
-		<Sort />
+		class="-top-15 absolute grid w-11/12 transform grid-cols-1 flex-row items-center gap-3 rounded-xl bg-white p-5 text-2xl shadow-md transition duration-500 after:absolute after:left-0 after:-top-[1px] after:h-2 after:w-full after:rounded-t-xl hover:scale-105 hover:shadow-lg md:grid-cols-[1fr_1fr] lg:w-3/5">
+		<div>
+			<Search bind:searchQuery />
+		</div>
+		<div class="flex flex-row items-center">	
+			<Range bind:curMin bind:curMax />
+			<Sort />
+		</div>
 	</div>
 </div>
 <section class="grid min-h-[max] w-full place-items-center sm:grid-cols-[3fr_1fr]">

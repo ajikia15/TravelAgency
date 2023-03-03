@@ -5,12 +5,12 @@
 <div class="relative">
 	<select
 		bind:value={sort}
-		class="rounded-md border py-2 mr-6 text-center text-xl border-moss-500 text-moss-500 outline-none focus-within:border-moss-500">
+		class="rounded-md border py-2 mr-6 text-center text-xl shadow-inner border-moss-500 text-moss-500 outline-none focus-within:border-moss-500">
 		<option value={0}>Sort</option>
 		<option value={1}>Price Descending</option>
 		<option value={2}>Price Ascending</option>
 	</select>
-	<div class=" pointer-events-none absolute -right-5 top-1 h-full w-1/4 text-gray-400">
+	<div class="pointer-events-none absolute -right-5 top-1 h-full w-1/4 text-gray-300">
 		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"
 			><path
 				fill="currentColor"
