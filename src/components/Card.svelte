@@ -16,7 +16,7 @@
 	class="flex flex-col overflow-hidden rounded-lg border-2  bg-white text-moss-900 shadow-xl duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-2xl">
 	<div class="group relative overflow-hidden transition-all ">
 		<img
-			class="w-full transition-all duration-500 ease-in-out group-hover:scale-105 "
+			class="w-full transition-all duration-500 ease-in-out group-hover:scale-105 aspect-[3/2]"
 			src={tour.src[0]}
 			alt="Sunset in the mountains" />
 		<div
