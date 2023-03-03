@@ -45,7 +45,6 @@
 <section class="min-h-100px grid w-full place-items-center sm:grid-cols-[3fr_1fr]">
 	<div class="grid w-11/12 grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3" id="tours">
 		{#if sortOption == 0}
-			{#if show}
 				{#each tours as tour, i}
 					{#if tour.destination
 						.toLowerCase()
@@ -55,15 +54,12 @@
 						</div>
 					{/if}
 				{/each}
-			{/if}
 		{:else}
-			{#if show}
 				{#each sortedTours as tour, i}
 					<div in:fade={{ delay: i * 100 }} out:fade>
 						<Card {tour} />
 					</div>
 				{/each}
-			{/if}
 		{/if}
 	</div>
 </section>
