@@ -1,11 +1,16 @@
-<script lang="ts">
-	export let searchQuery: string = '';
+<script lang>
+	export let searchQuery = '';
+	function scrollToDiv() {
+		console.log('nigga you gay');
+		searchDiv.scrollIntoView();
+	}
 </script>
 
 <div
-	class="group relative box-border flex items-center p-2 before:pointer-events-none before:absolute before:top-2.5 before:left-10 before:z-10 before:text-moss-500 before:transition-all before:content-['Where\0020To?'] after:absolute after:-bottom-0.5 after:h-0.5 after:w-full after:bg-moss-500 after:transition-all focus-within:before:-top-3 focus-within:before:text-sm focus-within:after:h-1	 {searchQuery.length >
+	id="searchDiv"
+	class="group relative box-border flex items-center p-2 before:pointer-events-none before:absolute before:top-2.5 before:left-10 before:z-10 before:text-moss-500 before:transition-all before:content-['Where\0020To?'] after:absolute after:-bottom-0.5 after:h-0.5 after:w-full after:bg-moss-500 after:transition-all focus-within:before:-top-3 focus-within:before:text-sm focus-within:after:h-1 md:scroll-mt-40	 {searchQuery.length >
 	0
-		? 'before:-top-3 before:text-sm'
+		? 'before:-top-[0.75rem] before:text-sm after:h-1'
 		: ''} ">
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
@@ -22,5 +27,6 @@
 	<input
 		class="relative flex w-full bg-white pl-2 text-moss-500 outline-none"
 		type="text"
-		bind:value={searchQuery} />
+		bind:value={searchQuery}
+		on:click={scrollToDiv} />
 </div>
