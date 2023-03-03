@@ -39,7 +39,7 @@
 			<li class="group relative flex flex-row items-center">
 				<button
 					type="button"
-					class="rounded-lg bg-white border-2 border-moss-500 bg-transparent p-2 px-5 tracking-wide text-moss-500 shadow-lg transition-all focus:outline-none focus:ring focus:ring-moss-400 group-hover:bg-moss-500 group-hover:text-white group-hover:shadow-md  group-hover:focus:ring-moss-500 hover:text-moss-100">
+					class="rounded-lg border-2 border-moss-500 bg-white bg-transparent p-2 px-5 tracking-wide text-moss-500 shadow-lg transition-all focus:outline-none focus:ring focus:ring-moss-400 group-hover:bg-moss-500 group-hover:text-white group-hover:shadow-md  group-hover:focus:ring-moss-500 hover:text-moss-100">
 					<p>Book</p>
 				</button>
 				<div class="popPhone">

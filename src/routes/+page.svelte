@@ -7,15 +7,23 @@
 
 	import { tours } from '../utils/tours.ts';
 	let searchQuery = '';
+	let sortOption = 0;
 	let curMin = 1;
 	let curMax = 1000;
 	$: processedSearch = searchQuery.toLowerCase();
 	$: minMax = [curMin, curMax];
-
 	import { fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	let show = false;
 	onMount(() => (show = true));
+
+	$: sortedTours = (() => {
+		if (sortOption === 1) {
+			return tours.slice().sort((a, b) => a.price - b.price);
+		} else if (sortOption === 2) {
+			return tours.slice().sort((a, b) => b.price - a.price);
+		}
+	})();
 </script>
 
 <svelte:head>
@@ -28,24 +36,34 @@
 		<div>
 			<Search bind:searchQuery />
 		</div>
-		<div class="flex flex-row items-center">	
+		<div class="flex flex-row items-center">
 			<Range bind:curMin bind:curMax />
-			<Sort />
+			<Sort bind:sortOption />
 		</div>
 	</div>
 </div>
-<section class="grid min-h-[max] w-full place-items-center sm:grid-cols-[3fr_1fr]">
+<section class="min-h-100px grid w-full place-items-center sm:grid-cols-[3fr_1fr]">
 	<div class="grid w-11/12 grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3" id="tours">
-		{#if show}
-			{#each tours as tour, i}
-				{#if tour.destination
-					.toLowerCase()
-					.includes(processedSearch) && tour.price > minMax[0] && tour.price < minMax[1]}
+		{#if sortOption == 0}
+			{#if show}
+				{#each tours as tour, i}
+					{#if tour.destination
+						.toLowerCase()
+						.includes(processedSearch) && tour.price > minMax[0] && tour.price < minMax[1]}
+						<div in:fade={{ delay: i * 100 }} out:fade>
+							<Card {tour} />
+						</div>
+					{/if}
+				{/each}
+			{/if}
+		{:else}
+			{#if show}
+				{#each sortedTours as tour, i}
 					<div in:fade={{ delay: i * 100 }} out:fade>
 						<Card {tour} />
 					</div>
-				{/if}
-			{/each}
+				{/each}
+			{/if}
 		{/if}
 	</div>
 </section>
