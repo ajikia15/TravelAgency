@@ -1,7 +1,6 @@
 <script lang>
 	export let searchQuery = '';
 	function scrollToDiv() {
-		console.log('nigga you gay');
 		searchDiv.scrollIntoView();
 	}
 </script>
