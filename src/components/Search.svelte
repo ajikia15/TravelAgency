@@ -24,7 +24,7 @@
 			d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
 	</svg>
 	<div
-		class="relative transition-all before:pointer-events-none before:absolute before:left-2  before:top-0 before:z-10 before:text-moss-500 before:transition-all before:content-['Where\0020To?'] focus-within:before:-top-3.5 focus-within:before:text-sm {searchQuery.length >
+		class="relative transition-all before:pointer-events-none before:absolute before:left-2  before:top-0 before:z-10 before:text-moss-500 before:transition-all before:content-['Where\0020To?'] focus-within:before:-top-3.5 focus-within:before:text-sm w-full {searchQuery.length >
 		0
 			? 'before:-top-[0.75rem] before:text-sm'
 			: ''} ">
