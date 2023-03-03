@@ -1,14 +1,15 @@
 <script>
 	import { tours } from '../utils/tours.ts';
-	export let sort = 0;
+	export let sortOption = 0;
 </script>
+
 <div class="relative">
 	<select
-		bind:value={sort}
-		class="rounded-md border py-2 mr-6 text-center text-xl shadow-inner border-moss-500 text-moss-500 outline-none focus-within:border-moss-500">
+		bind:value={sortOption}
+		class="mr-6 rounded-md border border-moss-500 py-2 text-center text-xl text-moss-500 shadow-inner outline-none focus-within:border-moss-500">
 		<option value={0}>Sort</option>
-		<option value={1}>Price Descending</option>
-		<option value={2}>Price Ascending</option>
+		<option value={1}>Price Ascending</option>
+		<option value={2}>Price Descending</option>
 	</select>
 	<div class="pointer-events-none absolute -right-5 top-1 h-full w-1/4 text-gray-300">
 		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"
