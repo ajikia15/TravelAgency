@@ -6,7 +6,7 @@
 <div class="relative">
 	<select
 		bind:value={sortOption}
-		class="mr-6 rounded-md border border-moss-500 py-2 text-center text-xl text-moss-500 shadow-inner outline-none focus-within:border-moss-500">
+		class="mr-6 rounded-md border border-moss-500 py-2 text-center text-xl text-moss-500 shadow-inner outline-none focus-within:border-moss-500 dark:bg-gray-800 dark:text-green-400">
 		<option value={0}>Sort</option>
 		<option value={1}>Price Ascending</option>
 		<option value={2}>Price Descending</option>

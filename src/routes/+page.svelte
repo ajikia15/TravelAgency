@@ -32,7 +32,7 @@
 <Hero />
 <div class=" relative mb-24 grid w-full place-items-center md:mb-20">
 	<div
-		class="-top-15 absolute grid w-11/12 transform grid-cols-1 flex-row items-center gap-3 rounded-xl bg-white p-5 text-2xl shadow-md transition duration-500 after:absolute after:left-0 after:-top-[1px] after:h-2 after:w-full after:rounded-t-xl hover:scale-105 hover:shadow-lg md:grid-cols-[1fr_1fr] lg:w-3/5">
+		class="-top-15 absolute grid w-11/12 transform grid-cols-1 flex-row items-center gap-3 rounded-xl bg-white p-5 text-2xl shadow-md transition duration-500 after:absolute after:left-0 after:-top-[1px] after:h-2 after:w-full after:rounded-t-xl hover:scale-105 hover:shadow-lg dark:bg-gray-900 md:grid-cols-[1fr_1fr] lg:w-3/5">
 		<div>
 			<Search bind:searchQuery />
 		</div>
@@ -42,24 +42,24 @@
 		</div>
 	</div>
 </div>
-<section class="min-h-100px grid w-full place-items-center sm:grid-cols-[3fr_1fr]">
+<section class="grid min-h-[100px] w-full place-items-center sm:grid-cols-[3fr_1fr] ">
 	<div class="grid w-11/12 grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3" id="tours">
 		{#if sortOption == 0}
-				{#each tours as tour, i}
-					{#if tour.destination
-						.toLowerCase()
-						.includes(processedSearch) && tour.price > minMax[0] && tour.price < minMax[1]}
-						<div in:fade={{ delay: i * 100 }} out:fade>
-							<Card {tour} />
-						</div>
-					{/if}
-				{/each}
-		{:else}
-				{#each sortedTours as tour, i}
+			{#each tours as tour, i}
+				{#if tour.destination
+					.toLowerCase()
+					.includes(processedSearch) && tour.price > minMax[0] && tour.price < minMax[1]}
 					<div in:fade={{ delay: i * 100 }} out:fade>
 						<Card {tour} />
 					</div>
-				{/each}
+				{/if}
+			{/each}
+		{:else}
+			{#each sortedTours as tour, i}
+				<div in:fade={{ delay: i * 100 }} out:fade>
+					<Card {tour} />
+				</div>
+			{/each}
 		{/if}
 	</div>
 </section>

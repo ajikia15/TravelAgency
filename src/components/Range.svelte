@@ -17,12 +17,12 @@
 </script>
 
 <div class="p-1">
-	<form class="price-input mb-3 flex flex-row text-moss-500">
+	<form class="price-input mb-3 flex flex-row text-moss-500 dark:text-green-400">
 		<div class="field flex">
 			<span class="">Min</span>
 			<input
 				type="tel"
-				class="input-min focus-within:text-gray-700"
+				class="input-min focus-within:text-gray-700 dark:bg-gray-800 dark:focus-within:text-white"
 				maxlength="3"
 				bind:value={curMin} />
 		</div>
@@ -31,7 +31,7 @@
 			<input
 				type="tel"
 				maxlength="4"
-				class="input-max group focus-within:text-gray-700"
+				class="input-max group focus-within:text-gray-700 dark:bg-gray-800 dark:focus-within:text-white"
 				style=""
 				bind:value={curMax} />
 			<span class="">Max</span>

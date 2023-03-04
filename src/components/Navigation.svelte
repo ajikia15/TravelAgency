@@ -49,7 +49,7 @@
 			<li>
 				<button
 					on:click={changeTheme}
-					class="flex items-center text-gray-400 transition-all hover:text-moss-500 dark:hover:text-green-400">
+					class="flex items-center text-gray-400 transition-all hover:text-moss-500 dark:text-[#6b7280] dark:hover:text-green-400">
 					{#if !darkTheme}
 						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
 							><path
@@ -160,10 +160,10 @@
 <style lang="scss">
 	.popPhone {
 		@apply absolute left-0 top-0 flex h-full w-1/2 cursor-pointer flex-col items-center
-		justify-center text-moss-500 opacity-0 transition-all duration-500 group-hover:-left-1/2 group-hover:rotate-[360deg] group-hover:opacity-100 hover:text-moss-700;
+		justify-center text-moss-500 opacity-0 transition-all duration-500 group-hover:-left-1/2 group-hover:rotate-[360deg] group-hover:opacity-100 hover:text-moss-700 dark:text-green-400 dark:hover:text-moss-500;
 	}
 	.popMessenger {
 		@apply absolute right-0 top-0 flex h-full w-1/2 cursor-pointer flex-col items-center
-		justify-center  text-moss-500 opacity-0 transition-all duration-500 group-hover:-right-1/2 group-hover:rotate-[360deg] group-hover:opacity-100 hover:text-moss-800;
+		justify-center  text-moss-500 opacity-0 transition-all duration-500 group-hover:-right-1/2 group-hover:rotate-[360deg] group-hover:opacity-100 hover:text-moss-800 dark:text-green-400 dark:hover:text-moss-500;
 	}
 </style>
