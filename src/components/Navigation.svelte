@@ -45,9 +45,30 @@
 				<a href="/about" class="">About Us</a>
 			</li>
 		</ul>
-		<ul class="flex flex-row items-center justify-between">
+		<ul class="flex flex-row items-center justify-between gap-10">
 			<li>
-				<button on:click={changeTheme}>Theme Switch</button>
+				<button
+					on:click={changeTheme}
+					class="flex items-center text-gray-400 transition-all hover:text-moss-500 dark:hover:text-green-400">
+					{#if !darkTheme}
+						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+							><path
+								fill="none"
+								stroke="currentColor"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M12 16a4 4 0 1 0 0-8a4 4 0 0 0 0 8zm0-13v1m0 16v1m-9-9h1m16 0h1m-2.636-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707.707" /></svg>
+					{:else}
+						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+							><path
+								fill="currentColor"
+								d="M9.37 5.51A7.35 7.35 0 0 0 9.1 7.5c0 4.08 3.32 7.4 7.4 7.4c.68 0 1.35-.09 1.99-.27A7.014 7.014 0 0 1 12 19c-3.86 0-7-3.14-7-7c0-2.93 1.81-5.45 4.37-6.49z"
+								opacity=".3" /><path
+								fill="currentColor"
+								d="M9.37 5.51A7.35 7.35 0 0 0 9.1 7.5c0 4.08 3.32 7.4 7.4 7.4c.68 0 1.35-.09 1.99-.27A7.014 7.014 0 0 1 12 19c-3.86 0-7-3.14-7-7c0-2.93 1.81-5.45 4.37-6.49zM12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26a5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z" /></svg>
+					{/if}
+				</button>
 			</li>
 			<li class="group relative flex flex-row items-center">
 				<button
