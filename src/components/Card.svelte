@@ -7,7 +7,7 @@
 	const handleClose = () => {
 		showModal = false;
 	};
-	import { fade, fly } from 'svelte/transition';
+	// gray-900 gray-800 green-400
 </script>
 
 <PicModal show={showModal} on:close={handleClose} bind:tour />
@@ -16,7 +16,7 @@
 	class="flex flex-col overflow-hidden rounded-lg border-2  bg-white text-moss-900 shadow-xl duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-2xl">
 	<div class="group relative overflow-hidden transition-all ">
 		<img
-			class="w-full transition-all duration-500 ease-in-out group-hover:scale-105 aspect-[3/2]"
+			class="aspect-[3/2] w-full transition-all duration-500 ease-in-out group-hover:scale-105"
 			src={tour.src[0]}
 			alt="Sunset in the mountains" />
 		<div

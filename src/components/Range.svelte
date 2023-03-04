@@ -14,14 +14,11 @@
 		if (curMin.toString() == '') curMin = 0;
 		if (curMax.toString() == '') curMax = max;
 	}
-	// function handleclick() {
-	// 	console.log(curMin);
-	// }
 </script>
 
-<div class="p-3">
-	<div class="price-input mb-3 text-moss-500">
-		<div class="field">
+<div class="p-1">
+	<form class="price-input mb-3 flex flex-row text-moss-500">
+		<div class="field flex">
 			<span class="">Min</span>
 			<input
 				type="tel"
@@ -35,11 +32,11 @@
 				type="tel"
 				maxlength="4"
 				class="input-max group focus-within:text-gray-700"
-				style="margin-left:0; margin-right:12px"
+				style=""
 				bind:value={curMax} />
 			<span class="">Max</span>
 		</div>
-	</div>
+	</form>
 	<div class="slider">
 		<div class="progress" style="left:{leftPercent}%; right:{rightPercent}%" />
 	</div>
@@ -49,11 +46,9 @@
 	</div>
 </div>
 
-<!-- <input type="button" class="h-12 w-12 bg-green-500" value="" on:click={handleclick} /> -->
 <style>
 	:root {
 		--color: #14803c;
-		/* --color: rgb(6 95 70); */
 	}
 	::selection {
 		color: #fff;
@@ -66,13 +61,12 @@
 	.price-input .field {
 		display: flex;
 		width: 80%;
-		align-items: center;
 	}
 	.field input {
+		min-width: 50px;
 		width: 100%;
 		height: 100%;
 		outline: none;
-		margin-left: 12px;
 		border-radius: 5px;
 		text-align: center;
 		border: 1px solid #13803b;

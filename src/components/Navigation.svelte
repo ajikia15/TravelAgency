@@ -2,44 +2,57 @@
 	import { page } from '$app/stores';
 	let path;
 	$: path = $page.url.pathname;
+	let darkTheme = false;
+	const changeTheme = () => {
+		if (!darkTheme) {
+			document.documentElement.classList.add('dark');
+		} else {
+			document.documentElement.classList.remove('dark');
+		}
+		darkTheme = !darkTheme;
+	};
 </script>
 
 <!-- Tablet++ nav -->
 <nav
-	class="fixed top-0 z-20 hidden w-full place-items-center overflow-hidden bg-white py-4 text-lg text-gray-400 shadow-sm transition-all md:grid">
-	<div class="flex w-11/12 flex-row items-center justify-between text-2xl tracking-wide">
+	class="fixed top-0 z-20 hidden w-full place-items-center overflow-hidden bg-white py-4 text-lg text-gray-400 shadow-sm transition-all dark:bg-gray-900 dark:text-[#6b7280]  md:grid">
+	<div
+		class="flex w-11/12 flex-row items-center justify-between text-2xl tracking-wide dark:bg-gray-900">
 		<ul class="flex flex-row items-center justify-between ">
 			<li>Logo</li>
 		</ul>
 		<ul class="flex flex-row items-center justify-between gap-6">
 			<li
-				class="w-min-content relative transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-1 before:w-0 before:bg-moss-500 before:shadow-2xl before:duration-500 hover:text-moss-500 hover:before:left-0 hover:before:w-full {path ==
+				class="w-min-content relative transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-1 before:w-0 before:bg-moss-500 before:shadow-2xl before:duration-500 hover:text-moss-500 hover:before:left-0 hover:before:w-full dark:before:bg-green-400 dark:hover:text-green-400 {path ==
 				'/'
-					? 'text-moss-500 before:w-full'
+					? 'text-moss-500 before:w-full dark:text-green-400'
 					: ''}">
 				<a href="/" class="">Home</a>
 			</li>
 			<li
-				class="w-min-content relative transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-1 before:w-0 before:bg-moss-500 before:shadow-2xl before:transition-all before:duration-500 hover:text-moss-500 hover:before:left-0 hover:before:w-full {path.includes(
+				class="w-min-content relative transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-1 before:w-0 before:bg-moss-500 before:shadow-2xl before:transition-all before:duration-500 hover:text-moss-500 hover:before:left-0 hover:before:w-full dark:before:bg-green-400 dark:hover:text-green-400 {path.includes(
 					'/tour'
 				)
-					? 'text-moss-500 before:w-full'
+					? 'text-moss-500 before:w-full dark:text-green-400'
 					: ''}">
 				<a href="/#tours" class="">Tours</a>
 			</li>
 			<li
-				class="w-min-content relative transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-1 before:w-0 before:bg-moss-500 before:shadow-2xl before:transition-all before:duration-500 hover:text-moss-500 hover:before:left-0 hover:before:w-full {path ==
+				class="w-min-content relative transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-1 before:w-0 before:bg-moss-500 before:shadow-2xl before:transition-all before:duration-500 hover:text-moss-500 hover:before:left-0 hover:before:w-full dark:before:bg-green-400 dark:hover:text-green-400 {path ==
 				'/about'
-					? 'text-moss-500 before:w-full'
+					? 'text-moss-500 before:w-full dark:text-green-400'
 					: ''}">
 				<a href="/about" class="">About Us</a>
 			</li>
 		</ul>
 		<ul class="flex flex-row items-center justify-between">
+			<li>
+				<button on:click={changeTheme}>Theme Switch</button>
+			</li>
 			<li class="group relative flex flex-row items-center">
 				<button
 					type="button"
-					class="rounded-lg border-2 border-moss-500 bg-white bg-transparent p-2 px-5 tracking-wide text-moss-500 shadow-lg transition-all focus:outline-none focus:ring focus:ring-moss-400 group-hover:bg-moss-500 group-hover:text-white group-hover:shadow-md  group-hover:focus:ring-moss-500 hover:text-moss-100">
+					class="rounded-lg border-2 border-moss-500 bg-transparent p-2 px-5 tracking-wide text-moss-500 shadow-lg transition-all focus:outline-none focus:ring focus:ring-moss-400 group-hover:bg-moss-500 group-hover:text-white group-hover:shadow-md  group-hover:focus:ring-moss-500 hover:text-moss-100	dark:border-green-400 dark:text-green-400">
 					<p>Book</p>
 				</button>
 				<div class="popPhone">
@@ -60,9 +73,12 @@
 </nav>
 <!-- Mobile Nav -->
 <nav
-	class="fixed bottom-0 left-0 z-20 grid h-[12%] min-h-max w-full place-items-center bg-white text-gray-400 shadow-2xl transition-all md:hidden">
+	class="fixed bottom-0 left-0 z-20 grid h-[12%] min-h-max w-full place-items-center bg-white text-gray-400 shadow-2xl  transition-all dark:bg-gray-900 dark:text-[#6b7280] md:hidden">
 	<ul class="grid w-11/12 grid-cols-4">
-		<li class="relative flex flex-col items-center {path == '/' ? 'text-moss-500' : ''}">
+		<li
+			class="relative flex flex-col items-center {path == '/'
+				? 'text-moss-500 dark:text-green-400'
+				: ''}">
 			<a href="/" class="flex cursor-pointer flex-col items-center">
 				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"
 					><path
@@ -81,7 +97,10 @@
 				<p class="flex justify-center ">Home</p>
 			</a>
 		</li>
-		<li class="relative flex flex-col items-center {path.includes('/tour') ? 'text-moss-500' : ''}">
+		<li
+			class="relative flex flex-col items-center {path.includes('/tour')
+				? 'text-moss-500 dark:text-green-400'
+				: ''}">
 			<a href="/#tours" class="flex cursor-pointer flex-col items-center">
 				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
 					><path
@@ -90,7 +109,10 @@
 				<p class="">Tours</p>
 			</a>
 		</li>
-		<li class="relative flex flex-col items-center {path == '/about' ? 'text-moss-500' : ''}">
+		<li
+			class="relative flex flex-col items-center {path == '/about'
+				? 'text-moss-500 dark:text-green-400'
+				: ''}">
 			<a href="/about" class="flex cursor-pointer flex-col items-center">
 				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
 					><path
@@ -99,7 +121,10 @@
 				<p class="">About Us</p>
 			</a>
 		</li>
-		<li class="relative flex flex-col items-center {path == '/book' ? 'text-moss-500' : ''}">
+		<li
+			class="relative flex flex-col items-center {path == '/book'
+				? 'text-moss-500 dark:text-green-400'
+				: ''}">
 			<div class="flex cursor-pointer flex-col items-center">
 				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
 					><path
