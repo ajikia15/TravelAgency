@@ -3,8 +3,10 @@
 	const dispatch = createEventDispatcher();
 	export let show = true;
 	export let tour;
+	let carouselNum = 0;
 	const close = () => {
 		show = false;
+		carouselNum = 0;
 		dispatch('close');
 	};
 
@@ -17,33 +19,31 @@
 		class="fixed top-0 left-0 z-30 grid h-full w-full place-items-center bg-black bg-opacity-90 "
 		on:click={close}>
 		<div
-			class="relative w-2/3 bg-white"
+			class="relative w-2/3"
 			on:click|stopPropagation
 			in:fly={{ y: 200, duration: 400 }}
-			out:fade>
-			<img alt="" src={tour.src[0]} class="h-full w-full" />
+			out:fade={{ duration: 200 }}>
 			<div
-				class="absolute right-0 -top-12 flex w-full items-center justify-between bg-emerald-900 p-2 text-white">
-				<a class="grid place-items-center" href={`/tour/${tour.id}`}>
-					<button
-						type="button"
-						class="rounded-xl border-2 border-amber-500 p-2 px-3 text-amber-500 transition-all hover:bg-amber-500 hover:text-white"
-						>More Details &rarr;</button>
-				</a>
-				<div class="group grid place-items-center">
-					<button
-						class=" group rounded-md border-2 border-amber-500 group-hover:bg-amber-500"
-						on:click={close}
-						><svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="32"
-							height="32"
-							viewBox="0 0 24 24"
-							class="fill-amber-500 transition-all group-hover:fill-white"
-							><path fill="" d="m9 7l2 5l-2 5h2l1-2.5l1 2.5h2l-2-5l2-5h-2l-1 2.5L11 7H9Z" /></svg>
-					</button>
+				class="flex w-full items-center justify-between rounded-t-lg bg-white  text-moss-500 transition-all dark:bg-gray-800 dark:text-green-400">
+				<div class="flex items-center gap-2 rounded-t-md bg-white p-1.5 px-2 dark:bg-gray-800">
+					<div class="group grid place-items-center">
+						<button
+							class="p group rounded-md border-2 border-gray-300 p-0.5  px-3 text-xl text-gray-300 transition-all hover:border-gray-500 hover:text-gray-500 dark:hover:border-white dark:hover:text-white"
+							on:click={close}
+							>X
+						</button>
+					</div>
+				</div>
+				<div class="flex items-center gap-2 rounded-t-md bg-white p-1.5 px-2 dark:bg-gray-800">
+					<a class="grid place-items-center" href={`/tour/${tour.id}`}>
+						<button
+							type="button"
+							class="rounded-md border-2 border-moss-500 bg-white p-1  px-2 transition-all  hover:bg-moss-500 hover:text-white dark:border-green-400 dark:bg-gray-800"
+							>More Details &rarr;</button>
+					</a>
 				</div>
 			</div>
+			<img alt={tour.destination} src={tour.src[carouselNum]} class="h-full w-full rounded-b-md" />
 		</div>
 	</div>
 {/if}
