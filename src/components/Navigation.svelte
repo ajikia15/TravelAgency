@@ -15,7 +15,7 @@
 
 <!-- Tablet++ nav -->
 <nav
-	class="fixed top-0 z-20 hidden w-full place-items-center overflow-hidden bg-white py-4 text-lg text-gray-400 shadow-sm transition-all dark:bg-gray-900 dark:text-[#6b7280]  md:grid">
+	class="fixed top-0 z-20 hidden w-full place-items-center overflow-hidden bg-white py-4 text-lg text-gray-400 shadow-sm transition-all dark:bg-gray-900 dark:text-gray-300  md:grid">
 	<div
 		class="flex w-11/12 flex-row items-center justify-between text-2xl tracking-wide dark:bg-gray-900">
 		<ul class="flex flex-row items-center justify-between ">
@@ -49,7 +49,7 @@
 			<li>
 				<button
 					on:click={changeTheme}
-					class="flex items-center text-gray-400 transition-all hover:text-moss-500 dark:text-[#6b7280] dark:hover:text-green-400">
+					class="flex items-center text-gray-400 transition-all hover:text-moss-500 dark:text-gray-300  dark:hover:text-green-400">
 					{#if !darkTheme}
 						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
 							><path
@@ -94,7 +94,7 @@
 </nav>
 <!-- Mobile Nav -->
 <nav
-	class="fixed bottom-0 left-0 z-20 grid h-[12%] min-h-max w-full place-items-center bg-white text-gray-400 shadow-2xl  transition-all dark:bg-gray-900 dark:text-[#6b7280] md:hidden">
+	class="fixed bottom-0 left-0 z-20 grid h-[12%] min-h-max w-full place-items-center bg-white text-gray-400 shadow-2xl  transition-all dark:bg-gray-900 dark:text-gray-300  md:hidden">
 	<ul class="grid w-11/12 grid-cols-4">
 		<li
 			class="relative flex flex-col items-center {path == '/'

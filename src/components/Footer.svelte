@@ -1,4 +1,4 @@
-<footer aria-label="Site Footer" class="bg-white">
+<footer aria-label="Site Footer" class="bg-white dark:bg-gray-900">
 	<div class="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
 		<div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
 			<div>
@@ -6,7 +6,7 @@
 					<p>logo</p>
 				</div>
 
-				<p class="mt-4 max-w-xs text-gray-500">Your Comfort Is Our Number One Priority</p>
+				<p class="mt-4 max-w-xs text-gray-500 dark:text-gray-300">Exciting Tours in Georgia</p>
 
 				<ul class="mt-8 flex gap-6">
 					<li>
@@ -14,7 +14,7 @@
 							href="/"
 							rel="noreferrer"
 							target="_blank"
-							class="text-gray-700  transition-all hover:text-moss-500">
+							class="text-gray-700  transition-all hover:text-moss-500 dark:text-gray-400 dark:hover:text-green-400">
 							<span class="sr-only">Facebook</span>
 
 							<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -31,7 +31,7 @@
 							href="/"
 							rel="noreferrer"
 							target="_blank"
-							class="text-gray-700  transition-all hover:text-moss-500">
+							class="text-gray-700  transition-all hover:text-moss-500 dark:text-gray-400 dark:hover:text-green-400">
 							<span class="sr-only">Instagram</span>
 
 							<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -48,7 +48,7 @@
 							href="/"
 							rel="noreferrer"
 							target="_blank"
-							class="text-gray-700  transition-all hover:text-moss-500">
+							class="text-gray-700  transition-all hover:text-moss-500 dark:text-gray-400 dark:hover:text-green-400">
 							<span class="sr-only">GitHub</span>
 
 							<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -69,15 +69,21 @@
 					<nav aria-label="Footer Navigation - Company" class="mt-6">
 						<ul class="space-y-4 text-sm">
 							<li>
-								<a href="#" class="text-gray-700 transition hover:opacity-75"> About </a>
+								<a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-300 ">
+									About
+								</a>
 							</li>
 
 							<li>
-								<a href="#" class="text-gray-700 transition hover:opacity-75"> Meet the Team </a>
+								<a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-300 ">
+									Meet the Team
+								</a>
 							</li>
 
 							<li>
-								<a href="#" class="text-gray-700 transition hover:opacity-75"> Accounts Review </a>
+								<a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-300">
+									Accounts Review
+								</a>
 							</li>
 						</ul>
 					</nav>
@@ -89,15 +95,21 @@
 					<nav aria-label="Footer Navigation - Company" class="mt-6">
 						<ul class="space-y-4 text-sm">
 							<li>
-								<a href="#" class="text-gray-700 transition hover:opacity-75"> Contact </a>
+								<a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-300">
+									Contact
+								</a>
 							</li>
 
 							<li>
-								<a href="#" class="text-gray-700 transition hover:opacity-75"> FAQs </a>
+								<a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-300">
+									FAQs
+								</a>
 							</li>
 
 							<li>
-								<a href="#" class="text-gray-700 transition hover:opacity-75"> Live Chat </a>
+								<a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-300">
+									Live Chat
+								</a>
 							</li>
 						</ul>
 					</nav>
@@ -109,15 +121,21 @@
 					<nav aria-label="Footer Navigation - Legal" class="mt-6">
 						<ul class="space-y-4 text-sm">
 							<li>
-								<a href="#" class="text-gray-700 transition hover:opacity-75"> Accessibility </a>
+								<a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-300">
+									Accessibility
+								</a>
 							</li>
 
 							<li>
-								<a href="#" class="text-gray-700 transition hover:opacity-75"> Returns Policy </a>
+								<a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-300">
+									Returns Policy
+								</a>
 							</li>
 
 							<li>
-								<a href="#" class="text-gray-700 transition hover:opacity-75"> Refund Policy </a>
+								<a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-300">
+									Refund Policy
+								</a>
 							</li>
 						</ul>
 					</nav>

@@ -57,7 +57,7 @@
 			</div>
 		</div>
 		<p
-			class="roboto truncated text-sm font-extrabold text-gray-400 transition-all duration-300 dark:text-[#6b7280]">
+			class="roboto truncated text-sm font-extrabold text-gray-400 transition-all duration-300 dark:text-gray-300 ">
 			{#each tour.activities as activity, i}
 				{#if i != tour.activities.length - 1}
 					{activity},&nbsp;
