@@ -91,7 +91,7 @@
 				<a href={`/tour/${tour.id}`}>
 					<button
 						type="button"
-						class="rounded-md border border-moss-500 bg-transparent p-2 px-3 text-base transition-all hover:bg-moss-500 hover:text-white"
+						class="rounded-md border border-moss-500 bg-transparent p-2 px-3 text-base transition-all hover:bg-moss-500 hover:text-white dark:border-green-400 "
 						>Details</button>
 				</a>
 			</li>
