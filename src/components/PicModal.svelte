@@ -24,7 +24,7 @@
 			in:fly={{ y: 200, duration: 400 }}
 			out:fade={{ duration: 200 }}>
 			<div
-				class="flex w-full items-center justify-between rounded-t-lg bg-white  text-moss-500 transition-all dark:bg-gray-800 dark:text-green-400">
+				class="flex w-full items-center justify-between rounded-t-lg bg-white text-moss-500 transition-all dark:bg-gray-800 dark:text-green-400">
 				<div class="flex items-center gap-2 rounded-t-md bg-white p-1.5 px-2 dark:bg-gray-800">
 					<div class="group grid place-items-center">
 						<button
