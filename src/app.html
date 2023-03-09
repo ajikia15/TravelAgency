@@ -10,6 +10,11 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
 </head>
+<script defer>
+	window.addEventListener('scroll', (e) => {
+		document.body.style.cssText = `--scrollTop: ${this.scrollY}px`;
+	});
+</script>
 
 <body data-sveltekit-preload-data="hover"
 	class="relative scrollbar-thin scrollbar-track-transparent scrollbar-thumb-gray-400 bg-gray-100 dark:bg-gray-800">

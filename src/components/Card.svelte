@@ -7,7 +7,6 @@
 	const handleClose = () => {
 		showModal = false;
 	};
-	// gray-900 gray-800 green-400
 </script>
 
 <PicModal show={showModal} on:close={handleClose} bind:tour />
@@ -57,7 +56,7 @@
 			</div>
 		</div>
 		<p
-			class="roboto truncated text-sm font-extrabold text-gray-400 transition-all duration-300 dark:text-gray-300 ">
+			class="roboto truncated text-sm font-extrabold text-gray-400 transition-all duration-300 dark:text-gray-300">
 			{#each tour.activities as activity, i}
 				{#if i != tour.activities.length - 1}
 					{activity},&nbsp;
