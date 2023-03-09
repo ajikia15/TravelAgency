@@ -4,6 +4,7 @@
 	import Search from '../components/Search.svelte';
 	import Range from '../components/Range.svelte';
 	import Sort from '../components/Sort.svelte';
+	import VehicleInformation from '../components/VehicleInformation.svelte';
 
 	import { tours } from '../utils/tours.ts';
 	let searchQuery = '';
@@ -30,9 +31,10 @@
 	<title>Travel Agency</title>
 </svelte:head>
 <Hero />
-<div class=" relative mb-24 grid w-full place-items-center md:mb-20">
+<VehicleInformation/>
+<div class="relative mb-24 grid w-full place-items-center md:mb-20">
 	<div
-		class="-top-15 absolute grid w-11/12 transform grid-cols-1 flex-row items-center gap-3 rounded-xl bg-white p-5 text-2xl shadow-md transition duration-500 after:absolute after:left-0 after:-top-[1px] after:h-2 after:w-full after:rounded-t-xl hover:scale-105 hover:shadow-lg dark:bg-gray-900 md:grid-cols-[1fr_1fr] lg:w-3/5">
+		class="grid w-11/12 transform grid-cols-1 flex-row items-center gap-3 rounded-xl bg-white p-5 text-2xl shadow-md transition duration-500 after:absolute after:left-0 after:-top-[1px] after:h-2 after:w-full after:rounded-t-xl hover:scale-105 hover:shadow-lg dark:bg-gray-900 md:grid-cols-[1fr_1fr] lg:w-3/5">
 		<div>
 			<Search bind:searchQuery />
 		</div>
