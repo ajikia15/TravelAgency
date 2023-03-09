@@ -2,18 +2,22 @@
 	import { tours } from '../utils/tours.ts';
 </script>
 
-<header class="h-[80vh] w-full">
-	<div class="layers">
+<header class="h-[80vh] w-full relative">
+	<div class="layers ">
 		<div class="layer_header">
 			<div class="layers_caption">
 				<h1>Company Name</h1>
 				<div class="layers_title">
 					<h2>Lorem ipsum dolor sit amet.</h2>
 				</div>
-				<div class="layer layers_base"></div>
-				<div class="layer layers_middle"></div>
-				<div class="layer layers_front"></div>
+				
 			</div>
+		</div>
+		<div class="layer layers_base bg-[url('/landing/layer-base.jpg')] ">
+		</div>
+		<div class="layer layers_middle bg-[url('/landing/layer-middle.jpg')]">
+		</div>
+		<div class="layer layers_front bg-[url('/landing/layer-front.jpg')]">
 		</div>
 	</div>
 </header>
@@ -22,13 +26,19 @@
 	:root {
 		--scrollTop: 0px;
 	}
+	.layers{
+		@apply h-full w-full flex items-center text-center justify-center;
+	}
+	.layer{
+		@apply h-full w-full absolute bg-cover bg-center;
+	}
 	.layers_base{
-		background-image: url("landing/layer-base.jpg");
+		transform:translate3d(0, calc(var(--scrollTop)), 0);
 	}
 	.layers_middle{
-		background-image:url("landing/layer-middle.png");
+		transform:translate3d(0, calc(var(--scrollTop)), 0);
 	}
 	.layers_front{
-		background-image:url("landing/layer-front.png");
+		transform:translate3d(0, calc(var(--scrollTop)), 0);
 	}
 </style>
