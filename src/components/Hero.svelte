@@ -2,48 +2,39 @@
 	import { tours } from '../utils/tours.ts';
 </script>
 
-<header class="relative h-[80vh] w-full overflow-hidden rounded-full">
-	<div class="relative flex h-full w-full items-center justify-center overflow-hidden text-center">
-		<div class="layers_header  flex w-3/5 justify-end text-4xl text-white">
-			<div class="layers_caption">
-				<h1>Company Name</h1>
-				<div class="layers_title">
-					<h2>Lorem ipsum dolor sit amet.</h2>
-				</div>
-			</div>
+<header class="grid w-full grid-cols-1 p-6 md:grid-cols-2 ">
+	<div
+		class="relative box-border aspect-square h-full max-h-[75vh] overflow-hidden rounded-full outline outline-[3px] outline-offset-4 outline-amber-500">
+		<div class="layer layers_base bg-[url('/landing/layer-base.webp')] " />
+		<div class="layer layers_middle bg-[url('/landing/layer-middle.webp')]" />
+		<div class="layer layers_front bg-[url('/landing/layer-front.webp')]" />
+	</div>
+	<div class="grid place-items-center">
+		<div class="text-center">
+			<h1 class="text-8xl">Company name</h1>
+			<h2 class="text-4xl">Lorem ipsum dolor sit amet.</h2>
 		</div>
-		<div class="layer layers_base bg-[url('/landing/layer-base.jpg')] " />
-		<div class="layer layers_middle bg-[url('/landing/layer-middle.png')]" />
-		<div class="layer layers_front  bg-[url('/landing/layer-front.png')]" />
 	</div>
 </header>
 
 <style lang="scss">
 	:root {
 		--scrollTop: 0px;
-		--transition: transform 0.2s cubic-bezier(0.2, 0.5, 0, 1);
 	}
+
 	.layer {
-		@apply absolute z-[2] h-full w-full overflow-hidden bg-cover will-change-transform md:bg-center lg:bg-center;
+		@apply absolute z-[2] h-full w-full bg-cover bg-left will-change-transform;
 	}
 	.layers_base {
-		transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+		transform: translate3d(0, calc(var(--scrollTop) / 1.5), 0);
 		z-index: 0;
-		transition: var(--transition);
 	}
 	.layers_middle {
-		transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
-		transition: var(--transition);
-
+		transform: translate3d(0, calc(var(--scrollTop) / 2.2), 0);
 		z-index: 0;
+
 	}
 	.layers_front {
-		transition: var(--transition);
 		transform: translate3d(0, calc(var(--scrollTop) / 5), 0);
-	}
-	.layers_header {
-		transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
-		z-index: 2;
-		transition: var(--transition);
 	}
 </style>

@@ -30,7 +30,9 @@
 <svelte:head>
 	<title>Travel Agency</title>
 </svelte:head>
+<div class="overflow-hidden">
 <Hero />
+</div>
 <VehicleInformation/>
 <div class="relative mb-24 grid w-full place-items-center md:mb-20">
 	<div
