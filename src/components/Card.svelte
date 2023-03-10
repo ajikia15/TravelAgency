@@ -13,13 +13,13 @@
 
 <div
 	class="flex flex-col overflow-hidden rounded-lg border bg-white text-moss-900 shadow-xl duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-2xl dark:border-gray-900 dark:bg-slate-800 ">
-	<div class="group relative overflow-hidden transition-all ">
+	<div class="group relative overflow-hidden transition-all">
 		<img
 			class="aspect-[3/2] w-full transition-all duration-500 ease-in-out group-hover:scale-105"
 			src={tour.src[0]}
-			alt="Sunset in the mountains" />
+			alt={tour.description} />
 		<div
-			class="absolute top-0 left-0 z-10 flex h-full w-full items-start justify-end bg-gray-700 bg-opacity-0 duration-500 group-hover:bg-opacity-50">
+			class="absolute top-0 left-0 z-10 flex h-full w-full items-start justify-end bg-gray-700 bg-opacity-0 duration-500 group-hover:bg-opacity-30">
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<div
 				on:click={() => (showModal = true)}

@@ -1,6 +1,6 @@
 <header class="grid w-full grid-cols-1 bg-white p-7 md:grid-cols-2">
 	<div
-		class="relative box-border aspect-square h-full max-h-[80vh] overflow-hidden rounded-full outline outline-[3px] outline-offset-4 outline-amber-500">
+		class="relative box-border aspect-square h-full max-h-[80vh] overflow-hidden rounded-full outline outline-[3px] outline-offset-4 outline-amber-500 hover:outline-offset-[10px] transition-all will-change-transform">
 		<div class="layer layers_base z-0 bg-[url('/landing/layer-base.webp')]" />
 		<div class="layer layers_middle z-0 bg-[url('/landing/layer-middle.webp')]" />
 		<div class="layer layers_front bg-[url('/landing/layer-front.webp')]" />
