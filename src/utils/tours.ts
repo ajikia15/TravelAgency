@@ -122,7 +122,7 @@ export const tours = [
 		'Discover the highest permanently inhabited village in Europe!',
 		['Hiking', 'Horse riding', 'Cultural Tour', 'Sightseeing']
 	),
-	new Tour(9, 'Tsalka', 110, true, 6, 14, ['tsalka-1.jpg'], 'Where Mountains Meet the lake', [
+	new Tour(9, 'Tsalka', 110, true, 6, 14, ['tsalka-1.webp'], 'Hidden Gem Of Europe', [
 		'Hiking',
 		'Horse riding',
 		'Cultural Tour',
