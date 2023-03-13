@@ -19,7 +19,7 @@
 			src={tour.src[0]}
 			alt={tour.description} />
 		<div
-			class="absolute top-0 left-0 z-10 flex h-full w-full items-start justify-end bg-gray-700 bg-opacity-0 duration-500 group-hover:bg-opacity-30">
+			class="absolute top-0 left-0 z-10 flex h-full w-full items-start justify-end bg-gray-700 bg-opacity-0 duration-500 group-hover:bg-opacity-20">
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<div
 				on:click={() => (showModal = true)}

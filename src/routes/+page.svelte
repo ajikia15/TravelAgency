@@ -43,7 +43,7 @@
 		</div>
 	</div>
 </div>
-<section class="grid min-h-[100px] w-full place-items-center sm:grid-cols-[3fr_1fr] ">
+<section class="grid min-h-[100px] w-full place-items-center sm:grid-cols-[3fr_1fr] mb-5">
 	<div class="grid w-11/12 grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3" id="tours">
 		{#if sortOption == 0}
 			{#each tours as tour, i}

@@ -9,7 +9,7 @@
 	<title>Travel Agency</title>
 </svelte:head>
 <Navigation />
-<div class="mb-10 lg:mt-20">
+<div class="lg:mt-20">
 	<slot />
 </div>
 <Footer />
