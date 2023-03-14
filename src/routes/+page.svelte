@@ -31,7 +31,7 @@
 	<title>Travel Agency</title>
 </svelte:head>
 <Hero />
-<div class="relative grid w-full place-items-center my-5">
+<div class="relative my-5 grid w-full place-items-center">
 	<div
 		class="grid w-11/12 transform grid-cols-1 flex-row items-center gap-3 rounded-xl bg-white p-5 text-2xl shadow-md transition duration-500 after:absolute after:left-0 after:-top-[1px] after:h-2 after:w-full after:rounded-t-xl hover:scale-105 hover:shadow-lg dark:bg-gray-900 md:grid-cols-[1fr_1fr] lg:w-3/5">
 		<div>
@@ -43,7 +43,7 @@
 		</div>
 	</div>
 </div>
-<section class="grid min-h-[100px] w-full place-items-center sm:grid-cols-[3fr_1fr] mb-5">
+<section class="mb-5 grid min-h-[100px] w-full place-items-center sm:grid-cols-[3fr_1fr]">
 	<div class="grid w-11/12 grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3" id="tours">
 		{#if sortOption == 0}
 			{#each tours as tour, i}
@@ -64,7 +64,7 @@
 		{/if}
 	</div>
 </section>
-<VehicleInformation/>
+<VehicleInformation />
 
 <style lang="scss">
 </style>

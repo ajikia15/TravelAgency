@@ -15,7 +15,7 @@
 
 <!-- Tablet++ nav -->
 <nav
-	class="fixed top-0 z-20 hidden w-full place-items-center overflow-hidden bg-white py-4 text-lg text-gray-400 shadow-sm transition-all dark:bg-gray-900 dark:text-gray-300  md:grid">
+	class="fixed top-0 z-20 hidden w-full place-items-center overflow-hidden bg-white py-4 text-lg text-gray-400 shadow-sm transition-all dark:bg-gray-900 dark:text-gray-300 md:grid">
 	<div
 		class="flex w-11/12 flex-row items-center justify-between text-2xl tracking-wide dark:bg-gray-900">
 		<ul class="flex flex-row items-center justify-between ">

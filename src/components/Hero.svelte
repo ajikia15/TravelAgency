@@ -1,5 +1,5 @@
 <header class="grid w-full place-items-center h-screen bg-white">
-	<div class="grid w-11/12 grid-cols-1 md:grid-cols-2 ">
+	<div class="grid w-11/12 grid-cols-1 md:grid-cols-[6fr_7fr] ">
 		<div class="space-y-6">
 			<h1 class="text-6xl font-bold">Unveil the hidden gem of Georgia!</h1>
 			<h2 class="text-xl">A land of mesmerizing landscapes and rich culture. 
