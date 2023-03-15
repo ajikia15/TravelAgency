@@ -16,7 +16,7 @@
 	<div class="group relative overflow-hidden transition-all">
 		<img
 			class="aspect-[3/2] w-full transition-all duration-500 ease-in-out group-hover:scale-105"
-			src={tour.src[0]}
+			src={tour.src[0]} loading="lazy"
 			alt={tour.description} />
 		<div
 			class="absolute top-0 left-0 z-10 flex h-full w-full items-start justify-end bg-gray-700 bg-opacity-0 duration-500 group-hover:bg-opacity-20">

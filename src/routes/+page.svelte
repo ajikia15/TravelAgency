@@ -43,8 +43,8 @@
 		</div>
 	</div>
 </div>
-<section class="mb-5 grid min-h-[100px] w-full place-items-center sm:grid-cols-[3fr_1fr]">
-	<div class="grid w-11/12 grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3" id="tours">
+<section class="mb-5 grid min-h-[100px] w-full place-items-center">
+	<div class="grid w-11/12 grid-cols-1 gap-10 md:grid-cols-3 xl:grid-cols-4" id="tours">
 		{#if sortOption == 0}
 			{#each tours as tour, i}
 				{#if tour.destination

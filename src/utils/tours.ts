@@ -30,7 +30,7 @@ export const tours = [
 		true,
 		2,
 		5,
-		['tbilisi-1.jpg', 'tbilisi-2.jpg', 'tbilisi-3.jpg'],
+		['tbilisi-1.webp', 'tbilisi-2.webp', 'tbilisi-3.webp'],
 		'Discover the vibrant culture and history of Tbilisi!',
 		['City Tour', 'Wine Tasting', 'Cable Car Ride']
 	),
@@ -41,7 +41,7 @@ export const tours = [
 		true,
 		4,
 		8,
-		['kazbegi-1.jpg', 'kazbegi-2.jpg', 'kazbegi-3.jpg'],
+		['kazbegi-1.webp', 'kazbegi-2.webp', 'kazbegi-3.webp'],
 		'Explore the beautiful landscapes of Kazbegi!',
 		['Hiking', 'Horse riding', 'Cultural Tour', 'Sightseeing']
 	),
@@ -52,7 +52,7 @@ export const tours = [
 		true,
 		6,
 		12,
-		['svaneti-1.jpg', 'svaneti-2.jpg', 'svaneti-3.jpg'],
+		['svaneti-1.webp', 'svaneti-2.webp', 'svaneti-3.webp'],
 		'Discover the remote villages and stunning peaks of Svaneti!',
 		['Hiking', 'Horse riding', 'Cultural Tour', 'Sightseeing']
 	),
@@ -63,7 +63,7 @@ export const tours = [
 		true,
 		2,
 		6,
-		['batumi-1.jpg', 'batumi-2.jpg', 'batumi-3.jpg'],
+		['batumi-1.webp', 'batumi-2.webp', 'batumi-3.webp'],
 		'Enjoy the sun, sea, and sand in Batumi!',
 		['Hiking', 'Horse riding', 'Cultural Tour', 'Sightseeing']
 	),
@@ -74,7 +74,7 @@ export const tours = [
 		true,
 		2,
 		4,
-		['kutaisi-1.jpg', 'kutaisi-2.jpg', 'kutaisi-3.jpg'],
+		['kutaisi-1.webp', 'kutaisi-2.webp', 'kutaisi-3.webp'],
 		'Discover the ancient history and architecture of Kutaisi!',
 		['Hiking', 'Horse riding', 'Cultural Tour', 'Sightseeing']
 	),
@@ -85,7 +85,7 @@ export const tours = [
 		true,
 		4,
 		10,
-		['vardzia-1.jpg', 'vardzia-2.jpg', 'vardzia-3.jpg'],
+		['vardzia-1.webp', 'vardzia-2.webp', 'vardzia-3.webp'],
 		'Explore the stunning cave city of Vardzia!',
 		['Hiking', 'Horse riding', 'Cultural Tour', 'Sightseeing']
 	),
@@ -96,7 +96,7 @@ export const tours = [
 		true,
 		4,
 		7,
-		['gudauri-1.jpg', 'gudauri-2.jpg', 'gudauri-3.jpg'],
+		['gudauri-1.webp', 'gudauri-2.webp', 'gudauri-3.webp'],
 		"Hit the slopes at Georgia's top ski resort!",
 		['Hiking', 'Horse riding', 'Cultural Tour', 'Sightseeing']
 	),
@@ -107,7 +107,7 @@ export const tours = [
 		true,
 		2,
 		3,
-		['borjomi-1.jpg', 'borjomi-2.jpg', 'borjomi-3.jpg'],
+		['borjomi-1.webp', 'borjomi-2.webp', 'borjomi-3.webp'],
 		'Relax and unwind in the picturesque town of Borjomi!',
 		['Hiking', 'Horse riding', 'Cultural Tour', 'Sightseeing']
 	),
@@ -118,7 +118,7 @@ export const tours = [
 		true,
 		6,
 		14,
-		['ushguli-1.jpg', 'ushguli-2.jpg', 'ushguli-3.jpg'],
+		['ushguli-1.webp', 'ushguli-2.webp', 'ushguli-3.webp'],
 		'Discover the highest permanently inhabited village in Europe!',
 		['Hiking', 'Horse riding', 'Cultural Tour', 'Sightseeing']
 	),

@@ -11,11 +11,16 @@
 		}
 		darkTheme = !darkTheme;
 	};
+	let y;
 </script>
 
+<svelte:window bind:scrollY={y} />
 <!-- Tablet++ nav -->
 <nav
-	class="fixed top-0 z-20 hidden w-full place-items-center overflow-hidden bg-white py-4 text-lg text-gray-400 shadow-sm transition-all dark:bg-gray-900 dark:text-gray-300 md:grid">
+	class="fixed top-0 z-20 hidden w-full place-items-center overflow-hidden bg-white py-4 text-lg text-gray-400  transition-all dark:bg-gray-900 dark:text-gray-300 md:grid {y >
+	1
+		? 'shadow-sm'
+		: ''}">
 	<div
 		class="flex w-11/12 flex-row items-center justify-between text-2xl tracking-wide dark:bg-gray-900">
 		<ul class="flex flex-row items-center justify-between ">
@@ -73,7 +78,7 @@
 			<li class="group relative flex flex-row items-center">
 				<button
 					type="button"
-					class="rounded-lg border-2 border-moss-500 bg-transparent p-2 px-5 tracking-wide text-moss-500 shadow-lg transition-all focus:outline-none focus:ring focus:ring-moss-400 group-hover:bg-moss-500 group-hover:text-white group-hover:shadow-md  group-hover:focus:ring-moss-500 hover:text-moss-100	dark:border-green-400 dark:text-green-400">
+					class="rounded-lg border-2 border-moss-500 bg-transparent p-2 px-5 tracking-wide text-moss-500 shadow-lg transition-all focus:outline-none focus:ring focus:ring-moss-400 group-hover:bg-moss-500 group-hover:text-white group-hover:shadow-md hover:text-moss-100	dark:border-green-400 dark:text-green-400">
 					<p>Book</p>
 				</button>
 				<div class="popPhone">
