@@ -17,9 +17,9 @@
 <svelte:window bind:scrollY={y} />
 <!-- Tablet++ nav -->
 <nav
-	class="fixed top-0 z-20 hidden w-full place-items-center overflow-hidden bg-white py-4 text-lg text-gray-400  transition-all dark:bg-gray-900 dark:text-gray-300 md:grid {y >
+	class="fixed top-0 z-20 hidden w-full place-items-center overflow-hidden bg-transparent py-4 text-lg text-gray-400  transition-all dark:bg-gray-900 dark:text-gray-300 md:grid {y >
 	1
-		? 'shadow-sm'
+		? 'shadow-sm bg-white'
 		: ''}">
 	<div
 		class="flex w-11/12 flex-row items-center justify-between text-2xl tracking-wide dark:bg-gray-900">
