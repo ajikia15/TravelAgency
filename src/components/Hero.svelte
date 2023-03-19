@@ -1,11 +1,17 @@
 <header class="relative grid min-h-screen w-full  place-items-center bg-white dark:bg-gray-900">
-	<img src="/landing/layered-waves-haikei-light.svg" class="absolute bottom-0 w-full z-0 pointer-events-none dark:hidden" alt="">
-	<img src="/landing/layered-waves-haikei-dark.svg" class="absolute bottom-0 w-full z-0 pointer-events-none hidden dark:block" alt="">
-	<div class="grid w-11/12 grid-cols-1 md:grid-cols-[5fr_7fr] z-10">
+	<img
+		src="/landing/layered-waves-haikei-light.svg"
+		class="pointer-events-none absolute bottom-0 z-0 w-full dark:hidden"
+		alt="" />
+	<img
+		src="/landing/layered-waves-haikei-dark.svg"
+		class="pointer-events-none absolute bottom-0 z-0 hidden w-full dark:block"
+		alt="" />
+	<div class="z-10 grid w-11/12 grid-cols-1 md:grid-cols-[5fr_7fr]">
 		<div class="flex flex-col justify-center space-y-6">
 			<h1 class="text-6xl font-semibold">Unveil the hidden gem of Georgia!</h1>
-			<h2 class="text-xl text-gray-500">
-				Travel to the land of mesmerizing landscapes and rich culture. Book your adventure today and
+			<h2 class="roboto text-xl text-gray-500">
+				Travel to the land of mesmerizing sights and rich culture. Book your adventure today and
 				discover the best of Georgia's food, music and hospitality. You can view the best deals and
 				insider tips, even arrange your own custom tours and for traveling to Georgia.
 			</h2>
@@ -43,4 +49,7 @@
 
 <!-- font-family: 'IBM Plex Serif', serif; -->
 <style lang="scss">
+	.roboto {
+		font-family: 'Roboto', sans-serif;
+	}
 </style>
