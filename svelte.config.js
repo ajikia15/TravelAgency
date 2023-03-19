@@ -19,6 +19,7 @@ const config = {
 				toggleButtonPos: 'top-right',
 			},
 		},
+
 	}
 };
 
