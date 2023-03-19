@@ -28,7 +28,7 @@
 				<div class="flex items-center gap-2 rounded-t-md bg-white p-1.5 px-2 dark:bg-gray-800">
 					<div class="group grid place-items-center">
 						<button
-							class="p group rounded-md border-2 border-gray-300 p-0.5  px-3 text-xl text-gray-300 transition-all hover:border-gray-500 hover:text-gray-500 dark:hover:border-white dark:hover:text-white"
+							class="p group rounded border-2 border-gray-300 p-0.5  px-3 text-xl text-gray-300 transition-all hover:border-gray-500 hover:text-gray-500 dark:hover:border-white dark:hover:text-white"
 							on:click={close}
 							>X
 						</button>
@@ -38,7 +38,7 @@
 					<a class="grid place-items-center" href={`/tour/${tour.id}`}>
 						<button
 							type="button"
-							class="rounded-md border-2 border-moss-500 bg-white p-1  px-2 transition-all  hover:bg-moss-500 hover:text-white dark:border-green-400 dark:bg-gray-800"
+							class="rounded border-2 border-moss-500 bg-white p-1  px-2 transition-all  hover:bg-moss-500 hover:text-white dark:border-green-400 dark:bg-gray-800"
 							>More Details &rarr;</button>
 					</a>
 				</div>

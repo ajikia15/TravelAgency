@@ -36,8 +36,9 @@
 	<div class="group/text px-3 py-4 text-moss-500 shadow-2xl dark:text-green-400">
 		<div class="flex items-center justify-between ">
 			<h1
-				class="text-3xl transition-all duration-500 ease-in-out group-hover/text:text-amber-400 cursor-default"
-				>{tour.destination}</h1>
+				class="cursor-default text-3xl transition-all duration-500 ease-in-out group-hover/text:text-amber-400">
+				{tour.destination}
+			</h1>
 			<div class="flex items-center justify-around">
 				<p class="text-xl">
 					{tour.peopleCount}
@@ -89,7 +90,7 @@
 				<a href={`/tour/${tour.id}`}>
 					<button
 						type="button"
-						class="rounded-md border border-moss-500 bg-transparent p-2 px-3 text-base transition-all hover:bg-moss-500 hover:text-white dark:border-green-400 "
+						class="rounded border border-moss-500 bg-transparent p-2 px-3 text-base transition-all hover:bg-moss-500 hover:text-white dark:border-green-400 "
 						>Details</button>
 				</a>
 			</li>
@@ -98,7 +99,6 @@
 </div>
 
 <style lang="scss">
-
 	.truncated {
 		--max-lines: 2;
 		overflow: hidden;
