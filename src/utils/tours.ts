@@ -35,7 +35,7 @@ export default class Tour {
 		['tbilisi-1.webp', 'tbilisi-2.webp', 'tbilisi-3.webp'],	
 		'Discover the vibrant culture and history of Tbilisi!',
 		['City Tour', 'Wine Tasting', 'Cable Car Ride'],
-		'paragraph'),
+		'Welcome to Tbilisi, the capital city of Georgia, is a hidden gem waiting to be explored by travelers. This charming city boasts a mix of ancient and modern architecture, with narrow streets, cozy cafes, and colorful balconies. The old town, with its winding alleys and historic buildings, is a must-visit for those interested in culture and history. The sulfur baths, located in the heart of the city, offer a unique and rejuvenating experience. Visitors can also enjoy the stunning panoramic views of the city from the Narikala Fortress, or indulge in Georgian cuisine at the local restaurants. Tbilisi is a perfect destination for those looking for a unique blend of history, culture, and relaxation.'),
 	new Tour(
 		1,
 		'Kazbegi',

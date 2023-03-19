@@ -5,9 +5,12 @@
 	// <h1>page.params.id === {$page.params.id}</h1>
 	const tour = tours.find((tour) => tour.id === i);
 	function nextSlide() {
-		if (imgId < tours[i].src.length-1) 
-		imgId++;
+		if (imgId < tours[i].src.length - 1) imgId++;
 		else imgId = 0;
+	}
+	function previousSlide() {
+		if (imgId > 0) imgId--;
+		else imgId = tours[i].src.length - 1;
 	}
 	$: imgId = 0;
 </script>
@@ -26,7 +29,7 @@
 			<div class="py-6">
 				<h1 class="text-4xl">{tours[i].description}</h1>
 				<h4 class="text-gray-400">{tours[i].destination}</h4>
-				<p>{tours[i].paragraph}</p>
+				<p class="roboto">{tours[i].paragraph}</p>
 			</div>
 		</div>
 		<div class="relative">
@@ -40,7 +43,7 @@
 					<li>Available Vehicles:</li>
 					<li>
 						<button
-							on:click={nextSlide}
+							on:click={previousSlide}
 							type="button"
 							class="w-full rounded-md bg-moss-500 p-2 text-center text-moss-100 hover:opacity-75"
 							>Book</button>

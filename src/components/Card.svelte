@@ -98,9 +98,7 @@
 </div>
 
 <style lang="scss">
-	.roboto {
-		font-family: 'Roboto', sans-serif;
-	}
+
 	.truncated {
 		--max-lines: 2;
 		overflow: hidden;
