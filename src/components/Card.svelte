@@ -16,7 +16,8 @@
 	<div class="group relative overflow-hidden transition-all">
 		<img
 			class="aspect-[3/2] w-full transition-all duration-500 ease-in-out group-hover:scale-105"
-			src={tour.src[0]} loading="lazy"
+			src={tour.src[0]}
+			loading="lazy"
 			alt={tour.description} />
 		<div
 			class="absolute top-0 left-0 z-10 flex h-full w-full items-start justify-end bg-gray-700 bg-opacity-0 duration-500 group-hover:bg-opacity-20">
@@ -34,11 +35,9 @@
 	</div>
 	<div class="group/text px-3 py-4 text-moss-500 shadow-2xl dark:text-green-400">
 		<div class="flex items-center justify-between ">
-			<a
-				href="https://en.wikipedia.org/wiki/Svaneti"
-				target="_blank"
-				class="text-3xl transition-all duration-500 ease-in-out group-hover/text:text-amber-400"
-				rel="noreferrer">{tour.destination}</a>
+			<h1
+				class="text-3xl transition-all duration-500 ease-in-out group-hover/text:text-amber-400 cursor-default"
+				>{tour.destination}</h1>
 			<div class="flex items-center justify-around">
 				<p class="text-xl">
 					{tour.peopleCount}
