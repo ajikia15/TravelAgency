@@ -32,25 +32,35 @@
 				<div class="relative w-full">
 					<!-- svelte-ignore a11y-click-events-have-key-events -->
 					<div
-						class="absolute left-0 top-0 grid h-full min-w-[10%] place-items-center text-white"
+						class="absolute left-0 top-0 grid h-full min-w-[13%] place-items-center bg-gradient-to-r from-gray-800 text-white opacity-30 transition-all hover:opacity-80"
 						on:click={previousSlide}>
-						<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+						<svg
+							class="cursor-pointer"
+							xmlns="http://www.w3.org/2000/svg"
+							width="48"
+							height="48"
+							viewBox="0 0 24 24"
 							><path
 								fill="currentColor"
 								d="M15.41 7.41L14 6l-6 6l6 6l1.41-1.41L10.83 12l4.58-4.59z" /></svg>
 					</div>
 					<img
-						class="aspect-[3/2] w-full rounded"
+						class="aspect-[3/2] w-full cursor-pointer rounded"
 						src={'../../' + tours[i].src[imgId]}
 						alt={'Sights of ' + tours[i].destination} />
 					<!-- svelte-ignore a11y-click-events-have-key-events -->
 					<div
-						class="absolute right-0 top-0 grid h-full min-w-[10%] place-items-center text-white"
+						class="absolute right-0 top-0 grid h-full min-w-[13%] place-items-center bg-gradient-to-l from-gray-800 text-white opacity-30 transition-all hover:opacity-80"
 						on:click={nextSlide}>
-						<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+						<svg
+							class="cursor-pointer"
+							xmlns="http://www.w3.org/2000/svg"
+							width="48"
+							height="48"
+							viewBox="0 0 24 24"
 							><path
 								fill="currentColor"
-								d="M15.41 7.41L14 6l-6 6l6 6l1.41-1.41L10.83 12l4.58-4.59z" /></svg>
+								d="M10 6L8.59 7.41L13.17 12l-4.58 4.59L10 18l6-6l-6-6z" /></svg>
 					</div>
 				</div>
 				<div
@@ -59,10 +69,10 @@
 						: ''}">
 					{#each tours[i].src as t, z}
 						<!-- svelte-ignore a11y-click-events-have-key-events -->
-						<div class={imgId === z ? 'brightness-75' : ''}>
+						<div class={imgId === z ? 'rounded outline outline-2 outline-moss-500 ' : ''}>
 							<img
 								on:click={() => setSlide(z)}
-								class="aspect-[3/2] rounded "
+								class="aspect-[3/2] rounded {imgId === z ? 'brightness-[.85]' : ''}"
 								src={'../../' + tours[i].src[z]}
 								alt="" />
 						</div>
