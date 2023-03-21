@@ -7,6 +7,7 @@
 	const handleClose = () => {
 		showModal = false;
 	};
+	import { base } from '$app/paths';
 </script>
 
 <PicModal show={showModal} on:close={handleClose} bind:tour />
@@ -16,7 +17,7 @@
 	<div class="group relative overflow-hidden transition-all">
 		<img
 			class="aspect-[3/2] w-full transition-all duration-500 ease-in-out group-hover:scale-105"
-			src={tour.src[0]}
+			src="/{tour.src[0]}"
 			loading="lazy"
 			alt={tour.description} />
 		<div
@@ -87,7 +88,7 @@
 				</p>
 			</li>
 			<li class=" relative flex items-center justify-center">
-				<a href={`/tour/${tour.id}`}>
+				<a href="/tour/{tour.id}">
 					<button
 						type="button"
 						class="rounded border border-moss-500 bg-transparent p-2 px-3 text-base transition-all hover:bg-moss-500 hover:text-white dark:border-green-400 "

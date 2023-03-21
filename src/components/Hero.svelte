@@ -1,3 +1,7 @@
+<script>
+	import { base } from '$app/paths';
+</script>
+
 <header class="relative grid min-h-screen w-full  place-items-center bg-white dark:bg-gray-900">
 	<img
 		src="/landing/layered-waves-haikei-light.svg"
@@ -9,7 +13,7 @@
 		alt="" />
 	<div class="z-10 grid w-11/12 grid-cols-1 md:grid-cols-[5fr_7fr]">
 		<div class="flex flex-col justify-center space-y-6">
-			<h1 class="text-6xl font-semibold">Unveil the hidden gem of Georgia!</h1>
+			<h1 class="text-6xl font-semibold dark:text-white">Unveil the hidden gem of Georgia!</h1>
 			<h2 class="roboto text-xl text-gray-500">
 				Travel to the land of mesmerizing sights and rich culture. Book your adventure today and
 				discover the best of Georgia's food, music and hospitality. You can view the best deals and
@@ -25,7 +29,7 @@
 					type="button"
 					class="focus-ring group rounded-lg border-2 border-transparent bg-transparent p-2 px-5  tracking-wide transition-all focus:outline-none	">
 					<p
-						class=" text-moss-500 opacity-70 transition-all focus:outline-none group-hover:opacity-100 group-focus:underline">
+						class=" text-moss-500 opacity-100 transition-all focus:outline-none group-hover:opacity-70 group-focus:underline">
 						How It Works
 					</p>
 				</button>

@@ -35,7 +35,7 @@ export default class Tour {
 		['tbilisi-1.webp', 'tbilisi-2.webp', 'tbilisi-3.webp'],	
 		'Discover the vibrant culture and history of Tbilisi!',
 		['City Tour', 'Wine Tasting', 'Cable Car Ride'],
-		'Welcome to Tbilisi, the capital city of Georgia, is a hidden gem waiting to be explored by travelers. This charming city boasts a mix of ancient and modern architecture, with narrow streets, cozy cafes, and colorful balconies. The old town, with its winding alleys and historic buildings, is a must-visit for those interested in culture and history. The sulfur baths, located in the heart of the city, offer a unique and rejuvenating experience. Visitors can also enjoy the stunning panoramic views of the city from the Narikala Fortress, or indulge in Georgian cuisine at the local restaurants. Tbilisi is a perfect destination for those looking for a unique blend of history, culture, and relaxation.'),
+		`Welcome to Tbilisi, the capital city of Georgia, is a hidden gem waiting to be explored by travelers. This charming city boasts a mix of ancient and modern architecture, with narrow streets, cozy cafes, and colorful balconies. The old town, with its winding alleys and historic buildings, is a must-visit for those interested in culture and history. The sulfur baths, located in the heart of the city, offer a unique and rejuvenating experience. Visitors can also enjoy the stunning panoramic views of the city from the Narikala Fortress, or indulge in Georgian cuisine at the local restaurants. Tbilisi is a perfect destination for those looking for a unique blend of history, culture, and relaxation.`),
 	new Tour(
 		1,
 		'Kazbegi',
@@ -43,7 +43,7 @@ export default class Tour {
 		true,
 		4,
 		8,
-		['kazbegi-1.webp', 'kazbegi-2.webp', 'kazbegi-3.webp'],
+		['kazbegi-1.webp'],
 		'Explore the beautiful landscapes of Kazbegi!',
 		['Hiking', 'Horse riding', 'Cultural Tour', 'Sightseeing'],
 		'paragraph'),
@@ -54,7 +54,7 @@ export default class Tour {
 		true,
 		6,
 		12,
-		['svaneti-1.webp', 'svaneti-2.webp', 'svaneti-3.webp'],
+		['svaneti-1.webp'],
 		'Discover the remote villages and stunning peaks of Svaneti!',
 		['Hiking', 'Horse riding', 'Cultural Tour', 'Sightseeing']
 	,'paragraph'),
@@ -65,7 +65,7 @@ export default class Tour {
 		true,
 		2,
 		6,
-		['batumi-1.webp', 'batumi-2.webp', 'batumi-3.webp'],
+		['batumi-1.webp'],
 		'Enjoy the sun, sea, and sand in Batumi!',
 		['Hiking', 'Horse riding', 'Cultural Tour', 'Sightseeing']
 	,'paragraph'),
@@ -76,7 +76,7 @@ export default class Tour {
 		true,
 		2,
 		4,
-		['kutaisi-1.webp', 'kutaisi-2.webp', 'kutaisi-3.webp'],
+		['kutaisi-1.webp'],
 		'Discover the ancient history and architecture of Kutaisi!',
 		['Hiking', 'Horse riding', 'Cultural Tour', 'Sightseeing']
 	,'paragraph'),
@@ -87,7 +87,7 @@ export default class Tour {
 		true,
 		4,
 		10,
-		['vardzia-1.webp', 'vardzia-2.webp', 'vardzia-3.webp'],
+		['vardzia-1.webp'],
 		'Explore the stunning cave city of Vardzia!',
 		['Hiking', 'Horse riding', 'Cultural Tour', 'Sightseeing']
 	,'paragraph'),
@@ -98,7 +98,7 @@ export default class Tour {
 		true,
 		4,
 		7,
-		['gudauri-1.webp', 'gudauri-2.webp', 'gudauri-3.webp'],
+		['gudauri-1.webp'],
 		"Hit the slopes at Georgia's top ski resort!",
 		['Hiking', 'Horse riding', 'Cultural Tour', 'Sightseeing']
 	,'paragraph'),
@@ -109,19 +109,19 @@ export default class Tour {
 		true,
 		2,
 		3,
-		['borjomi-1.webp', 'borjomi-2.webp', 'borjomi-3.webp'],
+		['borjomi-1.webp'],
 		'Relax and unwind in the picturesque town of Borjomi!',
 		['Hiking', 'Horse riding', 'Cultural Tour', 'Sightseeing']
 	,'paragraph'),
 	new Tour(
 		8,
-		'Ushguli',
+		'Sighnaghi',
 		220,
 		true,
 		6,
 		14,
-		['ushguli-1.webp', 'ushguli-2.webp', 'ushguli-3.webp'],
-		'Discover the highest permanently inhabited village in Europe!',
+		['sighnaghi-1.webp'],
+		'"We have Paris at Home"',
 		['Hiking', 'Horse riding', 'Cultural Tour', 'Sightseeing']
 	,'paragraph'),
 	new Tour(9, 'Tsalka', 110, true, 6, 14, ['tsalka-1.webp'], 'Hidden Gem Inside of a Hidden Gem?', [

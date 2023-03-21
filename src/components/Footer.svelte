@@ -1,3 +1,7 @@
+<script>
+	import { base } from '$app/paths';
+</script>
+
 <footer aria-label="Site Footer" class="bg-white dark:bg-gray-900">
 	<div class="mx-auto w-full px-4 py-16 sm:px-6 lg:px-8">
 		<div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
@@ -69,19 +73,25 @@
 					<nav aria-label="Footer Navigation - Company" class="mt-6">
 						<ul class="space-y-4 text-sm">
 							<li>
-								<a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-300 ">
+								<a
+									href="/about"
+									class="text-gray-700 transition hover:opacity-75 dark:text-gray-300 ">
 									About
 								</a>
 							</li>
 
 							<li>
-								<a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-300 ">
+								<a
+									href="/about"
+									class="text-gray-700 transition hover:opacity-75 dark:text-gray-300 ">
 									Meet the Team
 								</a>
 							</li>
 
 							<li>
-								<a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-300">
+								<a
+									href="/about"
+									class="text-gray-700 transition hover:opacity-75 dark:text-gray-300">
 									Accounts Review
 								</a>
 							</li>
@@ -95,19 +105,25 @@
 					<nav aria-label="Footer Navigation - Company" class="mt-6">
 						<ul class="space-y-4 text-sm">
 							<li>
-								<a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-300">
+								<a
+									href="/about"
+									class="text-gray-700 transition hover:opacity-75 dark:text-gray-300">
 									Contact
 								</a>
 							</li>
 
 							<li>
-								<a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-300">
+								<a
+									href="/about"
+									class="text-gray-700 transition hover:opacity-75 dark:text-gray-300">
 									FAQs
 								</a>
 							</li>
 
 							<li>
-								<a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-300">
+								<a
+									href="/about"
+									class="text-gray-700 transition hover:opacity-75 dark:text-gray-300">
 									Live Chat
 								</a>
 							</li>
@@ -121,19 +137,25 @@
 					<nav aria-label="Footer Navigation - Legal" class="mt-6">
 						<ul class="space-y-4 text-sm">
 							<li>
-								<a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-300">
+								<a
+									href="/about"
+									class="text-gray-700 transition hover:opacity-75 dark:text-gray-300">
 									Accessibility
 								</a>
 							</li>
 
 							<li>
-								<a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-300">
+								<a
+									href="/about"
+									class="text-gray-700 transition hover:opacity-75 dark:text-gray-300">
 									Returns Policy
 								</a>
 							</li>
 
 							<li>
-								<a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-300">
+								<a
+									href="/about"
+									class="text-gray-700 transition hover:opacity-75 dark:text-gray-300">
 									Refund Policy
 								</a>
 							</li>

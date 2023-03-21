@@ -9,7 +9,7 @@
 		carouselNum = 0;
 		dispatch('close');
 	};
-
+	import { base } from '$app/paths';
 	import { fade, fly } from 'svelte/transition';
 </script>
 
@@ -35,7 +35,7 @@
 					</div>
 				</div>
 				<div class="flex items-center gap-2 rounded-t-md bg-white p-1.5 px-2 dark:bg-gray-800">
-					<a class="grid place-items-center" href={`/tour/${tour.id}`}>
+					<a class="grid place-items-center" href="/tour/{tour.id}">
 						<button
 							type="button"
 							class="rounded border-2 border-moss-500 bg-white p-1  px-2 transition-all  hover:bg-moss-500 hover:text-white dark:border-green-400 dark:bg-gray-800"
@@ -43,7 +43,10 @@
 					</a>
 				</div>
 			</div>
-			<img alt={tour.destination} src={tour.src[carouselNum]} class="h-full w-full rounded-b-md" />
+			<img
+				alt={tour.destination}
+				src="/{tour.src[carouselNum]}"
+				class="h-full w-full rounded-b-md" />
 		</div>
 	</div>
 {/if}

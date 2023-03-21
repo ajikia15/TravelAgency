@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	import { tours } from '../../../utils/tours';
-	import { page } from '$app/stores';
+	// @ts-ignore
+	import { page } from '$app/stores'; 
 	const one: number = 1; // don't ask me why i had to do this
 	const i = $page.params.id;
 	let z: number = 0;
@@ -48,7 +49,7 @@
 						</div>
 						<img
 							class="aspect-[3/2] w-full cursor-pointer rounded"
-							src={'../../' + tours[i].src[imgId]}
+							src="../../{tours[i].src[imgId]}"
 							alt={'Sights of ' + tours[i].destination} />
 						<!-- svelte-ignore a11y-click-events-have-key-events -->
 						<div
@@ -68,12 +69,12 @@
 				</div>
 				<!-- {len > 3 ? 'overflow-y-scroll' : ''} -->
 				<div class="flex flex-col rounded pr-2">
-					<div class="flex justify-end border-b pt-2 pb-1">
+					<div class="flex justify-end pt-2 pb-1">
 						<div class="rounded-xl bg-amber-400 p-0.5 px-2.5 text-sm text-black ">
 							{imgId + 1 + '/' + len}
 						</div>
 					</div>
-					<div class="flex h-full flex-col justify-center">
+					<div class="flex h-full flex-col justify-end pb-[0.5rem]">
 						{#each tours[i].src as t, z}
 							<!-- svelte-ignore a11y-click-events-have-key-events -->
 							<div
@@ -85,7 +86,7 @@
 									class="aspect-[3/2] rounded md:rounded-sm {imgId === z
 										? ' '
 										: 'brightness-[.80] '}"
-									src={'../../' + tours[i].src[z]}
+									src="/../../{tours[i].src[z]}"
 									alt="" />
 							</div>
 						{/each}
