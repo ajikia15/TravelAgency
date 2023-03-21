@@ -23,6 +23,12 @@
 		} else if (sortOption === 2) {
 			return tours.slice().sort((a, b) => b.price - a.price);
 		}
+			else if (sortOption === 3) {
+			return tours.slice().sort((a, b) => a.peopleCount - b.peopleCount);
+		} else if (sortOption === 4)
+		{
+			return tours.slice().sort((a, b) => b.peopleCount - a.peopleCount);
+		}
 	})();
 </script>
 
