@@ -1,15 +1,14 @@
-<script>
+<script lang="ts">
 	import { createEventDispatcher } from 'svelte';
 	const dispatch = createEventDispatcher();
 	export let show = true;
-	export let tour;
+	export let tour:any;
 	let carouselNum = 0;
 	const close = () => {
 		show = false;
 		carouselNum = 0;
 		dispatch('close');
 	};
-	import { base } from '$app/paths';
 	import { fade, fly } from 'svelte/transition';
 </script>
 

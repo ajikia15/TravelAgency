@@ -1,6 +1,3 @@
-<script>
-	import { base } from '$app/paths';
-</script>
 
 <header class="relative grid min-h-screen w-full  place-items-center bg-white dark:bg-gray-900">
 	<img

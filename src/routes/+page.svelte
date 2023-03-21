@@ -1,11 +1,10 @@
-<script>
+<script lang="ts">
 	import Hero from '../components/Hero.svelte';
 	import Card from '../components/Card.svelte';
 	import Search from '../components/Search.svelte';
 	import Range from '../components/Range.svelte';
 	import Sort from '../components/Sort.svelte';
-
-	import { tours } from '../utils/tours.ts';
+	import { tours } from '../utils/tours';
 	let searchQuery = '';
 	let sortOption = 0;
 	let curMin = 1;

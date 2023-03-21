@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import VehicleInformation from '../../components/VehicleInformation.svelte';
 </script>
 

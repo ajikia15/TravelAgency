@@ -1,6 +1,6 @@
-<script lang>
+<script lang="ts">
+	//@ts-ignore
 	import { page } from '$app/stores';
-	import { base } from '$app/paths';
 
 	let path;
 	$: path = $page.url.pathname;

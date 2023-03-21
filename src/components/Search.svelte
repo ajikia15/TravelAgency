@@ -1,6 +1,7 @@
-<script lang>
+<script lang="ts">
 	export let searchQuery = '';
 	function scrollToDiv() {
+		//@ts-ignore
 		searchDiv.scrollIntoView();
 	}
 </script>

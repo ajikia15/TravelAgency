@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { tours } from '../utils/tours';
 	import PicModal from './PicModal.svelte';
 	export let tour;
@@ -7,7 +7,6 @@
 	const handleClose = () => {
 		showModal = false;
 	};
-	import { base } from '$app/paths';
 </script>
 
 <PicModal show={showModal} on:close={handleClose} bind:tour />

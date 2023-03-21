@@ -1,5 +1,4 @@
-<script>
-	import { tours } from '../utils/tours.ts';
+<script lang="ts">
 	export let sortOption = 0;
 </script>
 

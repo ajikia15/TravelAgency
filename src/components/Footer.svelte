@@ -1,6 +1,4 @@
-<script>
-	import { base } from '$app/paths';
-</script>
+
 
 <footer aria-label="Site Footer" class="bg-white dark:bg-gray-900">
 	<div class="mx-auto w-full px-4 py-16 sm:px-6 lg:px-8">
