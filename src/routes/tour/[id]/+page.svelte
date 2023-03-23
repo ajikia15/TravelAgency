@@ -2,7 +2,7 @@
 	import { fade } from 'svelte/transition';
 	import { tours } from '../../../utils/tours';
 	// @ts-ignore
-	import { page } from '$app/stores'; 
+	import { page } from '$app/stores';
 	const one: number = 1; // don't ask me why i had to do this
 	const i = $page.params.id;
 	let z: number = 0;
@@ -70,8 +70,32 @@
 				<!-- {len > 3 ? 'overflow-y-scroll' : ''} -->
 				<div class="flex flex-col rounded pr-2">
 					<div class="flex justify-end pt-2 pb-1">
-						<div class="rounded-xl bg-amber-400 p-0.5 px-2.5 text-sm text-black ">
-							{imgId + 1 + '/' + len}
+						<div class="flex flex-row justify-evenly rounded-xl  p-0.5 px-2.5 text-sm ">
+							{#each tours[i].src as t, z}
+								<button type="button" on:click={() => setSlide(z)}>
+									{#if z != imgId}
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											class="text-gray-400 dark:text-gray-400"
+											width="16"
+											height="16"
+											viewBox="0 0 24 24"
+											><path
+												fill="currentColor"
+												d="M12 22q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22Z" /></svg>
+									{:else}
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											class="text-moss-500 dark:text-green-400"
+											width="16"
+											height="16"
+											viewBox="0 0 24 24"
+											><path
+												fill="currentColor"
+												d="M12 22q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22Z" /></svg>
+									{/if}
+								</button>
+							{/each}
 						</div>
 					</div>
 					<div class="flex h-full flex-col justify-end pb-[0.5rem]">
@@ -111,6 +135,11 @@
 					<li>For {tours[i].peopleCount}+ People</li>
 					<li>Starting from {tours[i].price}$</li>
 					<li>Available Vehicles:</li>
+					<ul class="flex flex-col justify-evenly">
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
 					<button
 						type="button"
 						class="w-full rounded bg-moss-500 p-2 text-center text-moss-100 hover:opacity-75"
