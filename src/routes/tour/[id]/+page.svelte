@@ -124,9 +124,9 @@
 				<p class="roboto text-xl">{tours[i].paragraph}</p>
 			</div>
 		</div>
-		<div class="relative">
+		<div class="relative flex flex-col space-y-2">
 			<div
-				class="top-24 flex flex-col justify-center space-y-5 rounded border bg-white p-7 py-10 text-center shadow-lg will-change-transform md:sticky">
+				class="top-24 flex flex-col justify-center space-y-5 rounded border bg-white p-7 text-center shadow-lg will-change-transform md:sticky">
 				<div class="space-y-4">
 					<h1 class="text-4xl">{tours[i].destination}, Georgia</h1>
 					<h3 class="roboto text-sm text-gray-400">Vacation Package</h3>
@@ -177,7 +177,7 @@
 						Available Vehicles:
 					</li>
 					<ul class="grid grid-cols-3 border-t">
-						<li class="drive relative flex items-center border-r">
+						<li class="drive relative flex items-center border-r shadow-inner">
 							<svg
 								class="absolute text-gray-800 transition-all "
 								xmlns="http://www.w3.org/2000/svg"
@@ -188,7 +188,7 @@
 									fill="currentColor"
 									d="M16 6H6l-5 6v3h2a3 3 0 0 0 3 3a3 3 0 0 0 3-3h6a3 3 0 0 0 3 3a3 3 0 0 0 3-3h2v-3c0-1.11-.89-2-2-2h-2l-3-4M6.5 7.5h4V10h-6l2-2.5m5.5 0h3.5l1.96 2.5H12V7.5m-6 6A1.5 1.5 0 0 1 7.5 15A1.5 1.5 0 0 1 6 16.5A1.5 1.5 0 0 1 4.5 15A1.5 1.5 0 0 1 6 13.5m12 0a1.5 1.5 0 0 1 1.5 1.5a1.5 1.5 0 0 1-1.5 1.5a1.5 1.5 0 0 1-1.5-1.5a1.5 1.5 0 0 1 1.5-1.5Z" /></svg>
 						</li>
-						<li class="grid place-items-center py-2">
+						<li class="grid place-items-center py-2 shadow-inner">
 							<svg
 								class="text-gray-800 transition-all  "
 								xmlns="http://www.w3.org/2000/svg"
@@ -199,7 +199,7 @@
 									fill="currentColor"
 									d="M3 6h13l3 4h2c1.11 0 2 .89 2 2v3h-2a3 3 0 0 1-3 3a3 3 0 0 1-3-3H9a3 3 0 0 1-3 3a3 3 0 0 1-3-3H1V8c0-1.11.89-2 2-2m-.5 1.5V10h8V7.5h-8m9.5 0V10h5.14l-1.89-2.5H12m-6 6A1.5 1.5 0 0 0 4.5 15A1.5 1.5 0 0 0 6 16.5A1.5 1.5 0 0 0 7.5 15A1.5 1.5 0 0 0 6 13.5m12 0a1.5 1.5 0 0 0-1.5 1.5a1.5 1.5 0 0 0 1.5 1.5a1.5 1.5 0 0 0 1.5-1.5a1.5 1.5 0 0 0-1.5-1.5Z" /></svg>
 						</li>
-						<li class="group relative grid place-items-center border-l">
+						<li class="group relative grid place-items-center border-l shadow-inner">
 							<svg
 								class=" text-gray-800 transition-all "
 								xmlns="http://www.w3.org/2000/svg"
@@ -216,6 +216,17 @@
 					type="button"
 					class="w-full rounded bg-moss-500 p-2 text-center text-xl text-moss-100 hover:opacity-75"
 					>Book</button>
+			</div>
+			<div class="flex w-full justify-center bg-white p-2 shadow-sm">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="text-gray-100"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					><path
+						fill="currentColor"
+						d="M18 22q-1.25 0-2.125-.875T15 19q0-.175.025-.363t.075-.337l-7.05-4.1q-.425.375-.95.588T6 15q-1.25 0-2.125-.875T3 12q0-1.25.875-2.125T6 9q.575 0 1.1.213t.95.587l7.05-4.1q-.05-.15-.075-.337T15 5q0-1.25.875-2.125T18 2q1.25 0 2.125.875T21 5q0 1.25-.875 2.125T18 8q-.575 0-1.1-.212t-.95-.588L8.9 11.3q.05.15.075.338T9 12q0 .175-.025.363T8.9 12.7l7.05 4.1q.425-.375.95-.587T18 16q1.25 0 2.125.875T21 19q0 1.25-.875 2.125T18 22Zm0-16q.425 0 .713-.288T19 5q0-.425-.288-.713T18 4q-.425 0-.713.288T17 5q0 .425.288.713T18 6ZM6 13q.425 0 .713-.288T7 12q0-.425-.288-.713T6 11q-.425 0-.713.288T5 12q0 .425.288.713T6 13Zm12 7q.425 0 .713-.288T19 19q0-.425-.288-.713T18 18q-.425 0-.713.288T17 19q0 .425.288.713T18 20Zm0-15ZM6 12Zm12 7Z" /></svg>
 			</div>
 		</div>
 	</div>
@@ -239,16 +250,16 @@
 		0% {
 			left: 50%;
 		}
-		35% {
-			left: 93%;
+		39% {
+			left: 91%;
 		}
-		36% {
+		40% {
 			left: 5%;
 		}
-		60% {
+		70% {
 			left: 55%;
 		}
-		80% {
+		85% {
 			left: 45%;
 		}
 		100% {
