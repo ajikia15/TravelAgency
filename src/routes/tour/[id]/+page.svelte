@@ -137,7 +137,7 @@
 						<li class="flex items-center bg-gray-100 p-2 shadow">
 							<h2 class="roboto text-left text-xl font-bold">Details:</h2>
 						</li>
-						<li class="flex flex-row items-center gap-2 border-t p-2">
+						<li class="flex flex-row items-center gap-2 border-t p-2 hover:rotate-">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								class="text-gray-800"

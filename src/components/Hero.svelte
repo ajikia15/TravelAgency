@@ -8,7 +8,7 @@
 		class="pointer-events-none absolute bottom-0 z-0 hidden w-full dark:block"
 		alt="" />
 	<div class="z-10 grid w-11/12 grid-cols-1 md:grid-cols-[5fr_7fr]">
-		<div class="flex flex-col justify-center space-y-6">
+		<div class="flex flex-col justify-center space-y-8">
 			<h1 class="text-6xl font-semibold dark:text-white">Unveil the hidden gem of Georgia!</h1>
 			<h2 class="roboto text-xl text-gray-500">
 				Travel to the land of mesmerizing sights and rich culture. Book your adventure today and
