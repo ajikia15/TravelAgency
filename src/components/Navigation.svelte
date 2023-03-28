@@ -22,7 +22,7 @@
 	class="fixed top-0 z-20 hidden w-full place-items-center bg-transparent py-4 text-lg text-gray-400  transition-all  dark:text-gray-300 md:grid {y >
 		1 && 'bg-white shadow-sm dark:bg-gray-900'}">
 	<div
-		class="grid w-11/12 grid-cols-3 justify-between items-center  text-2xl tracking-wide dark:bg-gray-900">
+		class="grid w-11/12 grid-cols-3 items-center justify-between  text-2xl tracking-wide dark:bg-gray-900">
 		<ul class="flex flex-row items-center justify-between">
 			<li>Logo</li>
 		</ul>
@@ -96,13 +96,17 @@
 	</div>
 </nav>
 <!-- Mobile Nav -->
+<header
+	class="dark:bg-gray-90 fixed left-0 top-0 z-[21] grid w-full place-items-center bg-white py-3 text-black opacity-0 shadow-sm transition-all md:hidden {y >
+		1 && 'opacity-100'}">
+	<h1 class="flex w-11/12 items-center ">Logo</h1>
+</header>
 <nav
-	class="fixed bottom-0 left-0 z-20 grid h-[12%] min-h-max w-full place-items-center bg-white text-gray-400 shadow-2xl  transition-all dark:bg-gray-900 dark:text-gray-300  md:hidden">
+	class="fixed bottom-0 left-0 z-[21] grid h-[12%] min-h-max w-full place-items-center bg-white text-gray-400 shadow-2xl transition-all dark:bg-gray-900 dark:text-gray-300 md:hidden">
 	<ul class="grid w-11/12 grid-cols-4">
 		<li
-			class="relative flex flex-col items-center {path == '/'
-				? 'text-moss-500 dark:text-green-400'
-				: ''}">
+			class="relative flex flex-col items-center {path == '/' &&
+				'text-moss-500 dark:text-green-400'}">
 			<a href="/" class="flex cursor-pointer flex-col items-center">
 				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"
 					><path
@@ -122,9 +126,8 @@
 			</a>
 		</li>
 		<li
-			class="relative flex flex-col items-center {path.includes('/tour')
-				? 'text-moss-500 dark:text-green-400'
-				: ''}">
+			class="relative flex flex-col items-center {path.includes('/tour') &&
+				'text-moss-500 dark:text-green-400'}">
 			<a href="/#tours" class="flex cursor-pointer flex-col items-center">
 				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
 					><path
@@ -134,9 +137,8 @@
 			</a>
 		</li>
 		<li
-			class="relative flex flex-col items-center {path == '/about'
-				? 'text-moss-500 dark:text-green-400'
-				: ''}">
+			class="relative flex flex-col items-center {path == '/about' &&
+				'text-moss-500 dark:text-green-400'}">
 			<a href="/about" class="flex cursor-pointer flex-col items-center">
 				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
 					><path
@@ -146,9 +148,8 @@
 			</a>
 		</li>
 		<li
-			class="relative flex flex-col items-center {path == '/book'
-				? 'text-moss-500 dark:text-green-400'
-				: ''}">
+			class="relative flex flex-col items-center {path == '/book' &&
+				'text-moss-500 dark:text-green-400'}">
 			<div class="flex cursor-pointer flex-col items-center">
 				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
 					><path
