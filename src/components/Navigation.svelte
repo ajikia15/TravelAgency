@@ -20,9 +20,7 @@
 <!-- Tablet++ nav -->
 <nav
 	class="fixed top-0 z-20 hidden w-full place-items-center overflow-hidden bg-transparent py-4 text-lg text-gray-400  transition-all  dark:text-gray-300 md:grid {y >
-	1
-		? 'bg-white shadow-sm dark:bg-gray-900'
-		: ''}">
+		1 && 'bg-white shadow-sm dark:bg-gray-900'}">
 	<div
 		class="flex w-11/12 flex-row items-center justify-between text-2xl tracking-wide dark:bg-gray-900">
 		<ul class="flex flex-row items-center justify-between ">
@@ -31,24 +29,18 @@
 		<ul class="flex flex-row items-center justify-between gap-6">
 			<li
 				class="w-min-content relative transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-1 before:w-0 before:bg-moss-500 before:shadow-2xl before:duration-500 hover:text-moss-500 hover:before:left-0 hover:before:w-full dark:before:bg-green-400 dark:hover:text-green-400 {path ==
-				'/'
-					? 'text-moss-500 before:w-full dark:text-green-400'
-					: ''}">
+					'/' && 'text-moss-500 before:w-full dark:text-green-400'}">
 				<a href="/" class="">Home</a>
 			</li>
 			<li
 				class="w-min-content relative transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-1 before:w-0 before:bg-moss-500 before:shadow-2xl before:transition-all before:duration-500 hover:text-moss-500 hover:before:left-0 hover:before:w-full dark:before:bg-green-400 dark:hover:text-green-400 {path.includes(
 					'/tour'
-				)
-					? 'text-moss-500 before:w-full dark:text-green-400'
-					: ''}">
-				<a href="/#tours" class="">Tours</a>
+				) && 'text-moss-500 before:w-full dark:text-green-400'}">
+				<a href="/#searchDiv" class="">Tours</a>
 			</li>
 			<li
 				class="w-min-content relative transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-1 before:w-0 before:bg-moss-500 before:shadow-2xl before:transition-all before:duration-500 hover:text-moss-500 hover:before:left-0 hover:before:w-full dark:before:bg-green-400 dark:hover:text-green-400 {path ==
-				'/about'
-					? 'text-moss-500 before:w-full dark:text-green-400'
-					: ''}">
+					'/about' && 'text-moss-500 before:w-full dark:text-green-400'}">
 				<a href="/about" class="">About Us</a>
 			</li>
 		</ul>
