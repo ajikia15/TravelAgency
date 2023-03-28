@@ -19,7 +19,7 @@
 <div class="p-1">
 	<form class="price-input mb-3 flex flex-row text-moss-500 dark:text-green-400">
 		<div class="field flex">
-			<span class="">Min</span>
+			<span class="">&nbsp;Min&nbsp;&nbsp;</span>
 			<input
 				type="tel"
 				class="input-min focus-within:text-gray-700 dark:bg-gray-800 dark:focus-within:text-white"
@@ -34,7 +34,7 @@
 				class="input-max group focus-within:text-gray-700 dark:bg-gray-800 dark:focus-within:text-white"
 				style=""
 				bind:value={curMax} />
-			<span class="">Max</span>
+			<span class="">&nbsp;&nbsp;Max&nbsp;</span>
 		</div>
 	</form>
 	<div class="slider">
