@@ -6,5 +6,6 @@
 	<title>About Us</title>
 </svelte:head>
 <div class="bg-white pt-20">
+	
 	<VehicleInformation />
 </div>

@@ -1,4 +1,5 @@
-<header class="relative grid min-h-screen w-full  place-items-center bg-white dark:bg-gray-900">
+<header
+	class="relative grid min-h-[96vh] w-full  place-items-center bg-white dark:bg-gray-900">
 	<img
 		src="/landing/layered-waves-haikei-light.svg"
 		class="pointer-events-none absolute bottom-0 z-0 w-full dark:hidden"
@@ -9,25 +10,28 @@
 		alt="" />
 	<div class="z-10 grid w-11/12 grid-cols-1 md:grid-cols-[5fr_7fr]">
 		<div class="flex flex-col justify-center space-y-8">
-			<h1 class="text-6xl font-semibold dark:text-white">Unveil the hidden gem of Georgia!</h1>
+			<h1 class="text-6xl dark:text-white">Unveil the hidden gem of Georgia!</h1>
 			<h2 class="roboto text-xl text-gray-500">
 				Travel to the land of mesmerizing sights and rich culture. Book your adventure today and
 				discover the best of Georgia's food, music and hospitality. You can view the best deals and
 				insider tips, even arrange your own custom tours and for traveling to Georgia.
 			</h2>
 			<div class="space-x-6 text-2xl">
-				<button
-					type="button"
-					class="group rounded-lg border-2 border-moss-500 bg-moss-500 p-2 px-5 tracking-wide text-white opacity-100 shadow-lg transition-all focus:outline-none focus:ring focus:ring-moss-400 group-hover:shadow-md hover:border-transparent  hover:opacity-70 dark:border-green-400 dark:text-green-400">
-					<p>Explore Tours</p>
-				</button>
+				<a href="/#searchDiv">
+					<button
+						type="button"
+						class="group rounded-lg border-2 border-moss-500 bg-moss-500 p-2 px-5 tracking-wide text-white opacity-100 shadow-lg transition-all focus:outline-none focus:ring focus:ring-moss-400 group-hover:shadow-md hover:border-transparent  hover:opacity-70 dark:border-green-400 dark:text-green-400">
+						<p>Explore Tours</p>
+					</button>
+				</a>
 				<button
 					type="button"
 					class="focus-ring group rounded-lg border-2 border-transparent bg-transparent p-2 px-5  tracking-wide transition-all focus:outline-none	">
-					<p
+					<a
+						href="/about"
 						class=" text-moss-500 opacity-100 transition-all focus:outline-none group-hover:opacity-70 group-focus:underline">
 						How It Works
-					</p>
+					</a>
 				</button>
 			</div>
 		</div>
