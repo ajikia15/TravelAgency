@@ -12,18 +12,19 @@
 <PicModal show={showModal} on:close={handleClose} bind:tour />
 
 <div
-	class="flex flex-col overflow-hidden rounded-lg border bg-white text-moss-900 shadow-xl duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-2xl dark:border-gray-900 dark:bg-slate-800 ">
+	class="flex flex-col overflow-hidden rounded-lg border bg-white text-moss-900 shadow-xl duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-2xl dark:border-gray-900 dark:bg-slate-800">
 	<div class="group relative overflow-hidden transition-all">
 		<img
 			class="aspect-[3/2] w-full transition-all duration-500 ease-in-out group-hover:scale-105"
 			src="/{tour.src[0]}"
 			loading="lazy"
 			alt={tour.description} />
-		<div
+		<a
+			href="/tour/{tour.id}"
 			class="absolute top-0 left-0 z-10 flex h-full w-full items-start justify-end bg-gray-700 bg-opacity-0 duration-500 group-hover:bg-opacity-20">
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<div
-				on:click={() => (showModal = true)}
+				on:click|stopPropagation|preventDefault={() => (showModal = true)}
 				class="m-2 cursor-pointer rounded-sm bg-gray-800 bg-opacity-30 p-2 text-gray-200 opacity-0 duration-500 group-hover:opacity-100 hover:bg-opacity-60 ">
 				<svg class="" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 16 16"
 					><path
@@ -31,7 +32,7 @@
 						fill-rule="evenodd"
 						d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" /></svg>
 			</div>
-		</div>
+		</a>
 	</div>
 	<a
 		href="/tour/{tour.id}"
