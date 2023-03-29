@@ -1,5 +1,5 @@
 <header
-	class="relative grid h-screen w-full place-items-center bg-white dark:bg-gray-900 md:min-h-[96vh]">
+	class="relative grid h-[80vh] w-full place-items-center bg-white dark:bg-gray-900 md:min-h-[96vh]">
 	<img
 		src="/landing/layered-waves-haikei-light.svg"
 		class="pointer-events-none absolute bottom-0 z-0 w-full dark:hidden"
@@ -46,7 +46,7 @@
 				loading="lazy" />
 			<img
 				src="/landing/landing-dark.svg"
-				class="z-10 hidden h-4/5 w-1/2 dark:block"
+				class="z-10 hidden h-4/5 dark:block"
 				alt="Instagram Post You Travelling Dark Mode"
 				loading="lazy" />
 			<!-- <div class="md:hidden text-lg md:text-xl lg:text-lg flex ">
