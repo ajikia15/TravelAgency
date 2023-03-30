@@ -1,5 +1,3 @@
-
-
 <footer aria-label="Site Footer" class="bg-white dark:bg-gray-900">
 	<div class="mx-auto w-full px-4 py-16 sm:px-6 lg:px-8">
 		<div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
@@ -7,9 +5,7 @@
 				<div class="text-moss-500">
 					<p>logo</p>
 				</div>
-
-				<p class="mt-4 max-w-xs text-gray-500 dark:text-gray-300">Exciting Tours in Georgia</p>
-
+				<h1 class="mt-4 max-w-xs text-gray-500 dark:text-gray-300">Exciting Tours in Georgia</h1>
 				<ul class="mt-8 flex gap-6">
 					<li>
 						<a
@@ -141,7 +137,6 @@
 									Accessibility
 								</a>
 							</li>
-
 							<li>
 								<a
 									href="/about"
@@ -149,7 +144,6 @@
 									Returns Policy
 								</a>
 							</li>
-
 							<li>
 								<a
 									href="/about"

@@ -10,7 +10,6 @@
 </script>
 
 <PicModal show={showModal} on:close={handleClose} bind:tour />
-
 <div
 	class="flex flex-col overflow-hidden rounded-lg border bg-white text-moss-900 shadow-xl duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-2xl dark:border-gray-900 dark:bg-slate-800">
 	<div class="group relative overflow-hidden transition-all">
