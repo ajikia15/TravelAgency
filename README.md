@@ -4,7 +4,6 @@ Temporary hosting for the website - [HERE](https://641975d34182f5771982463e--inc
 # What's this about?
 
 A website for a mysterious Travel Agency. 🚩👻
-Yes I'm getting payed for this but I still would like the code to be visible to everyone.
 
 # Tools being used:
 
