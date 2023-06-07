@@ -134,4 +134,4 @@ export default class Tour {
 ];
 // sedan 3 jeep minivan 5 sprinter 16-18
 // imereti samegrelo
-//price starting from
+// price starting from
