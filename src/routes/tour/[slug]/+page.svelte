@@ -3,9 +3,7 @@
 	import { doc, getDoc } from 'firebase/firestore';
 	import { db } from '../../../lib/firebase';
 	import { onMount } from 'svelte';
-	import Carousel from 'svelte-carousel';
-	import { browser } from '$app/environment';
-	let carousel;
+
 	const slug = $page.params.slug;
 	let tour = {};
 	const docRef = doc(db, 'tours', slug);
@@ -227,16 +225,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
-	{:else}
-		<div class="mx-auto w-11/12 md:columns-2 xl:w-4/5 2xl:columns-3">
-			{#each tour.Pics as pic}
-				<img
-					class="cursor-pointer rounded-md py-2"
-					src={pic}
-					style={{ width: '100%' }}
-					alt="Adventures in {tour.Location}" />
-			{/each}
 		</div>
 	{/if}
 </div>
