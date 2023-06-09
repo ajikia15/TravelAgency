@@ -1,12 +1,12 @@
-<script lang="ts">
+<script>
 	import PicModal from './PicModal.svelte';
 	import Carousel from 'svelte-carousel';
 	import { browser } from '$app/environment';
 	let carousel;
-	export let Location: string;
-	export let Price: number;
-	export let Pics: Array<string>;
-	export let id: string;
+	export let Location;
+	export let Price;
+	export let Pics;
+	export let id;
 	let showModal = false;
 	//href={`/tour/${tour.id}`}
 </script>
