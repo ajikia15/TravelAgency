@@ -16,21 +16,63 @@
 			console.log('doesnt exist');
 		}
 	});
+	function getImageUrl(number) {
+		return tour.Pics[number];
+	}
 </script>
 
 <svelte:head>
 	<title>Explore {tour.Location || ''}</title>
 </svelte:head>
-<div class="grid w-full place-items-center py-4 md:pt-24">
+<div class="grid w-full place-items-center py-4 md:pt-[4.5rem]">
 	<div class="grid w-11/12 gap-8 md:grid-cols-[7fr_4fr]">
 		{#if !tour.Location}
 			<div>Loading...</div>
 		{:else}
-			<div class="flex flex-col">
-				<div class="space-y-2 py-6">
-					<h1 class="text-4xl">Description</h1>
-					<h4 class="roboto text-lg font-bold text-gray-400">{tour.Location}</h4>
-					<p class="roboto text-xl">idk</p>
+			<div class="relative mt-6 flex flex-col overflow-hidden rounded-2xl">
+				<div class="relative grid aspect-video w-full grid-cols-2 overflow-hidden rounded-2xl">
+					<div class="absolute bottom-3 right-3 z-10 cursor-pointer rounded-lg bg-white p-2 px-4">
+						<p>All Photos</p>
+					</div>
+					<div class="object-fit mr-2 h-full rounded-l-2xl bg-zinc-800">
+						<img
+							class="h-full rounded-l-2xl object-cover"
+							src={tour.Pics[0]}
+							alt="Breathtaking view of {tour.Location}" />
+					</div>
+					<div class="grid h-full grid-cols-2 gap-x-2 gap-y-2">
+						<img
+							class="h-full bg-zinc-800 object-cover"
+							src={tour.Pics[1]}
+							alt="Breathtaking view of {tour.Location}" />
+						<img
+							class="h-full bg-zinc-800 object-cover"
+							src={tour.Pics[2]}
+							alt="Breathtaking view of {tour.Location}" />
+						<img
+							class="h-full bg-zinc-800 object-cover"
+							src={tour.Pics[3]}
+							alt="Breathtaking view of {tour.Location}" />
+						<img
+							class="h-full bg-zinc-800 object-cover"
+							src={tour.Pics[4]}
+							alt="Breathtaking view of {tour.Location}" />
+					</div>
+				</div>
+				<div class="space-y-2 py-6 dark:text-white">
+					<h4 class="roboto text-lg font-bold text-gray-400">Why {tour.Location}?</h4>
+					<div class="roboto text-xl">
+						{#each tour.Description.split(/\/(\d+)\//) as segment, index}
+							{#if index % 2 === 0}
+								<span>{segment}</span> <!-- Regular text segment -->
+							{:else}
+								{#each [parseInt(segment, 10)] as imageNumber}
+									<img src={getImageUrl(imageNumber)} alt={'Image ' + imageNumber} />
+									<!-- Image placeholder -->
+								{/each}
+							{/if}
+						{/each}
+					</div>
 				</div>
 			</div>
 		{/if}
@@ -45,9 +87,6 @@
 					</div>
 					<ul
 						class="roboto grid border-collapse grid-rows-1 rounded border border-gray-100 text-left shadow-sm">
-						<li class="flex items-center bg-gray-100 p-2 shadow">
-							<h2 class="roboto text-left text-xl font-bold">Details:</h2>
-						</li>
 						<li class="hover:rotate- flex flex-row items-center gap-2 border-t p-2">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +128,7 @@
 							Available Vehicles:
 						</li>
 						<ul class="grid grid-cols-3 border-t">
-							<li class="drive relative flex items-center border-r shadow-inner">
+							<li class="grid place-items-center border-r shadow-inner">
 								<svg
 									class="absolute text-gray-800 transition-all"
 									xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +168,7 @@
 						class="bg-moss-500 text-moss-100 w-full rounded p-2 text-center text-xl opacity-100 transition-all hover:opacity-75"
 						>Book</button>
 				</div>
-				<div class="text-moss-500 grid w-full grid-cols-3 gap-2 rounded">
+				<div class="grid w-full grid-cols-3 gap-2 rounded text-gray-500">
 					<div
 						class="hover:bg-moss-500 group grid place-items-center rounded border bg-white p-2 shadow transition-all hover:text-white">
 						<svg
@@ -186,37 +225,4 @@
 </div>
 
 <style lang="scss">
-	.drive {
-		&:hover {
-			svg {
-				left: 80%;
-				animation: drive 0.7s 1 forwards;
-			}
-		}
-		svg {
-			transform: translate(-50%, -50%);
-			left: 50%;
-			top: 50%;
-		}
-	}
-	@keyframes drive {
-		0% {
-			left: 50%;
-		}
-		39% {
-			left: 91%;
-		}
-		40% {
-			left: 5%;
-		}
-		70% {
-			left: 55%;
-		}
-		85% {
-			left: 45%;
-		}
-		100% {
-			left: 50%;
-		}
-	}
 </style>

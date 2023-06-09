@@ -3,14 +3,17 @@
 	import Search from '../components/Search.svelte';
 	import Range from '../components/Range.svelte';
 	import Sort from '../components/Sort.svelte';
+	import { db } from '../lib/firebase';
+	import { collection, getDocs } from 'firebase/firestore';
+	import { onMount } from 'svelte';
 	import Card from '../components/Card.svelte';
+	
+
+  let carousel;
 	let searchQuery = '';
 	let curMin = 0;
 	let curMax = 1000;
 	let sortOption = 0;
-	import { db } from '../lib/firebase';
-	import { collection, getDocs } from 'firebase/firestore';
-	import { onMount } from 'svelte';
 	let tours = [];
 	const collectionRef = collection(db, 'tours');
 	onMount(async () => {
@@ -24,6 +27,8 @@
 		tours = fbTours;
 		console.table(tours);
 	});
+
+	
 </script>
 
 <svelte:head>
@@ -32,7 +37,10 @@
 <Hero />
 
 <section class="mb-5 grid min-h-[100px] w-full place-items-center">
+
 	<ul class="grid w-11/12 grid-cols-1 gap-10 md:grid-cols-3 xl:grid-cols-4" id="tours">
+			
+	
 		{#if tours.length > 0}
 			{#each tours as tour, i}
 				<Card Location={tour.Location} Price={tour.Price} Pics={tour.Pics} id={tour.id} />
@@ -42,7 +50,7 @@
 		{/if}
 	</ul>
 </section>
-<div class="grid w-full place-items-center pb-4">
+<div class="grid w-full pb-4 place-items-center">
 	<div
 		class="mt-10 grid w-11/12 transform grid-cols-1 flex-row items-center gap-3 rounded-xl bg-white p-5 text-2xl shadow-md transition duration-500 after:absolute after:-top-[1px] after:left-0 after:h-2 after:w-full after:rounded-t-xl hover:scale-105 hover:shadow-lg dark:bg-gray-900 md:mt-0 md:grid-cols-[1fr_1fr] lg:w-3/5">
 		<div>
