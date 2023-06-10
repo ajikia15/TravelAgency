@@ -16,19 +16,32 @@
 			<slot name="header" />
 			<slot />
 			<!-- svelte-ignore a11y-autofocus -->
-			<button autofocus on:click={() => dialog.close()}>close modal</button>
+			<button
+				class="appear fixed right-4 top-4 aspect-square p-4 text-white"
+				autofocus
+				on:click={() => dialog.close()}
+				><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 48 48"
+					><path
+						fill="none"
+						stroke="currentColor"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="4"
+						d="m8 8l32 32M8 40L40 8" /></svg
+				></button>
 		</div>
 	</dialog>
 {/if}
 
 <style>
 	dialog {
-		max-width: 32rem;
+		max-width: 70%;
 		border: none;
 		padding: 0;
+		background-color: transparent;
 	}
 	dialog::backdrop {
-		background: rgba(0, 0, 0, 0.3);
+		background: rgba(0, 0, 0, 0.7);
 	}
 
 	dialog[open] {
@@ -55,5 +68,20 @@
 	}
 	button {
 		display: block;
+	}
+	.appear {
+		opacity: 0;
+		animation: fadeAnimation 0.6s forwards;
+	}
+	@keyframes fadeAnimation {
+		0% {
+			opacity: 0;
+		}
+		50% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 0.3;
+		}
 	}
 </style>

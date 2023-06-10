@@ -118,12 +118,12 @@
 				</p>
 			</li>
 			<li class="relative flex items-center justify-center">
-				<div>
+				<a href={`/tour/${id}`}>
 					<button
 						type="button"
 						class="border-moss-500 hover:bg-moss-500 rounded border bg-transparent p-2 px-3 text-base transition-all hover:text-white dark:border-green-400"
 						>Details</button>
-				</div>
+				</a>
 			</li>
 		</ul>
 	</div>
