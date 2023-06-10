@@ -36,7 +36,7 @@
 				<div class="relative mt-6 flex flex-col overflow-hidden rounded-2xl">
 					<div class="relative grid aspect-video w-full grid-cols-2 overflow-hidden rounded-2xl">
 						<div class="absolute bottom-3 right-3 z-10 cursor-pointer rounded-lg bg-white p-2 px-4">
-							<button on:click={toggleGalleryState}>All Photos</button>
+							<a href="/tour/{slug}/gallery">All Photos</a>
 						</div>
 						<div class="object-fit mr-2 h-full rounded-l-2xl bg-zinc-800">
 							<img

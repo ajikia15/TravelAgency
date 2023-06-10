@@ -28,7 +28,7 @@ export const auth = getAuth(firebaseApp);
 signInAnonymously(auth)
 	.then((userCredential) => {
 		const user = userCredential.user;
-		console.log('Anonymous user ID:', user.uid);
+		// console.log('Anonymous user ID:', user.uid);
 	})
 	.catch((error) => {
 		console.error('Anonymous login failed:', error);

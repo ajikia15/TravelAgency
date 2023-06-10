@@ -2,10 +2,12 @@
 	import { page } from '$app/stores';
 	import { doc, getDoc } from 'firebase/firestore';
 	import { onMount } from 'svelte';
+	import CarouselModal from '../../../../components/CarouselModal.svelte';
 	import { db } from '../../../../lib/firebase';
 	const slug = $page.params.slug;
-	import Carousel from 'svelte-carousel';
+	import Carousel from 'svelte-carousel/src/components/Carousel/Carousel.svelte';
 	import { browser } from '$app/environment';
+
 	let carousel;
 	let tour = {};
 	const docRef = doc(db, 'tours', slug);
@@ -13,29 +15,32 @@
 		const docSnap = await getDoc(docRef);
 		if (docSnap.exists()) {
 			tour = docSnap.data();
-			console.log(tour);
+			// console.log(tour);
 		} else {
-			console.log('doesnt exist');
+			// console.log('doesnt exist');
 		}
 	});
-	let slideState = false;
-	function openPic(index) {
-		initialPage = index;
-		slideState = true;
-	}
+	let initialPageIndex = 0;
+
+	let showModal = false;
+	const openPic = (index) => {
+		showModal = true;
+		initialPageIndex = index;
+	};
 </script>
 
-<div>
-	<div class="mx-auto mt-24 w-11/12 md:columns-2 xl:w-4/5 2xl:columns-3">
-		{#if tour.Location}
-			{#if browser && slideState}
+{#if tour.Location}
+	<div>
+		{#if browser}
+			<CarouselModal bind:showModal>
 				<Carousel
 					bind:this={carousel}
 					let:showPrevPage
 					let:showNextPage
 					let:currentPageIndex
 					let:showPage
-					let:pagesCount>
+					let:pagesCount
+					{initialPageIndex}>
 					<!-- svelte-ignore a11y-click-events-have-key-events -->
 					<div slot="prev" on:click={showPrevPage} class="custom-arrow left-2">
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -78,17 +83,19 @@
 						</svg>
 					</div>
 				</Carousel>
-			{/if}
-
+			</CarouselModal>
+		{/if}
+		<div class="mx-auto mt-24 w-11/12 md:columns-2 xl:w-4/5 2xl:columns-3">
 			{#each tour.Pics as pic, index}
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<img
 					class="cursor-pointer rounded-md py-2"
 					src={pic}
+					key={index}
 					style={{ width: '100%' }}
 					alt="Adventures in {tour.Location} #{index}"
-					on:click={openPic(index)} />
+					on:click={() => openPic(index)} />
 			{/each}
-		{/if}
+		</div>
 	</div>
-</div>
+{/if}

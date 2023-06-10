@@ -7,7 +7,6 @@
 	export let Price;
 	export let Pics;
 	export let id;
-	let showModal = false;
 	//href={`/tour/${tour.id}`}
 </script>
 
