@@ -6,6 +6,7 @@
 	export let Location;
 	export let Price;
 	export let Pics;
+	export let MinPeople;
 	export let id;
 	//href={`/tour/${tour.id}`}
 </script>
@@ -71,7 +72,7 @@
 			</h1>
 			<div class="flex items-center justify-around">
 				<p class="text-xl">
-					<!-- {peopleCount} -->
+					{MinPeople}
 				</p>
 				<svg
 					class="text-moss-500 h-6 w-6 dark:text-green-400"

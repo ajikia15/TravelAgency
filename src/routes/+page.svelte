@@ -63,14 +63,24 @@
 				{#each tours as tour}
 					{#if tour.Location.toLowerCase().includes(processedSearch) && tour.Price > minMax[0] && tour.Price < minMax[1]}
 						<div>
-							<Card Location={tour.Location} Price={tour.Price} Pics={tour.Pics} id={tour.id} />
+							<Card
+								Location={tour.Location}
+								Price={tour.Price}
+								Pics={tour.Pics}
+								MinPeople={tour.MinPeople}
+								id={tour.id} />
 						</div>
 					{/if}
 				{/each}
 			{:else}
 				{#each sortedTours as tour}
 					<div>
-						<Card Location={tour.Location} Price={tour.Price} Pics={tour.Pics} id={tour.id} />
+						<Card
+							Location={tour.Location}
+							Price={tour.Price}
+							Pics={tour.Pics}
+							MinPeople={tour.MinPeople}
+							id={tour.id} />
 					</div>
 				{/each}
 			{/if}
