@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body {
+/* body {
 	font-family: 'bignoodletitlingregular', monospace;
 }
 :root {
@@ -16,4 +16,8 @@ body {
 }
 .roboto {
 	font-family: 'Roboto', sans-serif;
+} */
+*{
+	padding: 0;
+	margin: 0;
 }

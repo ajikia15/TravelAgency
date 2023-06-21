@@ -6,7 +6,9 @@
 		DialogHeader,
 		DialogTitle,
 		DialogTrigger
-	} from '../lib/components/ui/dialog';
+	} from '$components/ui/dialog';
+	import { Input } from '$components/ui/input';
+	import { Label } from '$components/ui/label';
 	import { db } from '../lib/firebase';
 	import { getFirestore, collection, addDoc } from 'firebase/firestore';
 	const collectionRef = collection(db, 'tours');
@@ -39,11 +41,15 @@
 						stroke-width="1.5"
 						d="M12.75 7.75h-10m5-5v10" /></svg>
 			</div></DialogTrigger>
-		<DialogContent class="bg-gray-200">
+		<DialogContent class="bg-white">
 			<DialogHeader>
 				<DialogTitle class="text-xl font-semibold">Add A Card</DialogTitle>
 				<DialogDescription>
-					<div class="grid w-full max-w-sm items-center gap-1.5" />
+					<div class="grid w-full max-w-sm items-center gap-1.5">
+						<Label for="email-2">Email</Label>
+						<Input type="email" id="email-2" placeholder="Email" />
+						<p class="text-muted-foreground text-sm">Enter your email address.</p>
+					</div>
 				</DialogDescription>
 			</DialogHeader>
 		</DialogContent>

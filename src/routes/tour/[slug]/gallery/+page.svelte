@@ -1,7 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 	import { doc, getDoc } from 'firebase/firestore';
-	import CarouselModal from '$components/CarouselModal.svelte';
+	import CarouselModal from '../../../../components/CarouselModal.svelte';
 	import { db } from '../../../../lib/firebase';
 	const slug = $page.params.slug;
 	import Carousel from 'svelte-carousel/src/components/Carousel/Carousel.svelte';
