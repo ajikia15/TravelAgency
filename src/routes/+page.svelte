@@ -3,10 +3,10 @@
 	import Search from '../components/Search.svelte';
 	import Range from '../components/Range.svelte';
 	import Sort from '../components/Sort.svelte';
+	import Card from '../components/Card.svelte';
+	import AdminCard from '../components/AdminCard.svelte';
 	import { db } from '../lib/firebase';
 	import { collection, getDocs } from 'firebase/firestore';
-	import { onMount } from 'svelte';
-	import Card from '../components/Card.svelte';
 
 	const iteration = 4;
 	let searchQuery = '';
@@ -15,16 +15,21 @@
 	let sortOption = 0;
 	let tours = [];
 	const collectionRef = collection(db, 'tours');
-	onMount(async () => {
-		const querySnapshot = await getDocs(collectionRef);
-		let fbTours = [];
-		querySnapshot.forEach((doc) => {
-			let tour = { ...doc.data(), id: doc.id };
-			fbTours = [tour, ...fbTours];
-		});
-
-		tours = fbTours;
-	});
+	async function fetchTours() {
+		try {
+			const querySnapshot = await getDocs(collectionRef);
+			let fbTours = [];
+			querySnapshot.forEach((doc) => {
+				let tour = { ...doc.data(), id: doc.id };
+				fbTours = [tour, ...fbTours];
+			});
+			tours = fbTours;
+		} catch (error) {
+			console.error(error);
+		}
+	}
+	// To call the function:
+	fetchTours();
 	$: processedSearch = searchQuery.toLowerCase();
 	$: minMax = [curMin, curMax];
 	$: sortedTours = (() => {
@@ -58,6 +63,7 @@
 </div>
 <section class="mb-5 grid min-h-[100px] w-full place-items-center">
 	<ul class="grid w-11/12 grid-cols-1 gap-10 md:grid-cols-3 xl:grid-cols-4" id="tours">
+		<AdminCard />
 		{#if tours.length > 0}
 			{#if sortOption == 0}
 				{#each tours as tour}

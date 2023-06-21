@@ -2,19 +2,25 @@
 	import { page } from '$app/stores';
 	import { doc, getDoc } from 'firebase/firestore';
 	import { db } from '../../../lib/firebase';
-	import { onMount } from 'svelte';
 
 	const slug = $page.params.slug;
 	let tour = {};
-	const docRef = doc(db, 'tours', slug);
-	onMount(async () => {
-		const docSnap = await getDoc(docRef);
-		if (docSnap.exists()) {
-			tour = docSnap.data();
-		} else {
-			console.log('doesnt exist');
+	async function fetchTour() {
+		try {
+			const docRef = doc(db, 'tours', slug);
+			const docSnap = await getDoc(docRef);
+			if (docSnap.exists()) {
+				tour = docSnap.data();
+			} else {
+				console.log('doesnt exist');
+			}
+		} catch (error) {
+			console.error(error);
 		}
-	});
+	}
+
+	// To call the function:
+	fetchTour();
 	function getImageUrl(number) {
 		return tour.Pics[number];
 	}
@@ -248,6 +254,7 @@
 									clip-rule="evenodd" /></svg>
 						</div>
 					</div>
+					<div class="h-[35vh] w-full">asdas</div>
 				{:else}
 					<div
 						role="status"

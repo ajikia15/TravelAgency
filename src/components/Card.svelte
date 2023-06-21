@@ -1,5 +1,4 @@
 <script>
-	import PicModal from './PicModal.svelte';
 	import Carousel from 'svelte-carousel';
 	import { browser } from '$app/environment';
 	let carousel;
@@ -87,15 +86,7 @@
 			</div>
 		</a>
 		<p
-			class="roboto truncated text-sm font-extrabold text-gray-400 transition-all duration-300 dark:text-gray-300">
-			<!-- {#each tour.activities as activity, i}
-				{#if i != tour.activities.length - 1}
-					{activity},&nbsp;
-				{:else}
-					{activity}...
-				{/if}
-			{/each} -->
-		</p>
+			class="roboto truncated text-sm font-extrabold text-gray-400 transition-all duration-300 dark:text-gray-300" />
 	</div>
 	<div class="text-moss-500 flex bg-gray-100 dark:bg-gray-900 dark:text-green-400">
 		<ul class="grid w-full grid-cols-3 [&>*]:py-3 [&>*]:text-2xl">

@@ -1,8 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 	import { doc, getDoc } from 'firebase/firestore';
-	import { onMount } from 'svelte';
-	import CarouselModal from '../../../../components/CarouselModal.svelte';
+	import CarouselModal from '$components/CarouselModal.svelte';
 	import { db } from '../../../../lib/firebase';
 	const slug = $page.params.slug;
 	import Carousel from 'svelte-carousel/src/components/Carousel/Carousel.svelte';
@@ -10,18 +9,23 @@
 
 	let carousel;
 	let tour = {};
-	const docRef = doc(db, 'tours', slug);
-	onMount(async () => {
-		const docSnap = await getDoc(docRef);
-		if (docSnap.exists()) {
-			tour = docSnap.data();
-			// console.log(tour);
-		} else {
-			// console.log('doesnt exist');
+	async function fetchTour() {
+		try {
+			const docRef = doc(db, 'tours', slug);
+			const docSnap = await getDoc(docRef);
+			if (docSnap.exists()) {
+				tour = docSnap.data();
+				// console.log(tour);
+			} else {
+				// console.log('doesnt exist');
+			}
+		} catch (error) {
+			console.error(error);
 		}
-	});
+	}
+	// To call the function:
+	fetchTour();
 	let initialPageIndex = 0;
-
 	let showModal = false;
 	const openPic = (index) => {
 		showModal = true;

@@ -33,6 +33,12 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"firebase": "^9.22.1"
+		"class-variance-authority": "^0.6.0",
+		"clsx": "^1.2.1",
+		"firebase": "^9.22.1",
+		"lucide-svelte": "^0.248.0",
+		"radix-svelte": "^0.7.1",
+		"tailwind-merge": "^1.13.2",
+		"tailwindcss-animate": "^1.0.6"
 	}
 }
