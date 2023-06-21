@@ -11,7 +11,7 @@
 
 <PicModal show={showModal} on:close={handleClose} bind:tour />
 <div
-	class="flex flex-col overflow-hidden rounded-lg border bg-white text-moss-900 shadow-xl duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-2xl dark:border-gray-900 dark:bg-slate-800">
+	class="text-moss-900 flex flex-col overflow-hidden rounded-lg border bg-white shadow-xl duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-2xl dark:border-gray-900 dark:bg-slate-800">
 	<div class="group relative overflow-hidden transition-all">
 		<img
 			class="aspect-[3/2] w-full transition-all duration-500 ease-in-out group-hover:scale-105"
@@ -20,11 +20,11 @@
 			alt={tour.description} />
 		<a
 			href="/tour/{tour.id}"
-			class="absolute top-0 left-0 z-10 flex h-full w-full items-start justify-end bg-gray-700 bg-opacity-0 duration-500 group-hover:bg-opacity-20">
+			class="absolute left-0 top-0 z-10 flex h-full w-full items-start justify-end bg-gray-700 bg-opacity-0 duration-500 group-hover:bg-opacity-20">
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<div
 				on:click|stopPropagation|preventDefault={() => (showModal = true)}
-				class="m-2 cursor-pointer rounded-sm bg-gray-800 bg-opacity-30 p-2 text-gray-200 opacity-0 duration-500 group-hover:opacity-100 hover:bg-opacity-60 ">
+				class="m-2 cursor-pointer rounded-sm bg-gray-800 bg-opacity-30 p-2 text-gray-200 opacity-0 duration-500 hover:bg-opacity-60 group-hover:opacity-100">
 				<svg class="" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 16 16"
 					><path
 						fill="currentColor"
@@ -35,8 +35,8 @@
 	</div>
 	<a
 		href="/tour/{tour.id}"
-		class="group/text px-3 py-4 text-moss-500 shadow-2xl dark:text-green-400">
-		<div class="flex items-center justify-between ">
+		class="group/text text-moss-500 px-3 py-4 shadow-2xl dark:text-green-400">
+		<div class="flex items-center justify-between">
 			<h1
 				class="cursor-default text-3xl transition-all duration-500 ease-in-out group-hover/text:text-amber-400">
 				{tour.destination}
@@ -46,7 +46,7 @@
 					{tour.peopleCount}
 				</p>
 				<svg
-					class="h-6 w-6 text-moss-500 dark:text-green-400"
+					class="text-moss-500 h-6 w-6 dark:text-green-400"
 					xmlns="http://www.w3.org/2000/svg"
 					width="24"
 					height="24"
@@ -58,7 +58,7 @@
 			</div>
 		</div>
 		<p
-			class="roboto truncated text-sm font-extrabold text-gray-400 transition-all duration-300 dark:text-gray-300">
+			class=" truncated text-sm font-extrabold text-gray-400 transition-all duration-300 dark:text-gray-300">
 			{#each tour.activities as activity, i}
 				{#if i != tour.activities.length - 1}
 					{activity},&nbsp;
@@ -68,7 +68,7 @@
 			{/each}
 		</p>
 	</a>
-	<div class=" flex bg-gray-100 text-moss-500 dark:bg-gray-900 dark:text-green-400">
+	<div class=" text-moss-500 flex bg-gray-100 dark:bg-gray-900 dark:text-green-400">
 		<ul class="grid w-full grid-cols-3 [&>*]:py-3 [&>*]:text-2xl">
 			<li class="group/sun flex items-center justify-center">
 				<svg
@@ -84,7 +84,7 @@
 				&nbsp;<span class="text-sm text-gray-400">Days</span>
 			</li>
 
-			<li class="flex items-center justify-center ">
+			<li class="flex items-center justify-center">
 				<p class="">
 					{tour.price}$
 				</p>
@@ -93,7 +93,7 @@
 				<a href="/tour/{tour.id}">
 					<button
 						type="button"
-						class="rounded border border-moss-500 bg-transparent p-2 px-3 text-base transition-all hover:bg-moss-500 hover:text-white dark:border-green-400 "
+						class="border-moss-500 hover:bg-moss-500 rounded border bg-transparent p-2 px-3 text-base transition-all hover:text-white dark:border-green-400"
 						>Details</button>
 				</a>
 			</li>

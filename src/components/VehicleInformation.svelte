@@ -2,11 +2,11 @@
 	<div class="w-1/2 md:w-4/6">
 		<div class="flex flex-col items-center justify-center space-y-3.5 pb-6">
 			<h1 class="text-4xl">The team offers:</h1>
-			<h2 class="roboto text-lg text-gray-400">List Of Vehicles</h2>
+			<h2 class=" text-lg text-gray-400">List Of Vehicles</h2>
 		</div>
 		<div class="grid grid-cols-1 gap-4 md:grid-cols-3">
 			<div
-				class="group flex aspect-square flex-col items-center justify-center rounded border-2 border-moss-500 bg-white shadow-sm transition-all hover:scale-105 hover:border-amber-400">
+				class="border-moss-500 group flex aspect-square flex-col items-center justify-center rounded border-2 bg-white shadow-sm transition-all hover:scale-105 hover:border-amber-400">
 				<svg
 					class="text-moss-500 transition-all group-hover:text-amber-400"
 					xmlns="http://www.w3.org/2000/svg"
@@ -19,15 +19,15 @@
 				<ul class="text-center">
 					<li>
 						<h2
-							class="roboto text-xl font-extrabold text-moss-500 transition-all group-hover:text-amber-400">
+							class=" text-moss-500 text-xl font-extrabold transition-all group-hover:text-amber-400">
 							Sedan
 						</h2>
 					</li>
-					<li><h3 class="roboto">1-4 People</h3></li>
+					<li><h3 class="">1-4 People</h3></li>
 				</ul>
 			</div>
 			<div
-				class="group flex aspect-square flex-col items-center justify-center rounded border-2 border-moss-500 bg-white shadow-sm transition-all hover:scale-105 hover:border-amber-400">
+				class="border-moss-500 group flex aspect-square flex-col items-center justify-center rounded border-2 bg-white shadow-sm transition-all hover:scale-105 hover:border-amber-400">
 				<svg
 					class="text-moss-500 transition-all group-hover:text-amber-400"
 					xmlns="http://www.w3.org/2000/svg"
@@ -40,16 +40,16 @@
 				<ul class="text-center">
 					<li>
 						<h2
-							class="roboto text-xl font-extrabold text-moss-500 transition-all group-hover:text-amber-400">
+							class=" text-moss-500 text-xl font-extrabold transition-all group-hover:text-amber-400">
 							Jeep
 						</h2>
 					</li>
-					<li><h3 class="roboto">4-6 People</h3></li>
+					<li><h3 class="">4-6 People</h3></li>
 				</ul>
 			</div>
 
 			<div
-				class="group flex aspect-square flex-col items-center justify-center rounded border-2 border-moss-500 bg-white shadow-sm transition-all hover:scale-105 hover:border-amber-400">
+				class="border-moss-500 group flex aspect-square flex-col items-center justify-center rounded border-2 bg-white shadow-sm transition-all hover:scale-105 hover:border-amber-400">
 				<svg
 					class=" text-moss-500 transition-all group-hover:text-amber-400"
 					xmlns="http://www.w3.org/2000/svg"
@@ -62,11 +62,11 @@
 				<ul class="text-center">
 					<li>
 						<h2
-							class="roboto text-xl font-extrabold text-moss-500 transition-all group-hover:text-amber-400 ">
+							class=" text-moss-500 text-xl font-extrabold transition-all group-hover:text-amber-400">
 							Tank
 						</h2>
 					</li>
-					<li><h3 class="roboto">6-8 People</h3></li>
+					<li><h3 class="">6-8 People</h3></li>
 				</ul>
 			</div>
 		</div>

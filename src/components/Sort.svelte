@@ -5,12 +5,12 @@
 <div class="relative">
 	<select
 		bind:value={sortOption}
-		class="w-full mt-2 md:mt-0 rounded border border-moss-500 py-2 text-center text-xl text-moss-500 shadow-inner outline-none focus-within:border-moss-500 dark:bg-gray-800 dark:text-green-400 md:w-auto">
-		<option value={0} class="roboto text-base font-bold">Sort</option>
-		<option value={1} class="roboto text-base font-bold">Price Ascending</option>
-		<option value={2} class="roboto text-base font-bold">Price Descending</option>
-		<option value={3} class="roboto text-base font-bold">Seats Ascending</option>
-		<option value={4} class="roboto text-base font-bold">Seats Descending</option>
+		class="border-moss-500 text-moss-500 focus-within:border-moss-500 mt-2 w-full rounded border py-2 text-center text-xl shadow-inner outline-none dark:bg-gray-800 dark:text-green-400 md:mt-0 md:w-auto">
+		<option value={0} class=" text-base font-bold">Sort</option>
+		<option value={1} class=" text-base font-bold">Price Ascending</option>
+		<option value={2} class=" text-base font-bold">Price Descending</option>
+		<option value={3} class=" text-base font-bold">Seats Ascending</option>
+		<option value={4} class=" text-base font-bold">Seats Descending</option>
 	</select>
 	<!-- <div class="pointer-events-none absolute -right-5 top-1 h-full w-1/4 text-gray-300">
 		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"

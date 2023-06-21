@@ -13,7 +13,7 @@
 			<h1 class="mt-4 text-center text-4xl dark:text-white md:text-left md:text-6xl">
 				Unveil the hidden gems of Georgia!
 			</h1>
-			<h2 class="roboto text-sm text-gray-500 md:text-base lg:text-xl">
+			<h2 class=" text-sm text-gray-500 md:text-base lg:text-xl">
 				Travel to the land of mesmerizing sights and rich culture. Book your adventure today and
 				discover the best of Georgia's food, music and hospitality. You can view the best deals and
 				insider tips, even arrange your own custom tours and for traveling to Georgia.
@@ -22,13 +22,13 @@
 				<a href="/#searchDiv">
 					<button
 						type="button"
-						class="group w-full rounded-lg border-2 border-moss-500 bg-moss-500 p-2 px-3 tracking-wide text-white opacity-100 shadow-lg transition-all focus:outline-none focus:ring focus:ring-moss-400 group-hover:shadow-md hover:border-transparent hover:opacity-70  dark:border-green-400 dark:text-green-400 md:w-auto md:p-2 md:px-5">
+						class="border-moss-500 bg-moss-500 focus:ring-moss-400 group w-full rounded-lg border-2 p-2 px-3 tracking-wide text-white opacity-100 shadow-lg transition-all hover:border-transparent hover:opacity-70 focus:outline-none focus:ring group-hover:shadow-md dark:border-green-400 dark:text-green-400 md:w-auto md:p-2 md:px-5">
 						<p>Explore Tours</p>
 					</button>
 				</a>
 				<button
 					type="button"
-					class="focus-ring group mt-3 w-full rounded-lg border-2 border-transparent  bg-transparent tracking-wide transition-all focus:outline-none md:ml-4  md:mt-0 md:w-auto md:p-2 md:px-5 ">
+					class="focus-ring group mt-3 w-full rounded-lg border-2 border-transparent bg-transparent tracking-wide transition-all focus:outline-none md:ml-4 md:mt-0 md:w-auto md:p-2 md:px-5">
 					<a
 						href="/about"
 						class=" text-moss-500 opacity-100 transition-all focus:outline-none group-hover:opacity-70 group-focus:underline">

@@ -86,7 +86,7 @@
 			</div>
 		</a>
 		<p
-			class="roboto truncated text-sm font-extrabold text-gray-400 transition-all duration-300 dark:text-gray-300" />
+			class=" truncated text-sm font-extrabold text-gray-400 transition-all duration-300 dark:text-gray-300" />
 	</div>
 	<div class="text-moss-500 flex bg-gray-100 dark:bg-gray-900 dark:text-green-400">
 		<ul class="grid w-full grid-cols-3 [&>*]:py-3 [&>*]:text-2xl">

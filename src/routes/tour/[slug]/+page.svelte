@@ -94,8 +94,8 @@
 					</div>
 				</div>
 				<div class="space-y-2 py-6 dark:text-white">
-					<h4 class="roboto text-lg font-bold text-gray-400">Why {tour.Location}?</h4>
-					<div class="roboto text-xl">
+					<h4 class=" text-lg font-bold text-gray-400">Why {tour.Location}?</h4>
+					<div class=" text-xl">
 						{#each tour.Description.split(/\/(\d+)\//) as segment, index}
 							{#if index % 2 === 0}
 								<span>{segment}</span> <!-- Regular text segment -->
@@ -118,10 +118,10 @@
 						class="flex w-full flex-col justify-center space-y-5 rounded border bg-white p-7 text-center shadow will-change-transform">
 						<div class="space-y-4">
 							<h1 class="text-4xl">{tour.Location}, Georgia</h1>
-							<h3 class="roboto text-sm text-gray-400">Vacation Package</h3>
+							<h3 class=" text-sm text-gray-400">Vacation Package</h3>
 						</div>
 						<ul
-							class="roboto grid border-collapse grid-rows-1 rounded border border-gray-100 text-left shadow-sm">
+							class=" grid border-collapse grid-rows-1 rounded border border-gray-100 text-left shadow-sm">
 							<li class="hover:rotate- flex flex-row items-center gap-2 border-t p-2">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -219,7 +219,7 @@
 						<a
 							href="tel:+995598857374"
 							class="hover:bg-moss-500 group grid place-items-center rounded border bg-white p-2 shadow transition-all hover:text-white">
-							<p class="text-xl" aria-label="Contact Phone Number">+995 598 85 73 74</p>
+							<p class="text-md" aria-label="Contact Phone Number">+995 598 85 73 74</p>
 						</a>
 						<div
 							class="hover:bg-moss-500 group flex items-center justify-center gap-1 rounded border bg-white p-2 shadow transition-all hover:text-white">
