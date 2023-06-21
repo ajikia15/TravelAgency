@@ -65,7 +65,7 @@
 				</svg>
 			</div>
 		</DialogTrigger>
-		<DialogContent class="bg-white">
+		<DialogContent>
 			<DialogHeader>
 				<DialogTitle class="text-xl font-semibold">Add A Tour</DialogTitle>
 				<DialogDescription>
@@ -101,8 +101,8 @@
 							bind:value={Description} />
 						<p class="text-muted-foreground pb-2 text-sm">Enter the description of the tour.</p>
 					</div>
-					<div class="flex w-full justify-between">
-						<Button variant="outline" on:click={addTour}>Add Tour</Button>
+					<div class="flex w-full justify-start gap-x-2">
+						<Button variant="" on:click={addTour}>Add Tour</Button>
 						<Button variant="secondary" on:click={resetParams}>Reset</Button>
 					</div>
 				</DialogDescription>
