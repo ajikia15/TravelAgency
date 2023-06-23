@@ -17,7 +17,7 @@
 			<slot />
 			<!-- svelte-ignore a11y-autofocus -->
 			<button
-				class="appear fixed right-4 top-4 aspect-square p-4 text-white"
+				class="fixed p-4 text-white appear right-4 top-4 aspect-square"
 				autofocus
 				on:click={() => dialog.close()}
 				><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 48 48"

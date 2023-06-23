@@ -19,27 +19,26 @@
 <svelte:window bind:scrollY={y} />
 <!-- Tablet++ nav -->
 <nav
-	class="fixed top-0 z-20 hidden w-full place-items-center bg-transparent py-4 text-lg text-gray-400  transition-all  dark:text-gray-300 md:grid {y >
+	class="fixed top-0 z-20 hidden w-full place-items-center bg-transparent py-4 text-lg text-gray-400 transition-all dark:text-gray-300 md:grid {y >
 		1 && 'bg-white shadow-sm dark:bg-gray-900'}">
-	<div
-		class="grid w-11/12 grid-cols-3 items-center justify-between  text-2xl tracking-wide dark:bg-gray-900">
+	<div class="grid w-11/12 grid-cols-3 items-center justify-between text-2xl dark:bg-gray-900">
 		<ul class="flex flex-row items-center justify-between">
 			<li>Logo</li>
 		</ul>
 		<ul class="flex flex-row items-center justify-center gap-6">
 			<li
-				class="w-min-content relative transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-1 before:w-0 before:bg-moss-500 before:shadow-2xl before:duration-500 hover:text-moss-500 hover:before:left-0 hover:before:w-full dark:before:bg-green-400 dark:hover:text-green-400 {path ==
+				class="w-min-content before:bg-moss-500 hover:text-moss-500 relative transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-1 before:w-0 before:shadow-2xl before:duration-500 hover:before:left-0 hover:before:w-full dark:before:bg-green-400 dark:hover:text-green-400 {path ==
 					'/' && 'text-moss-500 before:w-full dark:text-green-400'}">
 				<a href="/" class="">Home</a>
 			</li>
 			<li
-				class="w-min-content relative transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-1 before:w-0 before:bg-moss-500 before:shadow-2xl before:transition-all before:duration-500 hover:text-moss-500 hover:before:left-0 hover:before:w-full dark:before:bg-green-400 dark:hover:text-green-400 {path.includes(
+				class="w-min-content before:bg-moss-500 hover:text-moss-500 relative transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-1 before:w-0 before:shadow-2xl before:transition-all before:duration-500 hover:before:left-0 hover:before:w-full dark:before:bg-green-400 dark:hover:text-green-400 {path.includes(
 					'/tour'
 				) && 'text-moss-500 before:w-full dark:text-green-400'}">
 				<a href="/#searchDiv" class="">Tours</a>
 			</li>
 			<li
-				class="w-min-content relative transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-1 before:w-0 before:bg-moss-500 before:shadow-2xl before:transition-all before:duration-500 hover:text-moss-500 hover:before:left-0 hover:before:w-full dark:before:bg-green-400 dark:hover:text-green-400 {path ==
+				class="w-min-content before:bg-moss-500 hover:text-moss-500 relative transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-1 before:w-0 before:shadow-2xl before:transition-all before:duration-500 hover:before:left-0 hover:before:w-full dark:before:bg-green-400 dark:hover:text-green-400 {path ==
 					'/about' && 'text-moss-500 before:w-full dark:text-green-400'}">
 				<a href="/about" class="">About Us</a>
 			</li>
@@ -48,7 +47,7 @@
 			<li>
 				<button
 					on:click={changeTheme}
-					class="flex items-center text-gray-400 transition-all hover:text-moss-500 dark:text-gray-300  dark:hover:text-green-400">
+					class="hover:text-moss-500 flex items-center text-gray-400 transition-all dark:text-gray-300 dark:hover:text-green-400">
 					{#if !darkTheme}
 						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
 							><path
@@ -72,20 +71,20 @@
 			<li class="group relative flex flex-row items-center">
 				<button
 					type="button"
-					class="rounded-lg border-2 border-moss-500 bg-transparent p-2 px-5 tracking-wide text-moss-500 shadow-lg transition-all focus:outline-none focus:ring focus:ring-moss-400 group-hover:bg-moss-500 group-hover:text-white group-hover:shadow-md hover:text-moss-100	dark:border-green-400 dark:text-green-400">
+					class="border-moss-500 text-moss-500 focus:ring-moss-400 group-hover:bg-moss-500 hover:text-moss-100 rounded-lg border-2 bg-transparent p-2 px-5 tracking-wide shadow-lg transition-all focus:outline-none focus:ring group-hover:text-white group-hover:shadow-md dark:border-green-400 dark:text-green-400">
 					<p>Book</p>
 				</button>
 				<div
-					class="absolute left-0 top-0 flex h-full w-1/2 cursor-pointer flex-col items-center
-				justify-center text-moss-500 opacity-0 transition-all duration-500 group-hover:-left-1/2 group-hover:rotate-[360deg] group-hover:opacity-100 hover:text-moss-700 dark:text-green-400 dark:hover:text-moss-500">
+					class="text-moss-500 hover:text-moss-700 dark:hover:text-moss-500 absolute left-0 top-0 flex h-full w-1/2
+				cursor-pointer flex-col items-center justify-center opacity-0 transition-all duration-500 group-hover:-left-1/2 group-hover:rotate-[360deg] group-hover:opacity-100 dark:text-green-400">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
 						><path
 							fill="currentColor"
 							d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02c-.37-1.11-.56-2.3-.56-3.53c0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z" /></svg>
 				</div>
 				<div
-					class="absolute right-0 top-0 flex h-full w-1/2 cursor-pointer flex-col items-center
-				justify-center  text-moss-500 opacity-0 transition-all duration-500 group-hover:-right-1/2 group-hover:rotate-[360deg] group-hover:opacity-100 hover:text-moss-800 dark:text-green-400 dark:hover:text-moss-500">
+					class="text-moss-500 hover:text-moss-800 dark:hover:text-moss-500 absolute right-0 top-0 flex h-full w-1/2
+				cursor-pointer flex-col items-center justify-center opacity-0 transition-all duration-500 group-hover:-right-1/2 group-hover:rotate-[360deg] group-hover:opacity-100 dark:text-green-400">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
 						><path
 							fill="currentColor"
@@ -99,7 +98,7 @@
 <header
 	class="dark:bg-gray-90 fixed left-0 top-0 z-[21] grid w-full place-items-center bg-white py-3 text-black opacity-0 shadow-sm transition-all md:hidden {y >
 		1 && 'opacity-100'}">
-	<h1 class="flex w-11/12 items-center ">Logo</h1>
+	<h1 class="flex w-11/12 items-center">Logo</h1>
 </header>
 <nav
 	class="fixed bottom-0 left-0 z-[21] grid h-[12%] min-h-max w-full place-items-center bg-white text-gray-400 shadow-2xl transition-all dark:bg-gray-900 dark:text-gray-300 md:hidden">
@@ -122,7 +121,7 @@
 						stroke-linejoin="round"
 						stroke-width="32"
 						d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256m368-77V64h-48v69" /></svg>
-				<p class="flex justify-center ">Home</p>
+				<p class="flex justify-center">Home</p>
 			</a>
 		</li>
 		<li

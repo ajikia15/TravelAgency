@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	import { doc, getDoc } from 'firebase/firestore';
 	import { db } from '../../../lib/firebase';
+	import { list } from '../../../lib/list';
 	import {
 		Accordion,
 		AccordionContent,
@@ -10,12 +11,15 @@
 	} from '$components/ui/accordion';
 	const slug = $page.params.slug;
 	let tour = {};
+	let activityNumbers = [];
 	async function fetchTour() {
 		try {
 			const docRef = doc(db, 'tours', slug);
 			const docSnap = await getDoc(docRef);
 			if (docSnap.exists()) {
 				tour = docSnap.data();
+				console.log(tour.Activities.split(','));
+				activityNumbers = tour.Activities.split(',');
 			} else {
 				console.log('doesnt exist');
 			}
@@ -23,7 +27,7 @@
 			console.error(error);
 		}
 	}
-
+	// console.table(list);
 	// To call the function:
 	fetchTour();
 	function getImageUrl(number) {
@@ -70,7 +74,7 @@
 				<div class="relative grid aspect-video w-full grid-cols-2 overflow-hidden rounded-2xl">
 					<a
 						href="/tour/{slug}/gallery"
-						class="absolute bottom-3 right-3 z-10 cursor-pointer rounded-lg bg-white p-2 px-4">
+						class="absolute bottom-3 right-3 z-10 cursor-pointer rounded-lg bg-white p-2 px-4 font-semibold">
 						<p>All Photos</p>
 					</a>
 					<div class="object-fit mr-2 h-full rounded-l-2xl bg-zinc-800">
@@ -99,7 +103,7 @@
 					</div>
 				</div>
 				<div class="space-y-2 py-6 dark:text-white">
-					<h4 class="text-lg font-bold text-gray-400">Why {tour.Location}?</h4>
+					<h4 class="text-lg font-semibold text-gray-400">Why {tour.Location}?</h4>
 					<div class="text-xl">
 						{#each tour.Description.split(/\/(\d+)\//) as segment, index}
 							{#if index % 2 === 0}
@@ -178,24 +182,18 @@
 													fill="currentColor"
 													d="m7 23l3.075-15.55q.15-.725.675-1.088T11.85 6q.575 0 1.063.25T13.7 7l1 1.6q.45.725 1.163 1.313t1.637.862V9H19v14h-1.5V12.85q-1.2-.275-2.225-.875T13.5 10.5l-.6 3l2.1 2V23h-2v-6l-2.1-2l-1.8 8H7Zm.425-9.875l-2.125-.4q-.4-.075-.625-.413t-.15-.762l.75-3.925q.15-.8.85-1.263t1.5-.312l1.15.225l-1.35 6.85ZM13.5 5.5q-.825 0-1.413-.588T11.5 3.5q0-.825.588-1.413T13.5 1.5q.825 0 1.413.588T15.5 3.5q0 .825-.588 1.413T13.5 5.5Z" /></svg
 											>Activities
-										</div></AccordionTrigger>
+										</div>
+									</AccordionTrigger>
 									<AccordionContent>
 										included, but not limited To
 										<ul class="grid grid-cols-1 space-y-2 pt-2 font-semibold">
-											<li class="flex flex-row space-x-2">
-												<p>i</p>
-												<p>Sex</p>
-											</li>
-
-											<li class="flex flex-row space-x-2">
-												<p>i</p>
-												<p>Sex</p>
-											</li>
-
-											<li class="flex flex-row space-x-2">
-												<p>i</p>
-												<p>Sex</p>
-											</li>
+											{#each list as activity}
+												{#if activityNumbers.includes(activity.id.toString())}
+													<li class="flex flex-row space-x-2">
+														<p>{activity.id} {activity.name}</p>
+													</li>
+												{/if}
+											{/each}
 										</ul>
 									</AccordionContent>
 								</AccordionItem>
