@@ -22,11 +22,13 @@
 	let Price = null;
 	let Pics = [];
 	let Description = '';
+	let Activities = '';
 	function handlePicsInput(event) {
 		picsInput = event.target.value;
 		Pics = picsInput.split(',');
 	}
 	function resetParams() {
+		Activities = '';
 		Location = '';
 		picsInput = '';
 		MinPeople = null;
@@ -41,7 +43,8 @@
 				MinPeople,
 				Price,
 				Pics,
-				Description
+				Description,
+				Activities
 			});
 		} catch (error) {
 			console.error('Error adding tour: ', error);
@@ -87,6 +90,11 @@
 						<Input type="number" id="price" placeholder="Price" bind:value={Price} />
 						<p class="text-muted-foreground pb-2 text-sm">Enter the minimum price of the tour.</p>
 						<Label for="pics">Pictures</Label>
+						<Label for="activities">Activities</Label>
+						<Input type="text" id="activites" placeholder="Activites" bind:value={Activities} />
+						<p class="text-muted-foreground pb-2 text-sm">
+							Enter the activity numbers, separated by commas.
+						</p>
 						<Input
 							type="text"
 							id="pics"

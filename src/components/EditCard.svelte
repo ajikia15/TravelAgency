@@ -1,16 +1,26 @@
 <script>
-	import Carousel from 'svelte-carousel';
 	import { browser } from '$app/environment';
+	import {
+		Dialog,
+		DialogContent,
+		DialogDescription,
+		DialogHeader,
+		DialogTitle,
+		DialogTrigger
+	} from '$components/ui/dialog';
+	import EditPopup from './EditPopup.svelte';
+	import Carousel from 'svelte-carousel';
 	let carousel;
+
 	export let Location;
 	export let Price;
 	export let Pics;
 	export let MinPeople;
 	export let id;
+
 	//href={`/tour/${tour.id}`}
 </script>
 
-<!-- <PicModal show={showModal} on:close={handleClose} bind:tour /> -->
 <div
 	class="text-moss-900 group flex flex-col overflow-hidden rounded-lg border bg-white shadow-xl duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-2xl dark:border-gray-900 dark:bg-slate-800">
 	<div class="group relative overflow-hidden rounded-sm transition-all">
@@ -65,9 +75,32 @@
 		{/if}
 	</div>
 	<div class="group/text text-moss-500 px-3 py-4 shadow-2xl dark:text-green-400">
-		<a class="flex cursor-pointer items-center justify-between" href={`/tour/${id}`}>
+		<div class="flex cursor-pointer items-center justify-between">
 			<h1 class="text-3xl">
 				{Location}
+				<Dialog>
+					<DialogTrigger
+						><button
+							class="z-30 aspect-square w-6 text-black opacity-60 transition-all hover:opacity-80">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+								><g id="feEdit0" fill="none" fill-rule="evenodd" stroke="none" stroke-width="1"
+									><g id="feEdit1" fill="currentColor"
+										><path
+											id="feEdit2"
+											d="M5 20h14a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Zm-1-5L14 5l3 3L7 18H4v-3ZM15 4l2-2l3 3l-2.001 2.001L15 4Z" /></g
+									></g
+								></svg>
+						</button>
+					</DialogTrigger>
+					<DialogContent>
+						<DialogHeader>
+							<DialogTitle>Change Tour</DialogTitle>
+							<DialogDescription>
+								<EditPopup {id} />
+							</DialogDescription>
+						</DialogHeader>
+					</DialogContent>
+				</Dialog>
 			</h1>
 			<div class="flex items-center justify-around">
 				<p class="text-xl">
@@ -84,7 +117,7 @@
 						fill="currentColor"
 						d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z" /></svg>
 			</div>
-		</a>
+		</div>
 		<p
 			class="truncated text-sm font-extrabold text-gray-400 transition-all duration-300 dark:text-gray-300" />
 	</div>

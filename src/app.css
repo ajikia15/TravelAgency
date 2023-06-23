@@ -53,3 +53,6 @@
 		opacity: 1;
 	}
 }
+	.custom-arrow {
+	@apply absolute z-20 grid w-6 text-gray-800 transition-all -translate-y-1/2 bg-gray-200 rounded-full opacity-0 cursor-pointer top-1/2 aspect-square place-items-center hover:opacity-80 group-hover:opacity-80;
+}

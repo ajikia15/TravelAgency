@@ -5,6 +5,7 @@
 	import Sort from '../components/Sort.svelte';
 	import Card from '../components/Card.svelte';
 	import AdminCard from '../components/AdminCard.svelte';
+	import EditCard from '../components/EditCard.svelte';
 	import { db } from '../lib/firebase';
 	import { collection, getDocs } from 'firebase/firestore';
 	import autoAnimate from '@formkit/auto-animate';
@@ -73,7 +74,14 @@
 				{#each tours as tour}
 					{#if tour.Location.toLowerCase().includes(processedSearch) && tour.Price > minMax[0] && tour.Price < minMax[1]}
 						<div>
-							<Card
+							<!-- toggle betwen these two -->
+							<!-- <Card
+								Location={tour.Location}
+								Price={tour.Price}
+								Pics={tour.Pics}
+								MinPeople={tour.MinPeople}
+								id={tour.id} /> -->
+							<EditCard
 								Location={tour.Location}
 								Price={tour.Price}
 								Pics={tour.Pics}
