@@ -3,6 +3,7 @@
 	import { doc, getDoc } from 'firebase/firestore';
 	import { db } from '../../../lib/firebase';
 	import { list } from '../../../lib/list';
+	import autoAnimate from '@formkit/auto-animate';
 	import {
 		Accordion,
 		AccordionContent,
@@ -18,7 +19,7 @@
 			const docSnap = await getDoc(docRef);
 			if (docSnap.exists()) {
 				tour = docSnap.data();
-				console.log(tour.Activities.split(','));
+				// console.log(tour.Activities.split(','));
 				activityNumbers = tour.Activities.split(',');
 			} else {
 				console.log('doesnt exist');
@@ -39,7 +40,7 @@
 	<title>Explore {tour.Location || ''}</title>
 </svelte:head>
 <div class="grid w-full place-items-center py-4 md:pt-[4.5rem]">
-	<div class="grid w-11/12 gap-8 md:grid-cols-[7fr_4fr]">
+	<div class="grid w-11/12 gap-8 md:grid-cols-[7fr_4fr]" use:autoAnimate>
 		{#if !tour.Location}
 			<div role="status" class="mx-auto w-full animate-pulse">
 				<div class="flex w-full flex-col justify-start">
@@ -111,7 +112,6 @@
 							{:else}
 								{#each [parseInt(segment, 10)] as imageNumber}
 									<img src={getImageUrl(imageNumber)} alt={'Image ' + imageNumber} />
-									<!-- Image placeholder -->
 								{/each}
 							{/if}
 						{/each}
@@ -185,12 +185,14 @@
 										</div>
 									</AccordionTrigger>
 									<AccordionContent>
-										included, but not limited To
-										<ul class="grid grid-cols-1 space-y-2 pt-2 font-semibold">
+										<h4 class="opacity-40">Included, but not limited To</h4>
+										<ul class="grid grid-cols-1 space-y-2 pt-3 font-semibold">
 											{#each list as activity}
 												{#if activityNumbers.includes(activity.id.toString())}
-													<li class="flex flex-row space-x-2">
-														<p>{activity.id} {activity.name}</p>
+													<li class="flex flex-row items-center space-x-2.5 text-base">
+														<!-- {activity.id} -->
+														<img src={`/svgs/${activity.id}.svg `} alt="" width="30" height="30" />
+														<p>{activity.name}</p>
 													</li>
 												{/if}
 											{/each}
