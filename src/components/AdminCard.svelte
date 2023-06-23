@@ -7,6 +7,7 @@
 		DialogTitle,
 		DialogTrigger
 	} from '$components/ui/dialog';
+	import { Textarea } from '$components/ui/textarea';
 	import { Button } from '$components/ui/button';
 	import { Input } from '$components/ui/input';
 	import { Label } from '$components/ui/label';
@@ -82,7 +83,7 @@
 						<p class="text-muted-foreground pb-2 text-sm">
 							Enter the minimum number of people for the tour.
 						</p>
-						<Label for="description">Price</Label>
+						<Label for="price">Price</Label>
 						<Input type="number" id="price" placeholder="Price" bind:value={Price} />
 						<p class="text-muted-foreground pb-2 text-sm">Enter the minimum price of the tour.</p>
 						<Label for="pics">Pictures</Label>
@@ -94,11 +95,7 @@
 							on:change={handlePicsInput} />
 						<p class="text-muted-foreground pb-2 text-sm">Enter the URL(s) of the tour pictures.</p>
 						<Label for="description">Description</Label>
-						<Input
-							type="text"
-							id="description"
-							placeholder="Description"
-							bind:value={Description} />
+						<Textarea placeholder="Description." bind:value={Description} />
 						<p class="text-muted-foreground pb-2 text-sm">Enter the description of the tour.</p>
 					</div>
 					<div class="flex w-full justify-start gap-x-2">
