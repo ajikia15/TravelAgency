@@ -11,13 +11,14 @@
 	<dialog
 		bind:this={dialog}
 		on:close={() => (showModal = false)}
-		on:click|self={() => dialog.close()}>
+		on:click|self={() => dialog.close()}
+		class="relative">
 		<div on:click|stopPropagation>
 			<slot name="header" />
 			<slot />
 			<!-- svelte-ignore a11y-autofocus -->
 			<button
-				class="fixed p-4 text-white appear right-4 top-4 aspect-square"
+				class="appear fixed right-4 top-4 aspect-square p-4 text-white"
 				autofocus
 				on:click={() => dialog.close()}
 				><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 48 48"
@@ -39,6 +40,10 @@
 		border: none;
 		padding: 0;
 		background-color: transparent;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 	dialog::backdrop {
 		background: rgba(0, 0, 0, 0.7);

@@ -13,7 +13,7 @@
 		}
 		darkTheme = !darkTheme;
 	};
-	let y;
+	let y: number;
 </script>
 
 <svelte:window bind:scrollY={y} />
