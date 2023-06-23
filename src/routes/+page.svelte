@@ -7,6 +7,7 @@
 	import AdminCard from '../components/AdminCard.svelte';
 	import { db } from '../lib/firebase';
 	import { collection, getDocs } from 'firebase/firestore';
+	import autoAnimate from '@formkit/auto-animate';
 
 	const iteration = 4;
 	let searchQuery = '';
@@ -62,7 +63,10 @@
 	</div>
 </div>
 <section class="mb-5 grid min-h-[100px] w-full place-items-center">
-	<ul class="grid w-11/12 grid-cols-1 gap-10 md:grid-cols-3 xl:grid-cols-4" id="tours">
+	<ul
+		class="grid w-11/12 grid-cols-1 gap-10 md:grid-cols-3 xl:grid-cols-4"
+		id="tours"
+		use:autoAnimate>
 		<AdminCard />
 		{#if tours.length > 0}
 			{#if sortOption == 0}
