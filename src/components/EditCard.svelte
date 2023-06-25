@@ -33,6 +33,7 @@
 				let:currentPageIndex
 				let:showPage
 				let:pagesCount>
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<div slot="prev" on:click={showPrevPage} class="custom-arrow left-2">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 						<g fill="none" fill-rule="evenodd"
@@ -47,6 +48,7 @@
 					class="custom-dots"
 					style="display:flex; flex-direction:row; gap:4px; cursor:pointer; position:absolute; bottom: 0.5rem ">
 					{#each Array(pagesCount) as _, pageIndex (pageIndex)}
+						<!-- svelte-ignore a11y-click-events-have-key-events -->
 						<div
 							class="grid aspect-square w-2 place-items-center rounded-full text-white {currentPageIndex ===
 							pageIndex
@@ -62,6 +64,7 @@
 						alt="tour"
 						src={pic} />
 				{/each}
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<div slot="next" on:click={showNextPage} class="custom-arrow right-2">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 						<g fill="none" fill-rule="evenodd"
