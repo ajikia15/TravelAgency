@@ -1,9 +1,9 @@
 <script>
+	import IndividualWeatherCard from './IndividualWeatherCard.svelte';
 	// fetch data using api
 	// display forecast for the same day
 	// display forecast for next few days
 	// use different icons for different weathers
-	import IndividualWeatherCard from './IndividualWeatherCard.svelte';
 </script>
 
 <div class="flex flex-col items-center justify-center text-gray-700">
