@@ -5,13 +5,14 @@
 	import { Button } from '$components/ui/button';
 	import { Input } from '$components/ui/input';
 	import { Label } from '$components/ui/label';
+	import { Alert, AlertDescription, AlertTitle } from '$components/ui/alert';
 	import { db } from '../lib/firebase';
 	import { getFirestore, collection, doc, updateDoc, getDoc } from 'firebase/firestore';
 
 	let tour = {};
-
+	$: sent = false;
 	function handlePicsInput(event) {
-		picsInput = event.target.value;
+		let picsInput = event.target.value;
 		Pics = picsInput.split(',');
 	}
 
@@ -38,8 +39,14 @@
 				Location: tour.Location,
 				MinPeople: tour.MinPeople,
 				Price: tour.Price,
-				Description: tour.Description
+				Description: tour.Description,
+				Lat: tour.Lat,
+				Long: tour.Long
 			});
+			sent = true;
+			setTimeout(() => {
+				sent = false;
+			}, 1000);
 		} catch (error) {
 			console.error('Error updating tour: ', error);
 		}
@@ -57,25 +64,41 @@
 		<Label for="price">Price</Label>
 		<Input type="number" id="price" placeholder="Price" bind:value={tour.Price} />
 		<p class="text-muted-foreground pb-2 text-sm">Enter the minimum price of the tour</p>
-		<!-- <Label for="pics">Pictures</Label>
-	<Input
-		type="text"
-		id="pics"
-		placeholder="Pictures"
-		bind:value={picsInput}
-		on:change={handlePicsInput} /> -->
+		<Label for="pics">Pictures</Label>
+		<Input
+			type="text"
+			id="pics"
+			placeholder="Pictures"
+			bind:value={tour.Pics}
+			on:change={handlePicsInput} />
+		<p class="text-muted-foreground pb-2 text-sm">Enter the URL(s) of the tour pictures.</p>
 		<Label for="activities">Activities</Label>
 		<Input type="text" id="activites" placeholder="Activites" bind:value={tour.Activities} />
 		<p class="text-muted-foreground pb-2 text-sm">
 			Enter the activity numbers, separated by commas.
 		</p>
-		<p class="text-muted-foreground pb-2 text-sm">Enter the URL(s) of the tour pictures.</p>
+		<Label for="Latitude">Coordinates</Label>
+		<div class="grid grid-cols-3">
+			<Input type="number" placeholder="Latitude" bind:value={tour.Lat} />
+			<Input type="number" placeholder="Longitude" bind:value={tour.Long} />
+		</div>
+		<p class="text-muted-foreground pb-2 text-sm">
+			Enter the latitude and longitude of the tour location
+		</p>
 		<Label for="description">Description</Label>
 		<Textarea placeholder="Description" bind:value={tour.Description} />
 		<p class="text-muted-foreground pb-2 text-sm">Enter the description of the tour.</p>
 	</div>
 	<div class="flex w-full justify-start gap-x-2">
-		<Button variant="" on:click={editTour}>Save Changes</Button>
+		<Button variant="" on:click={editTour}>
+			{#if sent}
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+					<path fill="currentColor" d="M21 7L9 19l-5.5-5.5l1.41-1.41L9 16.17L19.59 5.59L21 7Z" />
+				</svg>
+			{:else}
+				Apply Changes
+			{/if}
+		</Button>
 		<Button variant="secondary" on:click={resetParams}>Reset</Button>
 	</div>
 {/if}

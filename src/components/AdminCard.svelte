@@ -15,7 +15,7 @@
 	import { getFirestore, collection, addDoc } from 'firebase/firestore';
 
 	const collectionRef = collection(db, 'tours');
-
+	$: sent = false;
 	let Location = '';
 	let picsInput = '';
 	let MinPeople = null;
@@ -23,6 +23,8 @@
 	let Pics = [];
 	let Description = '';
 	let Activities = '';
+	let Lat = null;
+	let Long = null;
 	function handlePicsInput(event) {
 		picsInput = event.target.value;
 		Pics = picsInput.split(',');
@@ -35,6 +37,8 @@
 		Price = null;
 		Pics = [];
 		Description = '';
+		Lat = null;
+		Long = null;
 	}
 	async function addTour() {
 		try {
@@ -44,8 +48,14 @@
 				Price,
 				Pics,
 				Description,
-				Activities
+				Activities,
+				Lat,
+				Long
 			});
+			sent = true;
+			setTimeout(() => {
+				sent = false;
+			}, 1000);
 		} catch (error) {
 			console.error('Error adding tour: ', error);
 		}
@@ -90,11 +100,6 @@
 						<Input type="number" id="price" placeholder="Price" bind:value={Price} />
 						<p class="text-muted-foreground pb-2 text-sm">Enter the minimum price of the tour.</p>
 						<Label for="pics">Pictures</Label>
-						<Label for="activities">Activities</Label>
-						<Input type="text" id="activites" placeholder="Activites" bind:value={Activities} />
-						<p class="text-muted-foreground pb-2 text-sm">
-							Enter the activity numbers, separated by commas.
-						</p>
 						<Input
 							type="text"
 							id="pics"
@@ -102,12 +107,35 @@
 							bind:value={picsInput}
 							on:change={handlePicsInput} />
 						<p class="text-muted-foreground pb-2 text-sm">Enter the URL(s) of the tour pictures.</p>
+						<Label for="activities">Activities</Label>
+						<Input type="text" id="activites" placeholder="Activites" bind:value={Activities} />
+						<p class="text-muted-foreground pb-2 text-sm">
+							Enter the activity numbers, separated by commas.
+						</p>
+						<Label for="Latitude">Coordinates</Label>
+						<div class="grid grid-cols-3">
+							<Input type="number" placeholder="Latitude" bind:value={Lat} />
+							<Input type="number" placeholder="Longitude" bind:value={Long} />
+						</div>
+						<p class="text-muted-foreground pb-2 text-sm">
+							Enter the latitude and longitude of the tour location
+						</p>
 						<Label for="description">Description</Label>
 						<Textarea placeholder="Description." bind:value={Description} />
 						<p class="text-muted-foreground pb-2 text-sm">Enter the description of the tour.</p>
 					</div>
 					<div class="flex w-full justify-start gap-x-2">
-						<Button variant="" on:click={addTour}>Add Tour</Button>
+						<Button variant="" on:click={addTour}>
+							{#if sent}
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+									<path
+										fill="currentColor"
+										d="M21 7L9 19l-5.5-5.5l1.41-1.41L9 16.17L19.59 5.59L21 7Z" />
+								</svg>
+							{:else}
+								Add a tour
+							{/if}
+						</Button>
 						<Button variant="secondary" on:click={resetParams}>Reset</Button>
 					</div>
 				</DialogDescription>

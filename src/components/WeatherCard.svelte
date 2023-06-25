@@ -7,7 +7,7 @@
 </script>
 
 <div class="flex flex-col items-center justify-center text-gray-700">
-	<div class="w-full rounded-xl bg-white p-10 ring-8 ring-white ring-opacity-40">
+	<div class="w-full rounded-lg bg-white p-10 shadow-md">
 		<div class="flex justify-between">
 			<div class="flex flex-col">
 				<span class="text-5xl font-bold">29°C</span>
