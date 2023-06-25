@@ -11,13 +11,15 @@
 
 	let tour = {};
 	$: sent = false;
+	let picsInput;
 	function handlePicsInput(event) {
-		let picsInput = event.target.value;
-		Pics = picsInput.split(',');
+		picsInput = event.target.value;
+		tour.Pics = picsInput.split(',');
 	}
 
 	onMount(async () => {
 		tour = await getInitialTour();
+		picsInput = tour.Pics;
 	});
 	async function getInitialTour() {
 		const docRef = doc(db, 'tours', id);
@@ -40,6 +42,7 @@
 				MinPeople: tour.MinPeople,
 				Price: tour.Price,
 				Description: tour.Description,
+				Pics: tour.Pics,
 				Lat: tour.Lat,
 				Long: tour.Long
 			});
@@ -69,7 +72,7 @@
 			type="text"
 			id="pics"
 			placeholder="Pictures"
-			bind:value={tour.Pics}
+			bind:value={picsInput}
 			on:change={handlePicsInput} />
 		<p class="text-muted-foreground pb-2 text-sm">Enter the URL(s) of the tour pictures.</p>
 		<Label for="activities">Activities</Label>
