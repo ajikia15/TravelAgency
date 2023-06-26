@@ -1,99 +1,106 @@
 <script>
 	import IndividualWeatherCard from './IndividualWeatherCard.svelte';
+	export let Location;
+	export let Lat;
+	export let Long;
+	import {
+		Dialog,
+		DialogContent,
+		DialogDescription,
+		DialogFooter,
+		DialogHeader,
+		DialogTitle,
+		DialogTrigger
+	} from '$components/ui/dialog';
+
 	// fetch data using api
 	// display forecast for the same day
 	// display forecast for next few days
 	// use different icons for different weathers
+
+	// https://api.openweathermap.org/data/2.5/weather?lat={Lat}&lon={Long}&appid={42c2387296084d3b8446ec47148ea9a7}
+	let data = {};
+	const getWeather = async () => {
+		const res = await fetch(
+			`https://api.openweathermap.org/data/3.0/onecall?lat=${Lat}&lon=${Long}&exclude=current,minutely,alerts,hourly&units=metric&appid=${
+				import.meta.env.VITE_WEATHERID
+			}`
+		);
+		data = await res.json();
+		// console.log(data);
+	};
+	getWeather();
 </script>
 
 <div class="flex flex-col items-center justify-center text-gray-700">
 	<div class="w-full rounded-lg bg-white p-10 shadow-md">
-		<div class="flex justify-between">
-			<div class="flex flex-col">
-				<span class="text-5xl font-bold">29°C</span>
-				<span class="mt-1 font-semibold text-gray-500">asd</span>
+		<!-- <IndividualWeatherCard {Location} /> -->
+		{#if data.lat}
+			<div class="flex justify-between">
+				<div class="flex flex-col">
+					<span class="text-5xl font-bold">{Math.round(data.daily[0].temp.day)}°C</span>
+					<span class="mt-1 font-semibold text-gray-500">
+						{Location}
+					</span>
+				</div>
+				{#if data.daily[0].weather[0].main === 'Rain'}
+					<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"
+						><path
+							fill="currentColor"
+							d="M11 2a6 6 0 0 0-5.986 6.41a5 5 0 0 0-1.322 8.34a1 1 0 1 0 1.324-1.5a3.002 3.002 0 0 1 1.324-5.178a1 1 0 0 0 .757-1.193A4 4 0 1 1 14.92 7.2a1 1 0 0 0 .999.8H16a4 4 0 0 1 2.4 7.2a1 1 0 0 0 1.201 1.6a6 6 0 0 0-2.93-10.762A6.002 6.002 0 0 0 11 2zm1.949 13.316a1 1 0 0 0-1.898-.632l-2 6a1 1 0 0 0 1.898.632l2-6zm3.367-2.265a1 1 0 0 1 .633 1.265l-2 6a1 1 0 0 1-1.898-.632l2-6a1 1 0 0 1 1.265-.633zM9.45 14.316a1 1 0 0 0-1.898-.632l-2 6a1 1 0 0 0 1.898.632l2-6z" /></svg>
+				{/if}
+				{#if data.daily[0].weather[0].main === 'Clouds'}
+					<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"
+						><path
+							fill="currentColor"
+							d="M16 5a3 3 0 0 1 2.557 4.57a5.96 5.96 0 0 0-1.886-.533a6.019 6.019 0 0 0-2.697-3.25A2.99 2.99 0 0 1 16 5zm-4.055.074a6 6 0 0 0-6.931 6.336A5 5 0 0 0 7 21h9a6 6 0 0 0 4.2-10.285a5 5 0 0 0-8.255-5.64zM7 11a4 4 0 0 1 7.92-.8a1 1 0 0 0 1 .8H16a4 4 0 0 1 0 8H7a3 3 0 0 1-.66-5.927a1 1 0 0 0 .757-1.194A4.017 4.017 0 0 1 7 11z" /></svg>
+				{/if}
+				{#if data.daily[0].weather[0].main === 'Clear'}
+					<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"
+						><path
+							fill="currentColor"
+							d="M12 2a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1zm7.071 2.929a1 1 0 0 1 0 1.414l-.707.707a1 1 0 1 1-1.414-1.414l.707-.707a1 1 0 0 1 1.414 0zm-14.142 0a1 1 0 0 1 1.414 0l.707.707A1 1 0 0 1 5.636 7.05l-.707-.707a1 1 0 0 1 0-1.414zM12 8a4 4 0 1 0 0 8a4 4 0 0 0 0-8zm-6 4a6 6 0 1 1 12 0a6 6 0 0 1-12 0zm-4 0a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1zm17 0a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2h-1a1 1 0 0 1-1-1zM5.636 16.95a1 1 0 0 1 1.414 1.414l-.707.707a1 1 0 0 1-1.414-1.414l.707-.707zm11.314 1.414a1 1 0 0 1 1.414-1.414l.707.707a1 1 0 0 1-1.414 1.414l-.707-.707zM12 19a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1z" /></svg>
+				{/if}
+				{#if data.daily[0].weather[0].main === 'Thunderstorm'}
+					<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"
+						><path
+							fill="currentColor"
+							d="M11 2a6 6 0 0 0-5.986 6.41a5 5 0 0 0 .737 9.432a1 1 0 1 0 .498-1.936a3.002 3.002 0 0 1 .09-5.833a1 1 0 0 0 .758-1.194A4 4 0 1 1 14.92 7.2a1 1 0 0 0 .999.8H16a4 4 0 0 1 1.6 7.668a1 1 0 1 0 .8 1.832a6.001 6.001 0 0 0-1.729-11.463A6.002 6.002 0 0 0 11 2zm1.894 11.447a1 1 0 1 0-1.788-.894l-2 4A1 1 0 0 0 10 18h2.382l-1.276 2.553a1 1 0 1 0 1.788.894l2-4A1 1 0 0 0 14 16h-2.382l1.276-2.553z" /></svg>
+				{/if}
+				{#if data.daily[0].weather[0].main === 'Snow'}
+					<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24"
+						><path
+							fill="currentColor"
+							d="M11 2a6 6 0 0 0-5.986 6.41a5 5 0 0 0-1.322 8.34a1 1 0 1 0 1.324-1.5a3.002 3.002 0 0 1 1.324-5.178a1 1 0 0 0 .757-1.193A4 4 0 1 1 14.92 7.2a1 1 0 0 0 .999.8H16a4 4 0 0 1 2.4 7.2a1 1 0 0 0 1.201 1.6a6 6 0 0 0-2.93-10.762A6.002 6.002 0 0 0 11 2zm3.5 15a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3zm-3.5-.5a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0zm4 3a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0zm-5 1a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0z" /></svg>
+				{/if}
 			</div>
-			<svg
-				class="h-20 w-20 fill-current text-yellow-400"
-				xmlns="http://www.w3.org/2000/svg"
-				height="24"
-				viewBox="0 0 24 24"
-				width="24"
-				><path d="M0 0h24v24H0V0z" fill="none" /><path
-					d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79zM1 10.5h3v2H1zM11 .55h2V3.5h-2zm8.04 2.495l1.408 1.407-1.79 1.79-1.407-1.408zm-1.8 15.115l1.79 1.8 1.41-1.41-1.8-1.79zM20 10.5h3v2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm-1 4h2v2.95h-2zm-7.45-.96l1.41 1.41 1.79-1.8-1.41-1.41z" /></svg>
-		</div>
-		<div class="mt-3 flex justify-between">
-			<div class="flex flex-col items-center">
-				<span class="text-lg font-semibold">29°C</span>
-				<svg
-					class="mt-3 h-10 w-10 fill-current text-gray-400"
-					xmlns="http://www.w3.org/2000/svg"
-					height="24"
-					viewBox="0 0 24 24"
-					width="24"
-					><path d="M0 0h24v24H0V0z" fill="none" /><path
-						d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79zM1 10.5h3v2H1zM11 .55h2V3.5h-2zm8.04 2.495l1.408 1.407-1.79 1.79-1.407-1.408zm-1.8 15.115l1.79 1.8 1.41-1.41-1.8-1.79zM20 10.5h3v2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm-1 4h2v2.95h-2zm-7.45-.96l1.41 1.41 1.79-1.8-1.41-1.41z" /></svg>
-				<span class="mt-1 text-sm font-semibold">11:00</span>
-				<span class="text-xs font-semibold text-gray-400">AM</span>
+			<div class="mt-3 flex justify-evenly">
+				{#each data.daily as day, i}
+					{#if i > 0 && i < 4}
+						<IndividualWeatherCard temp={Math.round(day.temp.day)} cond={day.weather[0].main} {i} />
+					{/if}
+				{/each}
 			</div>
-			<div class="flex flex-col items-center">
-				<span class="text-lg font-semibold">31°C</span>
-				<svg
-					class="mt-3 h-10 w-10 fill-current text-gray-400"
-					xmlns="http://www.w3.org/2000/svg"
-					height="24"
-					viewBox="0 0 24 24"
-					width="24"
-					><path d="M0 0h24v24H0V0z" fill="none" /><path
-						d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79zM1 10.5h3v2H1zM11 .55h2V3.5h-2zm8.04 2.495l1.408 1.407-1.79 1.79-1.407-1.408zm-1.8 15.115l1.79 1.8 1.41-1.41-1.8-1.79zM20 10.5h3v2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm-1 4h2v2.95h-2zm-7.45-.96l1.41 1.41 1.79-1.8-1.41-1.41z" /></svg>
-				<span class="mt-1 text-sm font-semibold">1:00</span>
-				<span class="text-xs font-semibold text-gray-400">PM</span>
-			</div>
-			<div class="flex flex-col items-center">
-				<span class="text-lg font-semibold">32°C</span>
-				<svg
-					class="mt-3 h-10 w-10 fill-current text-gray-400"
-					xmlns="http://www.w3.org/2000/svg"
-					height="24"
-					viewBox="0 0 24 24"
-					width="24"
-					><path d="M0 0h24v24H0V0z" fill="none" /><path
-						d="M12.01 6c2.61 0 4.89 1.86 5.4 4.43l.3 1.5 1.52.11c1.56.11 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3h-13c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.95 6 12.01 6m0-2C9.12 4 6.6 5.64 5.35 8.04 2.35 8.36.01 10.91.01 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.64-4.96C18.68 6.59 15.65 4 12.01 4z" /></svg>
-				<span class="mt-1 text-sm font-semibold">3:00</span>
-				<span class="text-xs font-semibold text-gray-400">PM</span>
-			</div>
-			<div class="flex flex-col items-center">
-				<span class="text-lg font-semibold">31°C</span>
-				<svg
-					class="mt-3 h-10 w-10 fill-current text-gray-400"
-					xmlns="http://www.w3.org/2000/svg"
-					height="24"
-					viewBox="0 0 24 24"
-					width="24"
-					><path d="M0 0h24v24H0V0z" fill="none" /><path
-						d="M12.01 6c2.61 0 4.89 1.86 5.4 4.43l.3 1.5 1.52.11c1.56.11 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3h-13c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.95 6 12.01 6m0-2C9.12 4 6.6 5.64 5.35 8.04 2.35 8.36.01 10.91.01 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.64-4.96C18.68 6.59 15.65 4 12.01 4z" /></svg>
-				<span class="mt-1 text-sm font-semibold">5:00</span>
-				<span class="text-xs font-semibold text-gray-400">PM</span>
-			</div>
-			<div class="flex flex-col items-center">
-				<span class="text-lg font-semibold">27°C</span>
-				<svg
-					class="mt-3 h-10 w-10 fill-current text-gray-400"
-					xmlns="http://www.w3.org/2000/svg"
-					enable-background="new 0 0 24 24"
-					height="24"
-					viewBox="0 0 24 24"
-					width="24"
-					><g><rect fill="none" height="24" width="24" /></g><g
-						><g
-							><path
-								d="M19.78,17.51c-2.47,0-6.57-1.33-8.68-5.43C8.77,7.57,10.6,3.6,11.63,2.01C6.27,2.2,1.98,6.59,1.98,12 c0,0.14,0.02,0.28,0.02,0.42C2.61,12.16,3.28,12,3.98,12c0,0,0,0,0,0c0-3.09,1.73-5.77,4.3-7.1C7.78,7.09,7.74,9.94,9.32,13 c1.57,3.04,4.18,4.95,6.8,5.86c-1.23,0.74-2.65,1.15-4.13,1.15c-0.5,0-1-0.05-1.48-0.14c-0.37,0.7-0.94,1.27-1.64,1.64 c0.98,0.32,2.03,0.5,3.11,0.5c3.5,0,6.58-1.8,8.37-4.52C20.18,17.5,19.98,17.51,19.78,17.51z" /><path
-								d="M7,16l-0.18,0C6.4,14.84,5.3,14,4,14c-1.66,0-3,1.34-3,3s1.34,3,3,3c0.62,0,2.49,0,3,0c1.1,0,2-0.9,2-2 C9,16.9,8.1,16,7,16z" /></g
-						></g
-					></svg>
-				<span class="mt-1 text-sm font-semibold">7:00</span>
-				<span class="text-xs font-semibold text-gray-400">PM</span>
-			</div>
-		</div>
+			<Dialog>
+				<DialogTrigger
+					><button type="button" class="line-clamp-1 hover:underline">8 Day Forecast &rarr;</button
+					></DialogTrigger>
+				<DialogContent>
+					<DialogHeader>
+						<DialogTitle>8 day forecast for {Location}</DialogTitle>
+						<DialogDescription>
+							<div class="mt-3 flex justify-between">
+								{#each data.daily as day, i}
+									<IndividualWeatherCard
+										temp={Math.round(day.temp.day)}
+										cond={day.weather[0].main}
+										{i} />
+								{/each}
+							</div>
+						</DialogDescription>
+					</DialogHeader>
+				</DialogContent>
+			</Dialog>
+		{/if}
 	</div>
 </div>
