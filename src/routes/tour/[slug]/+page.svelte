@@ -53,14 +53,14 @@
 <div class="grid w-full place-items-center py-4 md:pt-[4.5rem]">
 	<div class="grid w-11/12 gap-8 md:grid-cols-[7fr_3fr]" use:autoAnimate>
 		{#if !tour.Location}
-			<div role="status" class="mx-auto w-full animate-pulse">
-				<div class="flex w-full flex-col justify-start">
+			<div role="status" class="w-full mx-auto animate-pulse">
+				<div class="flex flex-col justify-start w-full">
 					<div class="mb-2 h-2.5 w-40 rounded-full bg-gray-200 dark:bg-gray-700" />
 					<div class="mb-4 h-2.5 w-48 rounded-full bg-gray-200 dark:bg-gray-700" />
 					<div
-						class="mb-2 flex aspect-video w-full items-center justify-center rounded bg-gray-300 dark:bg-gray-700">
+						class="flex items-center justify-center w-full mb-2 bg-gray-300 rounded aspect-video dark:bg-gray-700">
 						<svg
-							class="h-12 w-12 text-gray-200"
+							class="w-12 h-12 text-gray-200"
 							xmlns="http://www.w3.org/2000/svg"
 							aria-hidden="true"
 							fill="currentColor"
@@ -82,39 +82,39 @@
 				</div>
 			</div>
 		{:else}
-			<div class="relative mt-6 flex w-full flex-col overflow-hidden rounded-2xl">
-				<div class="relative grid aspect-video w-full grid-cols-2 overflow-hidden rounded-2xl">
+			<div class="relative flex flex-col w-full mt-6 overflow-hidden rounded-2xl">
+				<div class="relative grid w-full grid-cols-2 overflow-hidden aspect-video rounded-2xl">
 					<a
 						href="/tour/{slug}/gallery"
-						class="absolute bottom-3 right-3 z-10 cursor-pointer rounded-lg bg-white p-2 px-4 font-semibold">
+						class="absolute z-10 p-2 px-4 font-semibold bg-white rounded-lg cursor-pointer bottom-3 right-3">
 						<p>All Photos</p>
 					</a>
-					<div class="object-fit mr-2 h-full rounded-l-2xl bg-zinc-800">
+					<div class="h-full mr-2 object-fit rounded-l-2xl bg-zinc-800">
 						<img
-							class="h-full rounded-l-2xl object-cover"
+							class="object-cover h-full rounded-l-2xl"
 							src={tour.Pics[0]}
 							alt="Breathtaking view of {tour.Location}" />
 					</div>
 					<div class="grid h-full grid-cols-2 gap-x-2 gap-y-2">
 						<img
-							class="h-full bg-zinc-800 object-cover"
+							class="object-cover h-full bg-zinc-800"
 							src={tour.Pics[1]}
 							alt="Breathtaking view of {tour.Location}" />
 						<img
-							class="h-full bg-zinc-800 object-cover"
+							class="object-cover h-full bg-zinc-800"
 							src={tour.Pics[2]}
 							alt="Breathtaking view of {tour.Location}" />
 						<img
-							class="h-full bg-zinc-800 object-cover"
+							class="object-cover h-full bg-zinc-800"
 							src={tour.Pics[3]}
 							alt="Breathtaking view of {tour.Location}" />
 						<img
-							class="h-full bg-zinc-800 object-cover"
+							class="object-cover h-full bg-zinc-800"
 							src={tour.Pics[4]}
 							alt="Breathtaking view of {tour.Location}" />
 					</div>
 				</div>
-				<div class="space-y-2 py-6 dark:text-white">
+				<div class="py-6 space-y-2 dark:text-white">
 					<h4 class="text-lg font-semibold text-gray-400">Why {tour.Location}?</h4>
 					<div class="text-xl">
 						{#each tour.Description.split(/\/(\d+)\//) as segment, index}
@@ -132,18 +132,18 @@
 		{/if}
 		<div class="md:hidden">
 			<Sheet>
-				<SheetTrigger>Open</SheetTrigger>
+				<SheetTrigger>View Tour Details</SheetTrigger>
 				<SheetContent size="full">
 					<SheetHeader>
 						<SheetTitle>Tour Details</SheetTitle>
 						<SheetDescription
-							><div class="top-24 flex flex-col space-y-2 md:sticky">
+							><div class="flex flex-col space-y-2 top-24 md:sticky">
 								{#if tour.Location}
 									<div
-										class="flex w-full flex-col justify-center space-y-5 rounded border bg-white p-6 text-center shadow will-change-transform">
-										<ul class="flex flex-col gap-x-2 space-y-2 rounded">
+										class="flex flex-col justify-center w-full p-6 space-y-5 text-center bg-white border rounded shadow will-change-transform">
+										<ul class="flex flex-col space-y-2 rounded gap-x-2">
 											<li
-												class="flex flex-row items-center gap-x-2 rounded-sm border p-3 font-semibold">
+												class="flex flex-row items-center p-3 font-semibold border rounded-sm gap-x-2">
 												<svg
 													xmlns="http://www.w3.org/2000/svg"
 													class="text-gray-800"
@@ -156,7 +156,7 @@
 												For {tour.MinPeople}+ People
 											</li>
 											<li
-												class="flex flex-row items-center gap-2 rounded-sm border p-3 font-semibold">
+												class="flex flex-row items-center gap-2 p-3 font-semibold border rounded-sm">
 												<svg
 													xmlns="http://www.w3.org/2000/svg"
 													class="text-gray-800"
@@ -169,7 +169,7 @@
 												Starting from {tour.Price}$
 											</li>
 											<li
-												class="flex flex-row items-center gap-2 rounded-sm border p-3 font-semibold">
+												class="flex flex-row items-center gap-2 p-3 font-semibold border rounded-sm">
 												<svg
 													xmlns="http://www.w3.org/2000/svg"
 													class="text-gray-800"
@@ -184,7 +184,7 @@
 												Days
 											</li>
 											<Accordion type="single" collapsible class="grid w-full gap-y-2">
-												<AccordionItem value="item-1" class="rounded-sm border px-3">
+												<AccordionItem value="item-1" class="px-3 border rounded-sm">
 													<AccordionTrigger class="py-3"
 														><div class="flex flex-row gap-x-2">
 															<svg
@@ -200,7 +200,7 @@
 													</AccordionTrigger>
 													<AccordionContent>
 														<h4 class="opacity-40">Included, but not limited To</h4>
-														<ul class="grid grid-cols-1 space-y-2 pt-3 font-semibold">
+														<ul class="grid grid-cols-1 pt-3 space-y-2 font-semibold">
 															{#each list as activity}
 																{#if activityNumbers.includes(activity.id.toString())}
 																	<li class="flex flex-row items-center space-x-2.5 text-base">
@@ -217,7 +217,7 @@
 														</ul>
 													</AccordionContent>
 												</AccordionItem>
-												<AccordionItem value="item-2" class="rounded-sm border px-3">
+												<AccordionItem value="item-2" class="px-3 border rounded-sm">
 													<AccordionTrigger class="py-3"
 														><div class="flex flex-row gap-x-2">
 															<svg
@@ -232,7 +232,7 @@
 														</div></AccordionTrigger>
 													<AccordionContent>
 														included, but not limited To
-														<ul class="grid grid-cols-1 space-y-2 pt-2 font-semibold">
+														<ul class="grid grid-cols-1 pt-2 space-y-2 font-semibold">
 															<li class="flex flex-row space-x-2">
 																<p>i</p>
 																<p>Sex</p>
@@ -253,7 +253,7 @@
 											</Accordion>
 											<ul class="hidden grid-cols-3 border-t">
 												<!-- car svgs  -->
-												<li class="grid place-items-center border-r shadow-inner">
+												<li class="grid border-r shadow-inner place-items-center">
 													<svg
 														class="absolute text-gray-800 transition-all"
 														xmlns="http://www.w3.org/2000/svg"
@@ -264,7 +264,7 @@
 															fill="currentColor"
 															d="M16 6H6l-5 6v3h2a3 3 0 0 0 3 3a3 3 0 0 0 3-3h6a3 3 0 0 0 3 3a3 3 0 0 0 3-3h2v-3c0-1.11-.89-2-2-2h-2l-3-4M6.5 7.5h4V10h-6l2-2.5m5.5 0h3.5l1.96 2.5H12V7.5m-6 6A1.5 1.5 0 0 1 7.5 15A1.5 1.5 0 0 1 6 16.5A1.5 1.5 0 0 1 4.5 15A1.5 1.5 0 0 1 6 13.5m12 0a1.5 1.5 0 0 1 1.5 1.5a1.5 1.5 0 0 1-1.5 1.5a1.5 1.5 0 0 1-1.5-1.5a1.5 1.5 0 0 1 1.5-1.5Z" /></svg>
 												</li>
-												<li class="grid place-items-center py-2 shadow-inner">
+												<li class="grid py-2 shadow-inner place-items-center">
 													<svg
 														class="text-gray-800 transition-all"
 														xmlns="http://www.w3.org/2000/svg"
@@ -275,7 +275,7 @@
 															fill="currentColor"
 															d="M3 6h13l3 4h2c1.11 0 2 .89 2 2v3h-2a3 3 0 0 1-3 3a3 3 0 0 1-3-3H9a3 3 0 0 1-3 3a3 3 0 0 1-3-3H1V8c0-1.11.89-2 2-2m-.5 1.5V10h8V7.5h-8m9.5 0V10h5.14l-1.89-2.5H12m-6 6A1.5 1.5 0 0 0 4.5 15A1.5 1.5 0 0 0 6 16.5A1.5 1.5 0 0 0 7.5 15A1.5 1.5 0 0 0 6 13.5m12 0a1.5 1.5 0 0 0-1.5 1.5a1.5 1.5 0 0 0 1.5 1.5a1.5 1.5 0 0 0 1.5-1.5a1.5 1.5 0 0 0-1.5-1.5Z" /></svg>
 												</li>
-												<li class="group relative grid place-items-center border-l shadow-inner">
+												<li class="relative grid border-l shadow-inner group place-items-center">
 													<svg
 														class="text-gray-800 transition-all"
 														xmlns="http://www.w3.org/2000/svg"
@@ -307,39 +307,39 @@
 								{:else}
 									<div
 										role="status"
-										class="max-w-full animate-pulse space-y-4 divide-y divide-gray-200 rounded border border-gray-200 p-4 shadow dark:divide-gray-700 dark:border-gray-700 md:p-6">
+										class="max-w-full p-4 space-y-4 border border-gray-200 divide-y divide-gray-200 rounded shadow animate-pulse dark:divide-gray-700 dark:border-gray-700 md:p-6">
 										<div class="flex items-center justify-between">
 											<div>
 												<div class="mb-2.5 h-2.5 w-24 rounded-full bg-gray-300 dark:bg-gray-600" />
-												<div class="h-2 w-32 rounded-full bg-gray-200 dark:bg-gray-700" />
+												<div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700" />
 											</div>
 											<div class="h-2.5 w-12 rounded-full bg-gray-300 dark:bg-gray-700" />
 										</div>
 										<div class="flex items-center justify-between pt-4">
 											<div>
 												<div class="mb-2.5 h-2.5 w-24 rounded-full bg-gray-300 dark:bg-gray-600" />
-												<div class="h-2 w-32 rounded-full bg-gray-200 dark:bg-gray-700" />
+												<div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700" />
 											</div>
 											<div class="h-2.5 w-12 rounded-full bg-gray-300 dark:bg-gray-700" />
 										</div>
 										<div class="flex items-center justify-between pt-4">
 											<div>
 												<div class="mb-2.5 h-2.5 w-24 rounded-full bg-gray-300 dark:bg-gray-600" />
-												<div class="h-2 w-32 rounded-full bg-gray-200 dark:bg-gray-700" />
+												<div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700" />
 											</div>
 											<div class="h-2.5 w-12 rounded-full bg-gray-300 dark:bg-gray-700" />
 										</div>
 										<div class="flex items-center justify-between pt-4">
 											<div>
 												<div class="mb-2.5 h-2.5 w-24 rounded-full bg-gray-300 dark:bg-gray-600" />
-												<div class="h-2 w-32 rounded-full bg-gray-200 dark:bg-gray-700" />
+												<div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700" />
 											</div>
 											<div class="h-2.5 w-12 rounded-full bg-gray-300 dark:bg-gray-700" />
 										</div>
 										<div class="flex items-center justify-between pt-4">
 											<div>
 												<div class="mb-2.5 h-2.5 w-24 rounded-full bg-gray-300 dark:bg-gray-600" />
-												<div class="h-2 w-32 rounded-full bg-gray-200 dark:bg-gray-700" />
+												<div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700" />
 											</div>
 											<div class="h-2.5 w-12 rounded-full bg-gray-300 dark:bg-gray-700" />
 										</div>
@@ -351,13 +351,13 @@
 				</SheetContent>
 			</Sheet>
 		</div>
-		<div class="relative hidden flex-col md:flex">
-			<div class="top-24 flex flex-col space-y-2 md:sticky">
+		<div class="relative flex-col hidden md:flex">
+			<div class="flex flex-col space-y-2 top-24 md:sticky">
 				{#if tour.Location}
 					<div
-						class="flex w-full flex-col justify-center space-y-5 rounded border bg-white p-6 text-center shadow will-change-transform">
-						<ul class="flex flex-col gap-x-2 space-y-2 rounded">
-							<li class="flex flex-row items-center gap-x-2 rounded-sm border p-3 font-semibold">
+						class="flex flex-col justify-center w-full p-6 space-y-5 text-center bg-white border rounded shadow will-change-transform">
+						<ul class="flex flex-col space-y-2 rounded gap-x-2">
+							<li class="flex flex-row items-center p-3 font-semibold border rounded-sm gap-x-2">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									class="text-gray-800"
@@ -369,7 +369,7 @@
 										d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z" /></svg>
 								For {tour.MinPeople}+ People
 							</li>
-							<li class="flex flex-row items-center gap-2 rounded-sm border p-3 font-semibold">
+							<li class="flex flex-row items-center gap-2 p-3 font-semibold border rounded-sm">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									class="text-gray-800"
@@ -381,7 +381,7 @@
 										d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10zm-3.5-8v2H11v2h2v-2h1a2.5 2.5 0 1 0 0-5h-4a.5.5 0 1 1 0-1h5.5V8H13V6h-2v2h-1a2.5 2.5 0 0 0 0 5h4a.5.5 0 1 1 0 1H8.5z" /></svg>
 								Starting from {tour.Price}$
 							</li>
-							<li class="flex flex-row items-center gap-2 rounded-sm border p-3 font-semibold">
+							<li class="flex flex-row items-center gap-2 p-3 font-semibold border rounded-sm">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									class="text-gray-800"
@@ -396,7 +396,7 @@
 								Days
 							</li>
 							<Accordion type="single" collapsible class="grid w-full gap-y-2">
-								<AccordionItem value="item-1" class="rounded-sm border px-3">
+								<AccordionItem value="item-1" class="px-3 border rounded-sm">
 									<AccordionTrigger class="py-3"
 										><div class="flex flex-row gap-x-2">
 											<svg
@@ -412,7 +412,7 @@
 									</AccordionTrigger>
 									<AccordionContent>
 										<h4 class="opacity-40">Included, but not limited To</h4>
-										<ul class="grid grid-cols-1 space-y-2 pt-3 font-semibold">
+										<ul class="grid grid-cols-1 pt-3 space-y-2 font-semibold">
 											{#each list as activity}
 												{#if activityNumbers.includes(activity.id.toString())}
 													<li class="flex flex-row items-center space-x-2.5 text-base">
@@ -425,7 +425,7 @@
 										</ul>
 									</AccordionContent>
 								</AccordionItem>
-								<AccordionItem value="item-2" class="rounded-sm border px-3">
+								<AccordionItem value="item-2" class="px-3 border rounded-sm">
 									<AccordionTrigger class="py-3"
 										><div class="flex flex-row gap-x-2">
 											<svg
@@ -440,7 +440,7 @@
 										</div></AccordionTrigger>
 									<AccordionContent>
 										included, but not limited To
-										<ul class="grid grid-cols-1 space-y-2 pt-2 font-semibold">
+										<ul class="grid grid-cols-1 pt-2 space-y-2 font-semibold">
 											<li class="flex flex-row space-x-2">
 												<p>i</p>
 												<p>Sex</p>
@@ -461,7 +461,7 @@
 							</Accordion>
 							<ul class="hidden grid-cols-3 border-t">
 								<!-- car svgs  -->
-								<li class="grid place-items-center border-r shadow-inner">
+								<li class="grid border-r shadow-inner place-items-center">
 									<svg
 										class="absolute text-gray-800 transition-all"
 										xmlns="http://www.w3.org/2000/svg"
@@ -472,7 +472,7 @@
 											fill="currentColor"
 											d="M16 6H6l-5 6v3h2a3 3 0 0 0 3 3a3 3 0 0 0 3-3h6a3 3 0 0 0 3 3a3 3 0 0 0 3-3h2v-3c0-1.11-.89-2-2-2h-2l-3-4M6.5 7.5h4V10h-6l2-2.5m5.5 0h3.5l1.96 2.5H12V7.5m-6 6A1.5 1.5 0 0 1 7.5 15A1.5 1.5 0 0 1 6 16.5A1.5 1.5 0 0 1 4.5 15A1.5 1.5 0 0 1 6 13.5m12 0a1.5 1.5 0 0 1 1.5 1.5a1.5 1.5 0 0 1-1.5 1.5a1.5 1.5 0 0 1-1.5-1.5a1.5 1.5 0 0 1 1.5-1.5Z" /></svg>
 								</li>
-								<li class="grid place-items-center py-2 shadow-inner">
+								<li class="grid py-2 shadow-inner place-items-center">
 									<svg
 										class="text-gray-800 transition-all"
 										xmlns="http://www.w3.org/2000/svg"
@@ -483,7 +483,7 @@
 											fill="currentColor"
 											d="M3 6h13l3 4h2c1.11 0 2 .89 2 2v3h-2a3 3 0 0 1-3 3a3 3 0 0 1-3-3H9a3 3 0 0 1-3 3a3 3 0 0 1-3-3H1V8c0-1.11.89-2 2-2m-.5 1.5V10h8V7.5h-8m9.5 0V10h5.14l-1.89-2.5H12m-6 6A1.5 1.5 0 0 0 4.5 15A1.5 1.5 0 0 0 6 16.5A1.5 1.5 0 0 0 7.5 15A1.5 1.5 0 0 0 6 13.5m12 0a1.5 1.5 0 0 0-1.5 1.5a1.5 1.5 0 0 0 1.5 1.5a1.5 1.5 0 0 0 1.5-1.5a1.5 1.5 0 0 0-1.5-1.5Z" /></svg>
 								</li>
-								<li class="group relative grid place-items-center border-l shadow-inner">
+								<li class="relative grid border-l shadow-inner group place-items-center">
 									<svg
 										class="text-gray-800 transition-all"
 										xmlns="http://www.w3.org/2000/svg"
@@ -515,39 +515,39 @@
 				{:else}
 					<div
 						role="status"
-						class="max-w-full animate-pulse space-y-4 divide-y divide-gray-200 rounded border border-gray-200 p-4 shadow dark:divide-gray-700 dark:border-gray-700 md:p-6">
+						class="max-w-full p-4 space-y-4 border border-gray-200 divide-y divide-gray-200 rounded shadow animate-pulse dark:divide-gray-700 dark:border-gray-700 md:p-6">
 						<div class="flex items-center justify-between">
 							<div>
 								<div class="mb-2.5 h-2.5 w-24 rounded-full bg-gray-300 dark:bg-gray-600" />
-								<div class="h-2 w-32 rounded-full bg-gray-200 dark:bg-gray-700" />
+								<div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700" />
 							</div>
 							<div class="h-2.5 w-12 rounded-full bg-gray-300 dark:bg-gray-700" />
 						</div>
 						<div class="flex items-center justify-between pt-4">
 							<div>
 								<div class="mb-2.5 h-2.5 w-24 rounded-full bg-gray-300 dark:bg-gray-600" />
-								<div class="h-2 w-32 rounded-full bg-gray-200 dark:bg-gray-700" />
+								<div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700" />
 							</div>
 							<div class="h-2.5 w-12 rounded-full bg-gray-300 dark:bg-gray-700" />
 						</div>
 						<div class="flex items-center justify-between pt-4">
 							<div>
 								<div class="mb-2.5 h-2.5 w-24 rounded-full bg-gray-300 dark:bg-gray-600" />
-								<div class="h-2 w-32 rounded-full bg-gray-200 dark:bg-gray-700" />
+								<div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700" />
 							</div>
 							<div class="h-2.5 w-12 rounded-full bg-gray-300 dark:bg-gray-700" />
 						</div>
 						<div class="flex items-center justify-between pt-4">
 							<div>
 								<div class="mb-2.5 h-2.5 w-24 rounded-full bg-gray-300 dark:bg-gray-600" />
-								<div class="h-2 w-32 rounded-full bg-gray-200 dark:bg-gray-700" />
+								<div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700" />
 							</div>
 							<div class="h-2.5 w-12 rounded-full bg-gray-300 dark:bg-gray-700" />
 						</div>
 						<div class="flex items-center justify-between pt-4">
 							<div>
 								<div class="mb-2.5 h-2.5 w-24 rounded-full bg-gray-300 dark:bg-gray-600" />
-								<div class="h-2 w-32 rounded-full bg-gray-200 dark:bg-gray-700" />
+								<div class="w-32 h-2 bg-gray-200 rounded-full dark:bg-gray-700" />
 							</div>
 							<div class="h-2.5 w-12 rounded-full bg-gray-300 dark:bg-gray-700" />
 						</div>
