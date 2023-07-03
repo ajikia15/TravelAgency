@@ -18,7 +18,6 @@
 	// display forecast for next few days
 	// use different icons for different weathers
 
-	// https://api.openweathermap.org/data/2.5/weather?lat={Lat}&lon={Long}&appid={42c2387296084d3b8446ec47148ea9a7}
 	let data = {};
 	const getWeather = async () => {
 		const res = await fetch(
@@ -33,7 +32,7 @@
 </script>
 
 <div class="flex flex-col items-center justify-center text-gray-700">
-	<div class="w-full rounded-lg bg-white p-10 shadow-md">
+	<div class="w-full p-10 bg-white rounded-lg shadow-md">
 		<!-- <IndividualWeatherCard {Location} /> -->
 		{#if data.lat}
 			<div class="flex justify-between">
@@ -74,7 +73,7 @@
 							d="M11 2a6 6 0 0 0-5.986 6.41a5 5 0 0 0-1.322 8.34a1 1 0 1 0 1.324-1.5a3.002 3.002 0 0 1 1.324-5.178a1 1 0 0 0 .757-1.193A4 4 0 1 1 14.92 7.2a1 1 0 0 0 .999.8H16a4 4 0 0 1 2.4 7.2a1 1 0 0 0 1.201 1.6a6 6 0 0 0-2.93-10.762A6.002 6.002 0 0 0 11 2zm3.5 15a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3zm-3.5-.5a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0zm4 3a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0zm-5 1a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0z" /></svg>
 				{/if}
 			</div>
-			<div class="mt-3 flex justify-evenly">
+			<div class="flex mt-3 justify-evenly">
 				{#each data.daily as day, i}
 					{#if i > 0 && i < 4}
 						<IndividualWeatherCard temp={Math.round(day.temp.day)} cond={day.weather[0].main} {i} />
@@ -89,7 +88,7 @@
 					<DialogHeader>
 						<DialogTitle>8 day forecast for {Location}</DialogTitle>
 						<DialogDescription>
-							<div class="mt-3 flex justify-between">
+							<div class="flex justify-between mt-3">
 								{#each data.daily as day, i}
 									<IndividualWeatherCard
 										temp={Math.round(day.temp.day)}
