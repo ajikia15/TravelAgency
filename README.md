@@ -8,8 +8,7 @@ A website for a mysterious Travel Agency. 🚩👻
 # Tools being used:
 
 ```
-Svelte with Tailwind, some Typescript too.
-My goal is to avoid external libraries to make the bundle size smallest possible.
+Svelte with Tailwind and some Typescript
 ```
 
 # Misc
