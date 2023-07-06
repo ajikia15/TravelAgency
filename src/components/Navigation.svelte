@@ -21,28 +21,29 @@
 <nav
 	class="fixed top-0 z-20 hidden w-full place-items-center bg-transparent py-4 text-lg text-gray-400 transition-all dark:text-gray-300 md:grid {y >
 		1 && 'bg-white shadow-sm dark:bg-gray-900'}">
-	<div class="grid w-11/12 grid-cols-3 items-center justify-between text-2xl dark:bg-gray-900">
-		<ul class="flex flex-row items-center justify-between">
-			<li>Logo</li>
-		</ul>
-		<ul class="flex flex-row items-center justify-center gap-6">
+	<div class="grid w-11/12 grid-cols-2 items-center justify-between text-2xl dark:bg-gray-900">
+		<ul class="flex flex-row items-center gap-6">
+			<li class="aspect-square">
+				<img src="/landing/logo.png" alt="" class="h-14" />
+			</li>
 			<li
-				class="w-min-content before:bg-moss-500 hover:text-moss-500 relative transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-1 before:w-0 before:shadow-2xl before:duration-500 hover:before:left-0 hover:before:w-full dark:before:bg-green-400 dark:hover:text-green-400 {path ==
+				class="w-min-content before:bg-moss-500 hover:text-moss-500 relative text-lg font-semibold transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-[2.5px] before:w-0 before:shadow-2xl before:duration-500 hover:before:left-0 hover:before:w-full dark:before:bg-green-400 dark:hover:text-green-400 {path ==
 					'/' && 'text-moss-500 before:w-full dark:text-green-400'}">
 				<a href="/" class="">Home</a>
 			</li>
 			<li
-				class="w-min-content before:bg-moss-500 hover:text-moss-500 relative transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-1 before:w-0 before:shadow-2xl before:transition-all before:duration-500 hover:before:left-0 hover:before:w-full dark:before:bg-green-400 dark:hover:text-green-400 {path.includes(
+				class="w-min-content before:bg-moss-500 hover:text-moss-500 relative text-lg font-semibold transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-[2.5px] before:w-0 before:shadow-2xl before:transition-all before:duration-500 hover:before:left-0 hover:before:w-full dark:before:bg-green-400 dark:hover:text-green-400 {path.includes(
 					'/tour'
 				) && 'text-moss-500 before:w-full dark:text-green-400'}">
 				<a href="/#searchDiv" class="">Tours</a>
 			</li>
 			<li
-				class="w-min-content before:bg-moss-500 hover:text-moss-500 relative transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-1 before:w-0 before:shadow-2xl before:transition-all before:duration-500 hover:before:left-0 hover:before:w-full dark:before:bg-green-400 dark:hover:text-green-400 {path ==
+				class="w-min-content before:bg-moss-500 hover:text-moss-500 before:h-[2.5px]before:w-0 relative text-lg font-semibold transition-all before:absolute before:-bottom-[1px] before:right-0 before:shadow-2xl before:transition-all before:duration-500 hover:before:left-0 hover:before:w-full dark:before:bg-green-400 dark:hover:text-green-400 {path ==
 					'/about' && 'text-moss-500 before:w-full dark:text-green-400'}">
 				<a href="/about" class="">About Us</a>
 			</li>
 		</ul>
+
 		<ul class="flex flex-row items-center justify-end gap-10">
 			<li>
 				<button
@@ -71,7 +72,7 @@
 			<li class="group relative flex flex-row items-center">
 				<button
 					type="button"
-					class="border-moss-500 text-moss-500 focus:ring-moss-400 group-hover:bg-moss-500 hover:text-moss-100 rounded-lg border-2 bg-transparent p-2 px-5 tracking-wide shadow-lg transition-all focus:outline-none focus:ring group-hover:text-white group-hover:shadow-md dark:border-green-400 dark:text-green-400">
+					class="border-moss-500 text-moss-500 focus:ring-moss-400 group-hover:bg-moss-500 hover:text-moss-100 rounded-lg border-2 bg-transparent p-2 px-5 text-lg font-semibold tracking-wide shadow-lg transition-all focus:outline-none focus:ring group-hover:text-white group-hover:shadow-md dark:border-green-400 dark:text-green-400">
 					<p>Book</p>
 				</button>
 				<div

@@ -1,5 +1,5 @@
 <script lang="ts">
-	const max = 1000;
+	const max = 500;
 	export let curMin: number = 0;
 	export let curMax = max;
 	let temp = 0;
@@ -17,8 +17,8 @@
 </script>
 
 <div class="p-1">
-	<form class="price-input mb-3 flex flex-row text-moss-500 dark:text-green-400">
-		<div class="field flex w-full md:w-auto">
+	<form class="flex flex-row mb-3 price-input text-moss-500 dark:text-green-400">
+		<div class="flex w-full field md:w-auto">
 			<span class="">&nbsp;Min&nbsp;&nbsp;</span>
 			<input
 				type="tel"

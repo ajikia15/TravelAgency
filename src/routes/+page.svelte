@@ -13,7 +13,7 @@
 	const iteration = 4;
 	let searchQuery = '';
 	let curMin = 0;
-	let curMax = 1000;
+	let curMax = 500;
 	let sortOption = 0;
 	let tours = [];
 	const collectionRef = collection(db, 'tours');
