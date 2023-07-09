@@ -62,3 +62,10 @@
 		opacity: 1;
 	}
 }
+
+.font-merri {
+	font-family: 'Merriweather', serif;
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/Merriweather-Regular.ttf');
+}

@@ -72,7 +72,7 @@
 	</div>
 	<div class="group/text text-moss-500 px-3 py-4 shadow-2xl dark:text-green-400">
 		<a class="flex cursor-pointer items-center justify-between" href={`/tour/${id}`}>
-			<h1 class="text-2xl">
+			<h1 class="font-merri text-2xl font-semibold">
 				{Location}
 			</h1>
 			<div class="flex items-center justify-around">

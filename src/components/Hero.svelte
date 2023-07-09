@@ -10,7 +10,8 @@
 		alt="" />
 	<div class="z-10 grid w-11/12 grid-cols-1 md:grid-cols-[5fr_7fr]">
 		<div class="flex flex-col justify-center space-y-3 md:space-y-6">
-			<h1 class="mt-4 text-center text-2xl font-bold dark:text-white md:text-left md:text-4xl">
+			<h1
+				class="font-merri mt-4 text-center text-2xl font-bold dark:text-white md:text-left md:text-4xl">
 				Unveil the hidden gems of Georgia!
 			</h1>
 			<h2 class="lg:text-md text-sm text-gray-500 md:text-base">
@@ -22,7 +23,7 @@
 				<a href="/#searchDiv">
 					<button
 						type="button"
-						class="border-moss-500 bg-moss-500 focus:ring-moss-400 group w-full rounded-lg border-2 p-2 px-3 tracking-wide text-white opacity-100 shadow-lg transition-all hover:border-transparent hover:opacity-70 focus:outline-none focus:ring group-hover:shadow-md dark:border-green-400 dark:text-green-400 md:w-auto md:p-2 md:px-5">
+						class="border-moss-500 bg-moss-500 focus:ring-moss-400 group w-full rounded-lg border-2 p-2 px-3 font-semibold tracking-wide text-white opacity-100 shadow-lg transition-all hover:border-transparent hover:opacity-70 focus:outline-none focus:ring group-hover:shadow-md dark:border-green-400 dark:text-green-400 md:w-auto md:p-2 md:px-5">
 						<p>Explore Tours</p>
 					</button>
 				</a>
