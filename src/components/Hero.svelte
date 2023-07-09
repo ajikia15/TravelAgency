@@ -1,5 +1,5 @@
 <header
-	class="relative grid h-[80vh] w-full place-items-center bg-white dark:bg-gray-900 md:min-h-[96vh]">
+	class="relative grid h-[80vh] w-full place-items-center bg-white dark:bg-gray-900 md:min-h-[75vh]">
 	<img
 		src="/landing/layered-waves-haikei-light.svg"
 		class="pointer-events-none absolute bottom-0 z-0 w-full dark:hidden"
@@ -10,7 +10,7 @@
 		alt="" />
 	<div class="z-10 grid w-11/12 grid-cols-1 md:grid-cols-[5fr_7fr]">
 		<div class="flex flex-col justify-center space-y-3 md:space-y-6">
-			<h1 class="mt-4 text-center text-2xl dark:text-white md:text-left md:text-4xl">
+			<h1 class="mt-4 text-center text-2xl font-bold dark:text-white md:text-left md:text-4xl">
 				Unveil the hidden gems of Georgia!
 			</h1>
 			<h2 class="lg:text-md text-sm text-gray-500 md:text-base">
@@ -38,7 +38,7 @@
 			</div>
 		</div>
 		<!-- class="absolute z-0 duration-150 top-1/3 left-1/4 animate-spin-slow" xmlns="http://www.w3.org/2000/svg" width="64" height="64"  -->
-		<div class="relative flex flex-col md:items-center md:justify-center">
+		<div class="relative -z-10 flex flex-col md:items-center md:justify-center">
 			<img
 				src="/landing/landing-light.svg"
 				class="h-[75%] dark:hidden"
@@ -49,26 +49,6 @@
 				class="z-10 hidden h-[75%] dark:block"
 				alt="Instagram Post You Travelling Dark Mode"
 				loading="lazy" />
-			<!-- <div class="flex text-lg md:hidden md:text-xl lg:text-lg ">
-				<a href="/#searchDiv">
-					<button
-						type="button"
-						class="p-2 px-3 tracking-wide text-white transition-all border-2 rounded-lg shadow-lg opacity-100 group border-moss-500 bg-moss-500 focus:outline-none focus:ring focus:ring-moss-400 group-hover:shadow-md hover:border-transparent hover:opacity-70 dark:border-green-400 dark:text-green-400 md:p-2 md:px-5">
-						<p>Explore Tours</p>
-					</button>
-				</a>
-				<button
-					type="button"
-					class="ml-4 tracking-wide transition-all bg-transparent border-2 border-transparent rounded-lg focus-ring group focus:outline-none md:p-2 md:px-5 ">
-					<a
-						href="/about"
-						class="transition-all opacity-100 text-moss-500 focus:outline-none group-hover:opacity-70 group-focus:underline">
-						How It Works
-					</a>
-				</button>
-			</div> -->
 		</div>
 	</div>
 </header>
-
-<!-- font-family: 'IBM Plex Serif', serif; -->

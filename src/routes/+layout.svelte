@@ -8,6 +8,11 @@
 
 <svelte:head>
 	<title>Travel Agency</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;900&display=swap"
+		rel="stylesheet" />
 </svelte:head>
 <Navigation />
 <slot />

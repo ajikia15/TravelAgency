@@ -23,7 +23,10 @@
 				let:currentPageIndex
 				let:showPage
 				let:pagesCount>
-				<div slot="prev" on:click={showPrevPage} class="custom-arrow left-2">
+				<div
+					slot="prev"
+					on:click={showPrevPage}
+					class="absolute left-2 top-1/2 z-20 grid aspect-square w-6 -translate-y-1/2 cursor-pointer place-items-center rounded-full bg-gray-200 text-gray-800 opacity-0 transition-all hover:opacity-80 group-hover:opacity-80">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 						<g fill="none" fill-rule="evenodd"
 							><path
@@ -52,7 +55,10 @@
 						alt="tour"
 						src={pic} />
 				{/each}
-				<div slot="next" on:click={showNextPage} class="custom-arrow right-2">
+				<div
+					slot="next"
+					on:click={showNextPage}
+					class="absolute right-2 top-1/2 z-20 grid aspect-square w-6 -translate-y-1/2 cursor-pointer place-items-center rounded-full bg-gray-200 text-gray-800 opacity-0 transition-all hover:opacity-80 group-hover:opacity-80">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 						<g fill="none" fill-rule="evenodd"
 							><path
@@ -66,7 +72,7 @@
 	</div>
 	<div class="group/text text-moss-500 px-3 py-4 shadow-2xl dark:text-green-400">
 		<a class="flex cursor-pointer items-center justify-between" href={`/tour/${id}`}>
-			<h1 class="text-3xl">
+			<h1 class="text-2xl">
 				{Location}
 			</h1>
 			<div class="flex items-center justify-around">

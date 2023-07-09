@@ -3,6 +3,7 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
+
 /* body {
 	font-family: 'bignoodletitlingregular', monospace;
 }
@@ -19,40 +20,45 @@
 . {
 	font-family: '', sans-serif;
 } */
-*{
+* {
 	padding: 0;
 	margin: 0;
 }
+
 .appear {
 	opacity: 0;
 	animation: fadeAnimation 0.6s forwards;
 }
+
 @keyframes fadeAnimation {
 	0% {
 		opacity: 0;
 	}
+
 	50% {
 		opacity: 0;
 	}
+
 	100% {
 		opacity: 0.6;
 	}
 }
+
 .mainappear {
 	opacity: 0;
 	animation: fadeAnimation1 0.6s forwards;
 }
+
 @keyframes fadeAnimation1 {
 	0% {
 		opacity: 0;
 	}
+
 	50% {
 		opacity: 0;
 	}
+
 	100% {
 		opacity: 1;
 	}
-}
-	.custom-arrow {
-	@apply absolute z-20 grid w-6 text-gray-800 transition-all -translate-y-1/2 bg-gray-200 rounded-full opacity-0 cursor-pointer top-1/2 aspect-square place-items-center hover:opacity-80 group-hover:opacity-80;
 }

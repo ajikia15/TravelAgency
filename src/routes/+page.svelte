@@ -53,7 +53,7 @@
 <Hero />
 <div class="grid w-full place-items-center pb-4">
 	<div
-		class="mt-10 grid w-11/12 transform grid-cols-1 flex-row items-center gap-3 rounded-xl bg-white p-5 text-2xl shadow-md transition duration-500 after:absolute after:-top-[1px] after:left-0 after:h-2 after:w-full after:rounded-t-xl hover:scale-105 hover:shadow-lg dark:bg-gray-900 md:mt-0 md:grid-cols-[1fr_1fr] lg:w-3/5">
+		class="z-[15] mt-10 grid w-11/12 transform grid-cols-1 flex-row items-center gap-3 rounded-xl bg-white p-5 text-2xl shadow-md transition duration-500 after:absolute after:-top-[1px] after:left-0 after:h-2 after:w-full after:rounded-t-xl hover:scale-105 hover:shadow-lg dark:bg-gray-900 md:mt-0 md:grid-cols-[1fr_1fr] lg:w-3/5">
 		<div>
 			<Search bind:searchQuery />
 		</div>
@@ -68,25 +68,25 @@
 		class="grid w-11/12 grid-cols-1 gap-10 md:grid-cols-3 xl:grid-cols-4"
 		id="tours"
 		use:autoAnimate>
-		<AdminCard />
+		<!-- <AdminCard /> -->
 		{#if tours.length > 0}
 			{#if sortOption == 0}
 				{#each tours as tour}
 					{#if tour.Location.toLowerCase().includes(processedSearch) && tour.Price > minMax[0] && tour.Price < minMax[1]}
 						<div>
 							<!-- toggle betwen these two -->
-							<!-- <Card
-								Location={tour.Location}
-								Price={tour.Price}
-								Pics={tour.Pics}
-								MinPeople={tour.MinPeople}
-								id={tour.id} /> -->
-							<EditCard
+							<Card
 								Location={tour.Location}
 								Price={tour.Price}
 								Pics={tour.Pics}
 								MinPeople={tour.MinPeople}
 								id={tour.id} />
+							<!-- <EditCard
+								Location={tour.Location}
+								Price={tour.Price}
+								Pics={tour.Pics}
+								MinPeople={tour.MinPeople}
+								id={tour.id} /> -->
 						</div>
 					{/if}
 				{/each}

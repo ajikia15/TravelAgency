@@ -12,7 +12,7 @@
 							href="/"
 							rel="noreferrer"
 							target="_blank"
-							class="text-gray-700  transition-all hover:text-moss-500 dark:text-gray-400 dark:hover:text-green-400">
+							class="hover:text-moss-500 text-gray-700 transition-all dark:text-gray-400 dark:hover:text-green-400">
 							<span class="sr-only">Facebook</span>
 
 							<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -29,7 +29,7 @@
 							href="/"
 							rel="noreferrer"
 							target="_blank"
-							class="text-gray-700  transition-all hover:text-moss-500 dark:text-gray-400 dark:hover:text-green-400">
+							class="hover:text-moss-500 text-gray-700 transition-all dark:text-gray-400 dark:hover:text-green-400">
 							<span class="sr-only">Instagram</span>
 
 							<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -46,7 +46,7 @@
 							href="/"
 							rel="noreferrer"
 							target="_blank"
-							class="text-gray-700  transition-all hover:text-moss-500 dark:text-gray-400 dark:hover:text-green-400">
+							class="hover:text-moss-500 text-gray-700 transition-all dark:text-gray-400 dark:hover:text-green-400">
 							<span class="sr-only">GitHub</span>
 
 							<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -69,7 +69,7 @@
 							<li>
 								<a
 									href="/about"
-									class="text-gray-700 transition hover:opacity-75 dark:text-gray-300 ">
+									class="text-gray-700 transition hover:opacity-75 dark:text-gray-300">
 									About
 								</a>
 							</li>
@@ -77,7 +77,7 @@
 							<li>
 								<a
 									href="/about"
-									class="text-gray-700 transition hover:opacity-75 dark:text-gray-300 ">
+									class="text-gray-700 transition hover:opacity-75 dark:text-gray-300">
 									Meet the Team
 								</a>
 							</li>

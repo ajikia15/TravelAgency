@@ -38,7 +38,7 @@
 				<a href="/#searchDiv" class="">Tours</a>
 			</li>
 			<li
-				class="w-min-content before:bg-moss-500 hover:text-moss-500 before:h-[2.5px]before:w-0 relative text-lg font-semibold transition-all before:absolute before:-bottom-[1px] before:right-0 before:shadow-2xl before:transition-all before:duration-500 hover:before:left-0 hover:before:w-full dark:before:bg-green-400 dark:hover:text-green-400 {path ==
+				class="w-min-content before:bg-moss-500 hover:text-moss-500 relative text-lg font-semibold transition-all before:absolute before:-bottom-[1px] before:right-0 before:h-[2.5px] before:w-0 before:shadow-2xl before:transition-all before:duration-500 hover:before:left-0 hover:before:w-full dark:before:bg-green-400 dark:hover:text-green-400 {path ==
 					'/about' && 'text-moss-500 before:w-full dark:text-green-400'}">
 				<a href="/about" class="">About Us</a>
 			</li>
