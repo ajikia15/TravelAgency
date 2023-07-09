@@ -24,7 +24,7 @@
 	</svg>
 	<div
 		class="before:text-moss-500 relative w-full transition-all before:pointer-events-none before:absolute before:left-2 before:top-0 before:z-10 before:transition-all before:content-['Where?'] focus-within:before:-top-3.5 focus-within:before:text-sm dark:before:text-green-400 {searchQuery.length >
-			0 && 'before:-top-[0.75rem] before:text-sm'} ">
+			0 && 'before:-top-[50%] before:text-sm'} ">
 		<input
 			class="text-moss-500 relative flex w-full bg-white pl-2 outline-none dark:bg-gray-900 dark:before:bg-green-400"
 			type="text"
