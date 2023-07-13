@@ -45,6 +45,11 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
+	@media (max-width: 768px) {
+		dialog {
+			max-width: 100%;
+		}
+	}
 	dialog::backdrop {
 		background: rgba(0, 0, 0, 0.7);
 	}
