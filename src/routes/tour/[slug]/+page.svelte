@@ -115,7 +115,7 @@
 					</div>
 				</div>
 				<div class="space-y-2 py-6 dark:text-white">
-					<div class="flex justify-between">
+					<div class="flex items-center justify-between">
 						<h4 class="text-lg font-semibold text-gray-400">Why {tour.Location}?</h4>
 						<div class="md:hidden">
 							<Sheet>
@@ -123,10 +123,13 @@
 									<Button variant="" class="bg-moss-500 hover:bg-moSs-500 hover:bg-opacity-75"
 										>View Details &rarr;</Button>
 								</SheetTrigger>
-								<SheetContent position="right" size="full">
+								<SheetContent position="right" size="full" class="p-0">
 									<div
 										class="flex w-full flex-col justify-center space-y-5 rounded border bg-white p-6 text-center shadow will-change-transform">
 										<ul class="flex flex-col gap-x-2 space-y-2 rounded">
+											<li class="font-merri grid place-items-center py-2 text-3xl font-bold">
+												{tour.Location}, Georgia
+											</li>
 											<li
 												class="flex flex-row items-center gap-x-2 rounded-sm border p-3 font-semibold">
 												<svg

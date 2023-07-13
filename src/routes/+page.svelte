@@ -51,7 +51,7 @@
 	<title>Travel Agency</title>
 </svelte:head>
 <Hero />
-<div class="grid w-full pb-4 bg-gray-100 place-items-center dark:bg-gray-800">
+<div class="grid w-full place-items-center bg-gray-100 pb-4 dark:bg-gray-800">
 	<div
 		class="z-[15] mt-10 grid w-11/12 transform grid-cols-1 flex-row items-center gap-3 rounded-xl bg-white p-5 text-2xl shadow-md transition duration-500 after:absolute after:-top-[1px] after:left-0 after:h-2 after:w-full after:rounded-t-xl hover:scale-105 hover:shadow-lg dark:bg-gray-900 md:mt-0 md:grid-cols-[4fr_5fr] lg:w-3/5">
 		<div>
@@ -65,7 +65,7 @@
 </div>
 <section
 	class="mb-5 grid min-h-[100px] w-full place-items-center bg-gray-100 pb-4 dark:bg-gray-800">
-	<ul	
+	<ul
 		class="grid w-11/12 grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
 		id="tours"
 		use:autoAnimate>
@@ -107,11 +107,11 @@
 			{#each Array(iteration) as _, i}
 				<div
 					role="status"
-					class="max-w-sm p-4 border border-gray-200 rounded shadow animate-pulse dark:border-gray-700 md:p-6">
+					class="max-w-sm animate-pulse rounded border border-gray-200 p-4 shadow dark:border-gray-700 md:p-6">
 					<div
-						class="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-gray-700">
+						class="mb-4 flex h-48 items-center justify-center rounded bg-gray-300 dark:bg-gray-700">
 						<svg
-							class="w-12 h-12 text-gray-200 dark:text-gray-600"
+							class="h-12 w-12 text-gray-200 dark:text-gray-600"
 							xmlns="http://www.w3.org/2000/svg"
 							aria-hidden="true"
 							fill="currentColor"
@@ -122,7 +122,7 @@
 					<div class="mb-4 h-2.5 w-48 rounded-full bg-gray-200 dark:bg-gray-700" />
 					<div class="mb-2.5 h-2 rounded-full bg-gray-200 dark:bg-gray-700" />
 					<div class="mb-2.5 h-2 rounded-full bg-gray-200 dark:bg-gray-700" />
-					<div class="h-2 bg-gray-200 rounded-full dark:bg-gray-700" />
+					<div class="h-2 rounded-full bg-gray-200 dark:bg-gray-700" />
 					<span class="sr-only">Loading...</span>
 				</div>
 			{/each}
