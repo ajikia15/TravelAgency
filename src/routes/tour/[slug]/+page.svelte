@@ -86,7 +86,7 @@
 				<div class="relative grid aspect-video w-full grid-cols-2 overflow-hidden rounded-2xl">
 					<a
 						href="/tour/{slug}/gallery"
-						class="absolute bottom-3 right-3 z-10 cursor-pointer rounded-lg bg-white p-2 px-4 font-semibold">
+						class="absolute bottom-3 right-3 z-10 cursor-pointer rounded-lg bg-white p-2 px-3 font-semibold md:px-4">
 						<p>All Photos</p>
 					</a>
 					<div class="object-fit mr-2 h-full rounded-l-2xl bg-zinc-800">
@@ -115,7 +115,184 @@
 					</div>
 				</div>
 				<div class="space-y-2 py-6 dark:text-white">
-					<h4 class="text-lg font-semibold text-gray-400">Why {tour.Location}?</h4>
+					<div class="flex justify-between">
+						<h4 class="text-lg font-semibold text-gray-400">Why {tour.Location}?</h4>
+						<div class="md:hidden">
+							<Sheet>
+								<SheetTrigger>
+									<Button variant="" class="bg-moss-500 hover:bg-moSs-500 hover:bg-opacity-75"
+										>View Details &rarr;</Button>
+								</SheetTrigger>
+								<SheetContent position="right" size="full">
+									<div
+										class="flex w-full flex-col justify-center space-y-5 rounded border bg-white p-6 text-center shadow will-change-transform">
+										<ul class="flex flex-col gap-x-2 space-y-2 rounded">
+											<li
+												class="flex flex-row items-center gap-x-2 rounded-sm border p-3 font-semibold">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													class="text-gray-800"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													><path
+														fill="currentColor"
+														d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z" /></svg>
+												For {tour.MinPeople}+ People
+											</li>
+											<li
+												class="flex flex-row items-center gap-2 rounded-sm border p-3 font-semibold">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													class="text-gray-800"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													><path
+														fill="currentColor"
+														d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10zm-3.5-8v2H11v2h2v-2h1a2.5 2.5 0 1 0 0-5h-4a.5.5 0 1 1 0-1h5.5V8H13V6h-2v2h-1a2.5 2.5 0 0 0 0 5h4a.5.5 0 1 1 0 1H8.5z" /></svg>
+												Starting from {tour.Price}$
+											</li>
+											<li
+												class="flex flex-row items-center gap-2 rounded-sm border p-3 font-semibold">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													class="text-gray-800"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													><path
+														fill="currentColor"
+														d="M12 14q-.425 0-.713-.288T11 13q0-.425.288-.713T12 12q.425 0 .713.288T13 13q0 .425-.288.713T12 14Zm-4 0q-.425 0-.713-.288T7 13q0-.425.288-.713T8 12q.425 0 .713.288T9 13q0 .425-.288.713T8 14Zm8 0q-.425 0-.713-.288T15 13q0-.425.288-.713T16 12q.425 0 .713.288T17 13q0 .425-.288.713T16 14Zm-4 4q-.425 0-.713-.288T11 17q0-.425.288-.713T12 16q.425 0 .713.288T13 17q0 .425-.288.713T12 18Zm-4 0q-.425 0-.713-.288T7 17q0-.425.288-.713T8 16q.425 0 .713.288T9 17q0 .425-.288.713T8 18Zm8 0q-.425 0-.713-.288T15 17q0-.425.288-.713T16 16q.425 0 .713.288T17 17q0 .425-.288.713T16 18ZM5 22q-.825 0-1.413-.588T3 20V6q0-.825.588-1.413T5 4h1V3q0-.425.288-.713T7 2q.425 0 .713.288T8 3v1h8V3q0-.425.288-.713T17 2q.425 0 .713.288T18 3v1h1q.825 0 1.413.588T21 6v14q0 .825-.588 1.413T19 22H5Zm0-2h14V10H5v10Z" /></svg>
+												<!-- For {tours[i].daysCount} Day{#if tours[i].daysCount > 0}s
+							{/if} or More -->
+												Days
+											</li>
+											<Accordion type="single" collapsible class="grid w-full gap-y-2">
+												<AccordionItem value="item-1" class="rounded-sm border px-3">
+													<AccordionTrigger class="py-3"
+														><div class="flex flex-row gap-x-2">
+															<svg
+																xmlns="http://www.w3.org/2000/svg"
+																width="24"
+																height="24"
+																viewBox="0 0 24 24"
+																><path
+																	fill="currentColor"
+																	d="m7 23l3.075-15.55q.15-.725.675-1.088T11.85 6q.575 0 1.063.25T13.7 7l1 1.6q.45.725 1.163 1.313t1.637.862V9H19v14h-1.5V12.85q-1.2-.275-2.225-.875T13.5 10.5l-.6 3l2.1 2V23h-2v-6l-2.1-2l-1.8 8H7Zm.425-9.875l-2.125-.4q-.4-.075-.625-.413t-.15-.762l.75-3.925q.15-.8.85-1.263t1.5-.312l1.15.225l-1.35 6.85ZM13.5 5.5q-.825 0-1.413-.588T11.5 3.5q0-.825.588-1.413T13.5 1.5q.825 0 1.413.588T15.5 3.5q0 .825-.588 1.413T13.5 5.5Z" /></svg
+															>Activities
+														</div>
+													</AccordionTrigger>
+													<AccordionContent>
+														<h4 class="opacity-40">Included, but not limited To</h4>
+														<ul class="grid grid-cols-1 space-y-2 pt-3 font-semibold">
+															{#each list as activity}
+																{#if activityNumbers.includes(activity.id.toString())}
+																	<li class="flex flex-row items-center space-x-2.5 text-base">
+																		<!-- {activity.id} -->
+																		<img
+																			src={`/svgs/${activity.id}.svg `}
+																			alt=""
+																			width="30"
+																			height="30" />
+																		<p>{activity.name}</p>
+																	</li>
+																{/if}
+															{/each}
+														</ul>
+													</AccordionContent>
+												</AccordionItem>
+												<AccordionItem value="item-2" class="rounded-sm border px-3">
+													<AccordionTrigger class="py-3"
+														><div class="flex flex-row gap-x-2">
+															<svg
+																xmlns="http://www.w3.org/2000/svg"
+																width="24"
+																height="24"
+																viewBox="0 0 1024 1024"
+																><path
+																	fill="currentColor"
+																	d="M959 413.4L935.3 372a8 8 0 0 0-10.9-2.9l-50.7 29.6l-78.3-216.2a63.9 63.9 0 0 0-60.9-44.4H301.2c-34.7 0-65.5 22.4-76.2 55.5l-74.6 205.2l-50.8-29.6a8 8 0 0 0-10.9 2.9L65 413.4c-2.2 3.8-.9 8.6 2.9 10.8l60.4 35.2l-14.5 40c-1.2 3.2-1.8 6.6-1.8 10v348.2c0 15.7 11.8 28.4 26.3 28.4h67.6c12.3 0 23-9.3 25.6-22.3l7.7-37.7h545.6l7.7 37.7c2.7 13 13.3 22.3 25.6 22.3h67.6c14.5 0 26.3-12.7 26.3-28.4V509.4c0-3.4-.6-6.8-1.8-10l-14.5-40l60.3-35.2a8 8 0 0 0 3-10.8zM264 621c-22.1 0-40-17.9-40-40s17.9-40 40-40s40 17.9 40 40s-17.9 40-40 40zm388 75c0 4.4-3.6 8-8 8H380c-4.4 0-8-3.6-8-8v-84c0-4.4 3.6-8 8-8h40c4.4 0 8 3.6 8 8v36h168v-36c0-4.4 3.6-8 8-8h40c4.4 0 8 3.6 8 8v84zm108-75c-22.1 0-40-17.9-40-40s17.9-40 40-40s40 17.9 40 40s-17.9 40-40 40zM220 418l72.7-199.9l.5-1.3l.4-1.3c1.1-3.3 4.1-5.5 7.6-5.5h427.6l75.4 208H220z" /></svg
+															>Available Vehicles
+														</div></AccordionTrigger>
+													<AccordionContent>
+														included, but not limited To
+														<ul class="grid grid-cols-1 space-y-2 pt-2 font-semibold">
+															<li class="flex flex-row space-x-2">
+																<p>i</p>
+																<p>მალე</p>
+															</li>
+
+															<li class="flex flex-row space-x-2">
+																<p>i</p>
+																<p>მალე</p>
+															</li>
+
+															<li class="flex flex-row space-x-2">
+																<p>i</p>
+																<p>მალე</p>
+															</li>
+														</ul>
+													</AccordionContent>
+												</AccordionItem>
+											</Accordion>
+											<ul class="hidden grid-cols-3 border-t">
+												<!-- car svgs  -->
+												<li class="grid place-items-center border-r shadow-inner">
+													<svg
+														class="absolute text-gray-800 transition-all"
+														xmlns="http://www.w3.org/2000/svg"
+														width="24"
+														height="24"
+														viewBox="0 0 24 24"
+														><path
+															fill="currentColor"
+															d="M16 6H6l-5 6v3h2a3 3 0 0 0 3 3a3 3 0 0 0 3-3h6a3 3 0 0 0 3 3a3 3 0 0 0 3-3h2v-3c0-1.11-.89-2-2-2h-2l-3-4M6.5 7.5h4V10h-6l2-2.5m5.5 0h3.5l1.96 2.5H12V7.5m-6 6A1.5 1.5 0 0 1 7.5 15A1.5 1.5 0 0 1 6 16.5A1.5 1.5 0 0 1 4.5 15A1.5 1.5 0 0 1 6 13.5m12 0a1.5 1.5 0 0 1 1.5 1.5a1.5 1.5 0 0 1-1.5 1.5a1.5 1.5 0 0 1-1.5-1.5a1.5 1.5 0 0 1 1.5-1.5Z" /></svg>
+												</li>
+												<li class="grid place-items-center py-2 shadow-inner">
+													<svg
+														class="text-gray-800 transition-all"
+														xmlns="http://www.w3.org/2000/svg"
+														width="24"
+														height="24"
+														viewBox="0 0 24 24"
+														><path
+															fill="currentColor"
+															d="M3 6h13l3 4h2c1.11 0 2 .89 2 2v3h-2a3 3 0 0 1-3 3a3 3 0 0 1-3-3H9a3 3 0 0 1-3 3a3 3 0 0 1-3-3H1V8c0-1.11.89-2 2-2m-.5 1.5V10h8V7.5h-8m9.5 0V10h5.14l-1.89-2.5H12m-6 6A1.5 1.5 0 0 0 4.5 15A1.5 1.5 0 0 0 6 16.5A1.5 1.5 0 0 0 7.5 15A1.5 1.5 0 0 0 6 13.5m12 0a1.5 1.5 0 0 0-1.5 1.5a1.5 1.5 0 0 0 1.5 1.5a1.5 1.5 0 0 0 1.5-1.5a1.5 1.5 0 0 0-1.5-1.5Z" /></svg>
+												</li>
+												<li class="group relative grid place-items-center border-l shadow-inner">
+													<svg
+														class="text-gray-800 transition-all"
+														xmlns="http://www.w3.org/2000/svg"
+														width="24"
+														height="24"
+														viewBox="0 0 512 512"
+														><path
+															fill="currentColor"
+															d="m240.287 127.394l-23.78-19.145l108.861-13.892l2.751 21.828zM180.746 107.7h-62.91l-17.88 44.576h136.067zm275.78 247.033a62.91 62.91 0 1 0-62.911 62.91a62.91 62.91 0 0 0 62.91-62.91zm-279.205 0a62.91 62.91 0 1 0-62.91 62.91a62.91 62.91 0 0 0 62.91-62.91zM486 347.25a20.548 20.548 0 0 1-7.922 16.216a84.917 84.917 0 1 0-168.362 4.388H198.31a84.903 84.903 0 1 0-168.788-13.686a26.834 26.834 0 0 1-3.329-16.504l16.753-143.165a22.914 22.914 0 0 1 22.762-20.26h241.904a14.992 14.992 0 0 1 11.787 5.736l44.012 56.089l105.383 22.941zM337.815 239.255l-35.856-50.656h-93.265v50.683h129.135z" /></svg>
+												</li>
+											</ul>
+										</ul>
+										<div class="grid grid-cols-[3fr_2fr] gap-x-2">
+											<Button class="bg-moss-500 hover:bg-moss-700">Book</Button>
+											<Button variant="secondary">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													class="text-zinc-700"
+													><path
+														fill="currentColor"
+														d="M18 22q-1.25 0-2.125-.875T15 19q0-.175.025-.363t.075-.337l-7.05-4.1q-.425.375-.95.588T6 15q-1.25 0-2.125-.875T3 12q0-1.25.875-2.125T6 9q.575 0 1.1.213t.95.587l7.05-4.1q-.05-.15-.075-.337T15 5q0-1.25.875-2.125T18 2q1.25 0 2.125.875T21 5q0 1.25-.875 2.125T18 8q-.575 0-1.1-.212t-.95-.588L8.9 11.3q.05.15.075.338T9 12q0 .175-.025.363T8.9 12.7l7.05 4.1q.425-.375.95-.587T18 16q1.25 0 2.125.875T21 19q0 1.25-.875 2.125T18 22Zm0-16q.425 0 .713-.288T19 5q0-.425-.288-.713T18 4q-.425 0-.713.288T17 5q0 .425.288.713T18 6ZM6 13q.425 0 .713-.288T7 12q0-.425-.288-.713T6 11q-.425 0-.713.288T5 12q0 .425.288.713T6 13Zm12 7q.425 0 .713-.288T19 19q0-.425-.288-.713T18 18q-.425 0-.713.288T17 19q0 .425.288.713T18 20Zm0-15ZM6 12Zm12 7Z" /></svg
+												></Button>
+										</div>
+									</div>
+									<WeatherCard Location={tour.Location} Lat={tour.Lat} Long={tour.Long} />
+								</SheetContent>
+							</Sheet>
+						</div>
+					</div>
 					<div class="text-xl">
 						{#each tour.Description.split(/\/(\d+)\//) as segment, index}
 							{#if index % 2 === 0}
@@ -223,17 +400,17 @@
 										<ul class="grid grid-cols-1 space-y-2 pt-2 font-semibold">
 											<li class="flex flex-row space-x-2">
 												<p>i</p>
-												<p>Sex</p>
+												<p>მალე</p>
 											</li>
 
 											<li class="flex flex-row space-x-2">
 												<p>i</p>
-												<p>Sex</p>
+												<p>მალე</p>
 											</li>
 
 											<li class="flex flex-row space-x-2">
 												<p>i</p>
-												<p>Sex</p>
+												<p>მალე</p>
 											</li>
 										</ul>
 									</AccordionContent>

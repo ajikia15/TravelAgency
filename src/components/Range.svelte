@@ -17,8 +17,8 @@
 </script>
 
 <div class="p-1">
-	<form class="flex flex-row mb-3 price-input text-moss-500 dark:text-green-400">
-		<div class="flex w-full field md:w-auto">
+	<form class="price-input text-moss-500 mb-3 flex flex-row dark:text-green-400">
+		<div class="field flex w-full md:w-auto">
 			<span class="">&nbsp;Min&nbsp;&nbsp;</span>
 			<input
 				type="tel"

@@ -23,13 +23,13 @@
 				<a href="/#searchDiv">
 					<button
 						type="button"
-						class="border-moss-500 bg-moss-500 focus:ring-moss-400 group w-full rounded-lg border-2 p-2 px-3 font-semibold tracking-wide text-white opacity-100 shadow-lg transition-all hover:border-transparent hover:opacity-70 focus:outline-none focus:ring group-hover:shadow-md dark:border-green-400 dark:text-green-400 md:w-auto md:p-2 md:px-5">
+						class="border-moss-500 bg-moss-500 focus:ring-moss-400 group hidden w-full rounded-lg border-2 p-2 px-3 font-semibold tracking-wide text-white opacity-100 shadow-lg transition-all hover:border-transparent hover:opacity-70 focus:outline-none focus:ring group-hover:shadow-md dark:border-green-400 dark:text-green-400 md:inline-block md:w-auto md:p-2 md:px-5">
 						<p>Explore Tours</p>
 					</button>
 				</a>
 				<button
 					type="button"
-					class="focus-ring group mt-3 w-full rounded-lg border-2 border-transparent bg-transparent tracking-wide transition-all focus:outline-none md:ml-4 md:mt-0 md:w-auto md:p-2 md:px-5">
+					class="focus-ring group mt-3 hidden w-full rounded-lg border-2 border-transparent bg-transparent tracking-wide transition-all focus:outline-none md:ml-4 md:mt-0 md:inline-block md:w-auto md:p-2 md:px-5">
 					<a
 						href="/about"
 						class="text-moss-500 opacity-100 transition-all focus:outline-none group-hover:opacity-70 group-focus:underline">
@@ -50,6 +50,15 @@
 				class="z-10 hidden h-[75%] dark:block"
 				alt="Instagram Post You Travelling Dark Mode"
 				loading="lazy" />
+			<div class="text-lg md:text-xl lg:text-lg">
+				<a href="/#searchDiv">
+					<button
+						type="button"
+						class="border-moss-500 bg-moss-500 focus:ring-moss-400 group z-50 inline-block w-full rounded-lg border-2 p-2 px-3 font-semibold tracking-wide text-white opacity-100 shadow-lg transition-all hover:border-transparent hover:opacity-70 focus:outline-none focus:ring group-hover:shadow-md dark:border-green-400 dark:text-green-400 md:hidden md:w-auto md:p-2 md:px-5">
+						<p>Explore Tours</p>
+					</button>
+				</a>
+			</div>
 		</div>
 	</div>
 </header>
