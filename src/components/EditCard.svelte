@@ -1,13 +1,13 @@
 <script>
 	import { browser } from '$app/environment';
 	import {
-		Dialog,
-		DialogContent,
-		DialogDescription,
-		DialogHeader,
-		DialogTitle,
-		DialogTrigger
-	} from '$components/ui/dialog';
+		Sheet,
+		SheetContent,
+		SheetDescription,
+		SheetHeader,
+		SheetTitle,
+		SheetTrigger
+	} from '$components/ui/sheet';
 	import EditPopup from './EditPopup.svelte';
 	import Carousel from 'svelte-carousel';
 	let carousel;
@@ -87,8 +87,9 @@
 		<div class="flex cursor-pointer items-center justify-between">
 			<h1 class="text-2xl">
 				{Location}
-				<Dialog>
-					<DialogTrigger
+
+				<Sheet>
+					<SheetTrigger
 						><button
 							class="z-30 aspect-square w-6 text-black opacity-60 transition-all hover:opacity-80">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -99,17 +100,15 @@
 											d="M5 20h14a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Zm-1-5L14 5l3 3L7 18H4v-3ZM15 4l2-2l3 3l-2.001 2.001L15 4Z" /></g
 									></g
 								></svg>
-						</button>
-					</DialogTrigger>
-					<DialogContent>
-						<DialogHeader>
-							<DialogTitle>Change Tour</DialogTitle>
-							<DialogDescription>
+						</button></SheetTrigger>
+					<SheetContent size="content" class="overflow-scroll ">
+						<SheetHeader>
+							<SheetDescription>
 								<EditPopup {id} />
-							</DialogDescription>
-						</DialogHeader>
-					</DialogContent>
-				</Dialog>
+							</SheetDescription>
+						</SheetHeader>
+					</SheetContent>
+				</Sheet>
 			</h1>
 			<div class="flex items-center justify-around">
 				<p class="text-xl">

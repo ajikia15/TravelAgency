@@ -26,7 +26,7 @@
 				<div
 					slot="prev"
 					on:click={showPrevPage}
-					class="absolute left-2 top-1/2 z-20 grid aspect-square w-6 -translate-y-1/2 cursor-pointer place-items-center rounded-full bg-gray-200 text-gray-800 opacity-0 transition-all hover:opacity-80 group-hover:opacity-80">
+					class="absolute left-2 top-1/2 z-20 grid aspect-square w-6 -translate-y-1/2 cursor-pointer select-none place-items-center rounded-full bg-gray-200 text-gray-800 opacity-0 transition-all hover:opacity-80 group-hover:opacity-80">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 						<g fill="none" fill-rule="evenodd"
 							><path
@@ -40,25 +40,29 @@
 					class="custom-dots"
 					style="display:flex; flex-direction:row; gap:4px; cursor:pointer; position:absolute; bottom: 0.5rem ">
 					{#each Array(pagesCount) as _, pageIndex (pageIndex)}
-						<div
-							class="grid aspect-square w-2 place-items-center rounded-full text-white {currentPageIndex ===
-							pageIndex
-								? 'bg-white'
-								: 'bg-gray-300 opacity-90 '}"
-							on:click={() => showPage(pageIndex)} />
+						{#if pageIndex < 4}
+							<div
+								class="grid aspect-square w-2 place-items-center rounded-full text-white {currentPageIndex ===
+								pageIndex
+									? 'bg-white'
+									: 'bg-gray-300 opacity-90 '}"
+								on:click={() => showPage(pageIndex)} />
+						{/if}
 					{/each}
 				</div>
-				{#each Pics as pic}
-					<img
-						class="aspect-[3/2] w-full md:pointer-events-none"
-						loading="lazy"
-						alt="tour"
-						src={pic} />
+				{#each Pics as pic, i}
+					{#if i < 4}
+						<img
+							class="aspect-[3/2] w-full md:pointer-events-none"
+							loading="lazy"
+							alt="tour"
+							src={pic} />
+					{/if}
 				{/each}
 				<div
 					slot="next"
 					on:click={showNextPage}
-					class="absolute right-2 top-1/2 z-20 grid aspect-square w-6 -translate-y-1/2 cursor-pointer place-items-center rounded-full bg-gray-200 text-gray-800 opacity-0 transition-all hover:opacity-80 group-hover:opacity-80">
+					class="absolute right-2 top-1/2 z-20 grid aspect-square w-6 -translate-y-1/2 cursor-pointer select-none place-items-center rounded-full bg-gray-200 text-gray-800 opacity-0 transition-all hover:opacity-80 group-hover:opacity-80">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 						<g fill="none" fill-rule="evenodd"
 							><path
