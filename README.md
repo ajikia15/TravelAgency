@@ -7,6 +7,3 @@ A website for a mysterious Travel Agency. 🚩👻
 ```
 Svelte with Tailwind and some Typescript
 ```
-
-# Misc
-
