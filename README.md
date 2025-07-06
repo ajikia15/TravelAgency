@@ -1,7 +1,7 @@
 # What's this about?
 
 Old Svelte project 
-Demo (dont visit please): [geodusk](https://www.geodusk.netlify.app)
+Demo (dont visit please): [geodusk](https://geodusk.netlify.app)
 
 # Tools being used:
 
