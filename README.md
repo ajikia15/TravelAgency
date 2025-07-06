@@ -1,6 +1,7 @@
 # What's this about?
 
-A website for a mysterious Travel Agency. 🚩👻
+Old Svelte project 
+Demo (dont visit please): (geodusk)[geodusk.netlify.app]
 
 # Tools being used:
 
